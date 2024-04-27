@@ -15,10 +15,24 @@ header.header
 				else if isCatalogPage
 					ul.navigation-icons__list.navigation-icons__catalog
 						li
-							+inlineSvg('user-icons__favorites', '25', '25', 'heart-background', '#000000', 'none')
+							+inlineSvg('user-icons__favorites', '25', '25', 'icon-heart-background', '#000000', 'none')
 						li 
-							+inlineSvg('user-icons__basket', '25', '24', 'icon-basket', 'none', '#000000')
-							
+							+inlineSvg('user-icons__basket', '24', '24', 'icon-basket', '#000000', '#000000')
+							+inlineSvg('user-icons__house', '18', '20', 'icon-house', 'blue', 'blue')
+							+inlineSvg('user-icons__profile', '20', '20', 'icon-profile', 'blue', 'blue')
+							+inlineSvg('user-icons__search-list', '40', '40', 'icon-search-list', 'blue', 'blue')
+							+inlineSvg('user-icons__sorting', '20', '20', 'icon-sorting', 'none', 'blue')
+							+inlineSvg('user-icons__heart-background', '24', '22', 'icon-heart-background', 'blue', 'none')
+							+inlineSvg('user-icons__comment', '24', '24', 'icon-comment', 'none', 'blue')
+							+inlineSvg('user-icons__bell', '24', '24', 'icon-bell', 'none', 'red')
+							+inlineSvg('user-icons__heart-border', '23', '21', 'icon-heart-border', 'none', 'blue')
+							+inlineSvg('user-icons__filters', '40', '40', 'icon-filters', 'none', 'blue')
+							+inlineSvg('user-icons__search', '16', '16', 'icon-search', 'none', 'blue')
+							+inlineSvg('user-icons__search-list', '40', '40', 'icon-search-list', 'none', 'blue')
+							+inlineSvg('user-icons__icon-vk', '40', '40', 'icon-vk', 'blue', 'blue')
+							+inlineSvg('user-icons__icon-email', '40', '40', 'icon-email', 'blue', 'blue')
+							+inlineSvg('user-icons__telegram', '40', '40', 'icon-telegram', 'green', 'red')
+				
 				+button('Войти через VK', 'vk-login', 'button')
 				include ./../sections/user-navigation-header.pug
 				include ./../sections/mobile-navigation-main.pug
