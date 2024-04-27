@@ -78,8 +78,9 @@ mixin img(className, src, alt, width, height, ext)
 
 //- Миксин для SVG картинки из стека
 mixin inlineSvg(className, width, height, id, fill, stroke)
-	svg(class=className, width=width, height=height, fill=fill, stroke=stroke, xmlns="http://www.w3.org/2000/svg")
+	svg(class=className, width=width, height=height, fill=fill, stroke=stroke, viewBox='0 0 ' + width + ' ' + height, xmlns="http://www.w3.org/2000/svg")
 		use(xlink:href=`../images/icons/stack.svg#${id}`)
+//- Use +inlineSvg('user-icons__basket', '25', '24', 'icon-basket', 'none', '#000000')
 
 //- Миксин для input
 mixin inputField(label, type, name, id, placeholder)
