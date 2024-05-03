@@ -1,0 +1,28 @@
+section.editing-order-product
+	.editing-order-product__wrapper
+		h2.editing-order-product__title Редактировать информацию о заказе 3347348
+		.editing-order-product__information
+			dl
+				dt Куда прийдет заказ?
+				dd ул. Н. Островского, 51
+				dt Стоимость заказа:
+				dd 37 999₽
+				dt Выбранный вами параметр будет отражаться у пользователя
+				dd Местоположение заказа на данный момент
+				dt Примерная дата доставки
+				dd 19 января в 15:00
+				dt Количество вещей:
+				dd 7 шт.
+			select.form__sort(name="sort")
+							option(value="toMoscow") В пути в москву
+							option(value="toCity") Еще куда то в пути
+							option(value="toSP") В пути в Санкт-Петербург
+
+		.editing-orders__products
+			h2 Какие именно позиции в данном заказе
+			ul.products__list
+				li.products__items
+					h3.products__title Zion Williamson x Air Jordan 1 Retro Low OG "Voodoo"
+					p Количество: 1
+					p Размер 42
+					p 23 859 ₽
