@@ -38,7 +38,7 @@ function onSubmitForm(evt) {
     const userProfile = {
       name: userName,
       email: userEmail,
-      avatarUrl: userAvatarUrl
+      avatarUrl: userAvatarUrl,
     }
     localStorage.setItem('userProfile', JSON.stringify(userProfile))
     registrationForm.classList.add('hidden');
