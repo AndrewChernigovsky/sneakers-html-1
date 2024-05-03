@@ -3,11 +3,13 @@
 		index: 'Главная страница',
 		catalog: 'Каталог',
 		calculator: 'Калькулятор',
+		faqpage: 'FAQ',
+		calc_settings: 'Настройки калькулятора',
 		payment: 'Оформление заказа'
 	}
 
 
-	
+
 -
 	var isCatalogPage = true;
 
@@ -26,13 +28,13 @@
 			title: 'Оплата и доставка',
 			url: './pages/delivery.html'
 		},
-		{  
+		{
 			title: 'Контакт',
 			url: './pages/contact.html'
 		}
 	]
 
-- 
+-
 	var mobileMenuMain = [
 		{
 			'Основные': [
@@ -82,7 +84,7 @@
 			title: 'Корзина',
 			url: '#'
 		},
-		{  
+		{
 			title: 'Профиль',
 			url: '#'
 		}
@@ -214,7 +216,7 @@
 				{name: 'Как с нами связаться?', url: '#'},
 				{name: 'Наш пункт выдачи', url: '#'},
 				{name: 'Помощь', url: '#'},
-				{name: 'FAQ', url: '#'},
+				{name: 'FAQ', url: './pages/faqpage.html'},
 			]
 		}
 	]
@@ -240,4 +242,14 @@
 		{name: 'Настройки профиля', url: '#'},
 		{name: 'Основные настройки', url: '#'},
 		{name: 'Поддержка', url: '#'}
+	]
+
+-
+	var asideMenuCalcSettings = [
+		{name: 'Настройки калькулятора', url: '#'},
+		{name: 'Позиции каталога', url: '#'},
+		{name: 'Редактирование заказов', url: '#'},
+		{name: 'Вопросы из FAQ', url: '#'},
+		{name: 'Партнёрская программа', url: '#'},
+		{name: 'Выйти из аккаунта', url: '#'}
 	]

@@ -1,0 +1,24 @@
+section.editing-orders
+	.editing-orders__wrapper
+		h2.editing-orders__title Актуальные заказы
+		form.editing-orders__form
+			.form__header-wrapper
+				ul.form_list
+					li.form__item
+						p.form__title Заказы актуальные
+					li.form__item
+						label(for="search") Поиск
+						input(type="search" id="search" name="search" placeholder="Поиск  по номеру заказа....")
+					li.form__item
+						label(for="date") Дата
+						input(type="date" id="date" name="date" placeholder="13.04.2023")
+					li.form__item
+						select.form__sort(name="sort")
+							option(value="newest") Сортировка: Сначала новые
+							option(value="oldest") Сортировка: Сначала старые
+							option(value="popular") Сортировка: Сначала популярные
+		.editing-orders__products
+			ul.products__list
+				li.products__items
+					h3.products__title Номер заказа: 583830
+					+link('products__button-edit', 'Редактировать', '#')
