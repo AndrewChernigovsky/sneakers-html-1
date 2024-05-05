@@ -1,8 +1,8 @@
 import { checkLocalStorage } from "./auth";
 
 const registrationForm = document.querySelector('.registration-modal');
-const imageUploadButton = registrationForm.querySelector('.registration-modal__input-image-upload');
-const usersImagePreviews = registrationForm.querySelector('.registration-modal__image-preview');
+const imageUploadButton = document.querySelector('.registration-modal__input-image-upload');
+const usersImagePreviews = document.querySelector('.registration-modal__image-preview');
 
 const MAX_IMAGE_SIZE = 2000000;
 
