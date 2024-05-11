@@ -33,6 +33,7 @@ $silver-gray: #C1C1C1;
 $dark-gray: #757575;
 $dark-gray2: #8E8E8E;
 $gray-neutral: #A0A2A5;
+$gray-silver: #AFAFAF;
 
 //------------------------------------------------------------------------------------------
 //---Денис
@@ -50,13 +51,13 @@ $gray-neutral: #A0A2A5;
 // $text-color-order-info: ;
 
 //-------------------------------------------------------------------------------------------
-
-// $background-color-base: ;
-// $background-color-primary: ;
-// $background-color-secondary: ;
-// $background-color-decorate: ;
+//Таня
+$background-color-base: $black;
+$background-color-primary: $light-gray3;
+$background-color-secondary: $white-azure;
+$background-color-decorate: $green;
 // $background-color-decorate2: ;
-// $background-color-user-profile: ;
+$background-color-user-profile: $black-blue;
 // $background-color-pagination:;
 // $background-color-pagination-active: ;
 
@@ -66,22 +67,30 @@ $gray-neutral: #A0A2A5;
 
 //------------------------------------------------------------------------------------------
 
-// $button-background-color-base: ;
-// $button-background-color-primary: ;
-// $button-background-color-secondary: ;
+$button-background-color-base: $green;
+$button-background-color-primary: $black;
+$button-background-color-secondary: $light-gray3;
+$button-border-light: $white;
 
 //--------------------------------------------------------------------------------------------
 
-// $checkbox-background-color-active: ;
+$icon-light: $white;
+$icon-dark: $black;
+
+//--------------------------------------------------------------------------------------------
+
+$checkbox-background-color-active: $green;
+$checkbox-border: $gray-silver;
 
 //---------------------------------------------------------------------------------------------
 
-// $box-shadow-cart: ;
+$box-shadow-cart: 0px 4px 4px rgba(0, 0, 0, 0.25);
 
 //---------------------------------------------------------------------------------------------
 
-// $input-background-color: ;
-// $input-border-color: ;
+$input-background-color: $light-gray3; 
+$input-border-light: $gray-silver;
+$inpit-border-dark: $black;
 
 //---------------------------------------------------------------------------------------------
 //----Денис
