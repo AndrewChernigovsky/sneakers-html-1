@@ -1,5 +1,6 @@
-@import "./common/style.scss";
 @import "./blocks/style.scss";
+@import "./common/style.scss";
+@import "./global/style.scss";
 @import "./layout/style.scss";
 
 h1 {
@@ -8,4 +9,8 @@ h1 {
   display: flex;
   overflow: hidden;
   color: #0d7a13;
+}
+
+h2 {
+  font-family: $first-font;
 }
