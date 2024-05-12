@@ -1,11 +1,39 @@
 
 //- Mиксин для навигации
-mixin menu(items, ulClass, liClass, aClass)
+//mixin menu(items, ulClass, liClass, aClass, currentPageUrl)
 	ul(class=ulClass)
 		each item in items
-			li(class=liClass)
-				a(class=aClass href=item.url)= item.title
+			if item.url !== currentPageUrl
+				li(class=liClass)
+					a(class=aClass href=item.url)= item.title
+			else
+				li(class=liClass)
+					a(class=aClass)= item.title
 //-Use +menu(navHeader, 'nav__list', 'nav__item')
+
+mixin menu(items, ulClass, liClass, aClass, currentPageID)
+	ul(class=ulClass)
+		each item in items
+			if item.key === currentPageID
+				li(class=liClass)
+					a(class=aClass)= item.title
+			else
+				li(class=liClass)
+					a(class=aClass, href=item.url)= item.title
+
+
+//
+//mixin menu(items, ulClass, liClass, aClass, currentPageID)
+	ul(class=ulClass)
+		each item in items
+			if item.key !== currentPageID || isIndexPage
+				li(class=liClass)
+					a(class=aClass)= item.title
+			else
+				li(class=liClass)
+					span(class=aClass href=item.url)= item.title
+
+
 
 //- Миксин для мобильного меню Главная страница
 mixin menuMobileCategories(categories)
