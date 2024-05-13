@@ -1,6 +1,7 @@
-@import "./blocks/style.scss";
+@import "./common/mixins.scss";
+@import "./common/fonts.scss";
 @import "./common/style.scss";
-@import "./global/style.scss";
+@import "./blocks/style.scss";
 @import "./layout/style.scss";
 
 h1 {
