@@ -43,9 +43,9 @@ $text-color-error: $red;
 $text-color-old-price: $light-gray;
 $text-color-new-price: $gray;
 $text-color-checkbox: $gray-neutral;
-// $text-color-checkbox-secondary: ;
+$text-color-checkbox-secondary: $gray-neutral;
 $text-color-input: $dark-gray;
-// $text-color-profile-link: ;
+$text-color-profile-link: $silver-gray;
 $text-color-order-info: $black-signal;
 
 //-------------------------------------------------------------------------------------------
@@ -53,11 +53,12 @@ $background-color-base: $black;
 $background-color-primary: $light-gray3;
 $background-color-secondary: $white-azure;
 $background-color-decorate: $green;
-// $background-color-decorate2: ;
+$background-color-decorate2: $dark-black-amber;
 $background-color-user-profile: $black-blue;
-// $background-color-pagination:;
-// $background-color-pagination-active: ;
-// $border-color-pagination: ;
+$background-color-pagination: $white-azure;
+$background-color-pagination-active: $black;
+$border-color-pagination: $black;
+$background-color-link-active: $green;
 
 //------------------------------------------------------------------------------------------
 
@@ -73,11 +74,11 @@ $checkbox-border: $gray-silver;
 
 //---------------------------------------------------------------------------------------------
 
-$box-shadow-cart: 0px 4px 4px rgba(0, 0, 0, 0.25);
+$box-shadow-cart-color: $black;
 
 //---------------------------------------------------------------------------------------------
 
-$input-background-color: $light-gray3; 
+$input-background-color: $light-gray3;
 $input-border-neutral: $gray-silver;
 $inpit-border-dark: $black;
 $input-border-light: $white;
