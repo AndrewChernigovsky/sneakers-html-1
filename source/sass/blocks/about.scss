@@ -1,0 +1,170 @@
+@import '../common/variables.scss';
+
+//Для мобильных устройств (до 768px)
+@media (max-width: $mobile) {
+  .about {
+    background-color: #000000;
+    min-width: 100%;
+    min-height: 620px;
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+
+    &__container {
+      display: flex;
+      flex-direction: column;
+      align-self: center;
+      align-items: center;
+      margin: 0 auto;
+    }
+
+    &__title {
+      align-self: center;
+      color: #FFFF;
+      text-align: center;
+    }
+
+    &__subtitle {
+      align-self: center;
+      color: $base_link_bg_color;
+      text-align: center;
+      text-transform: uppercase;
+    }
+
+    &__text {
+      max-width: 335px;
+      align-self: center;
+      color: #FFFF;
+      text-align: center;
+    }
+
+    &__text:last-child {
+      margin-bottom: 48px;
+    }
+
+    &__image {
+      display: block;
+      align-self: flex-end;
+      width: 336px;
+      height: 199px;
+    }
+  }
+}
+
+//Для планшетов (769px - 992px)
+@media (min-width: 769px) and (max-width: $tablet) {
+  .about {
+    background-color: #000000;
+    min-width: 100%;
+    min-height: 620px;
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+
+    &__container {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-self: center;
+      align-items: center;
+      margin: 0 auto;
+    }
+
+    &__title {
+      align-self: center;
+      color: #FFFF;
+      text-align: center;
+    }
+
+    &__subtitle {
+      align-self: center;
+      color: $base_link_bg_color;
+      text-align: center;
+      text-transform: uppercase;
+    }
+
+    &__text {
+      max-width: 500px;
+      align-self: center;
+      color: #FFFF;
+      text-align: center;
+    }
+
+    &__text:last-child {
+      margin-bottom: 48px;
+    }
+
+    &__image {
+      display: block;
+      align-self: flex-end;
+      width: 336px;
+      height: 199px;
+    }
+  }
+}
+
+//Для компьютеров (993px и более)
+@media (min-width: $desktop) {
+  .about {
+    background-color: #000000;
+    background-image: url('');
+    // min-width: 100%;
+    // min-height: 951px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    &__header {
+      min-width: 620px;
+      display: flex;
+      flex-direction: column;
+      margin: 0 auto;
+    }
+
+    &__title {
+      color: #FFFF;
+      text-align: center;
+      margin-top: 128px;
+      justify-self: center;
+    }
+
+    &__subtitle {
+      color: $base_link_bg_color;
+      text-align: center;
+      text-transform: uppercase;
+      margin-bottom: 84px;
+    }
+
+    &__container {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      gap: 91px;
+    }
+
+    &__description {
+      min-width: 400px;
+      color: #FFFF;
+      text-align: center;
+      margin-right: 276px;
+    }
+
+    &__text:last-child {
+      margin-bottom: 48px;
+    }
+
+    &__link {
+      display: block;
+      // width: 777px;
+      // height: 459px;
+      margin-left: 293px;
+    }
+  }
+}
