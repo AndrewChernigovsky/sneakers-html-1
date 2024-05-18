@@ -6,6 +6,12 @@
   min-width: 128px;
   min-height: 31px;
   padding: 10px 30px 10px 24px;
+  text-align: center;
+}
+
+.intro__text,
+.intro__title {
+  color: white;
 }
 
 // .base-link--black {
@@ -15,8 +21,10 @@
 //Для мобильных устройств (до 768px)
 @media (max-width: $mobile) {
   .intro {
-    background-image: url();
-    width: 400px;
+    background-image: url('../../images/decors/intro-bg-shadow.png'), url('../../images/decors/intro-bg.png');
+    background-position: 1050px -45px;
+    min-width: 400px;
+    min-height: 400px;
     display: flex;
     flex-direction: column;
     align-self: center;
@@ -30,10 +38,11 @@
       align-self: center;
       align-items: center;
       margin: 0 auto;
+      margin-top: 75px;
     }
 
     &__text {
-      max-width: 285px;
+      max-width: 341px;
       min-height: 41px;
       margin-bottom: 24px;
       text-align: center;
@@ -47,15 +56,17 @@
     &__img {
       display: block;
       margin: 0 auto;
+      margin-bottom: 80px;
     }
   }
 }
 
 //Для планшетов (769px - 992px)
-@media (max-width: $tablet) {
+@media (min-width: 769px) and (max-width: $tablet) {
   .intro {
-    background-image: url();
-    width: 900px;
+    background-image: url('../../images/decors/intro-bg-shadow.png'), url('../../images/decors/intro-bg.png');
+    background-position: 1500px -45px;
+    min-width: 700px;
     display: flex;
     flex-direction: column;
     align-self: center;
@@ -69,10 +80,12 @@
       align-self: center;
       align-items: center;
       margin: 0 auto;
+      margin-top: 75px;
+      margin-bottom: 50px;
     }
 
     &__text {
-      max-width: 500px;
+      max-width: 700px;
       min-height: 50px;
       margin-bottom: 24px;
       text-align: center;
@@ -82,17 +95,25 @@
       display: flex;
       gap: 40px;
     }
+
+    &__container--img {
+      margin-bottom: 82px;
+    }
   }
 }
 
 //Для компьютеров (993px и более)
-@media (min-width: $tablet) {
+@media (min-width: 993px) {
   .intro {
     position: relative;
-    background-image: url();
+    background-image: url('../../images/decors/intro-bg-shadow.png'), url('../../images/decors/intro-bg.png');
+    background-repeat: no-repeat;
     display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
     justify-content: center;
     margin: 0 auto;
+    min-height: 949px;
 
     &__container {
       max-width: 590px;
@@ -121,11 +142,29 @@
       gap: 43px;
     }
 
-    &__img {
-      // position: absolute;
-      // left: 736px;
-      display: block;
-      align-self: flex-end;
+    &__container--img {
+      display: flex;
+      align-items: center;
     }
+
+    &__img {
+      display: block;
+      z-index: 1;
+      margin-right: 108px;
+      // align-self: center;
+    }
+  }
+
+  .base-link {
+    min-width: 265px;
+    // min-width: 195px;
+    min-height: 64px;
+    padding: 21px 37px 21px 49px;
+  }
+
+  .base-link--black{
+    min-width: 265px;
+    min-height: 64px;
+    padding: 21px 37px 21px 33px;
   }
 }
