@@ -5,7 +5,7 @@ const { src, dest } = config.gulp;
 const { source, raws } = config.paths;
 
 export const getStack = () => {
-  return src([`!${raws}/icons/`, `${raws}/icons/*.svg`])
+  return src(`${raws}/icons/**/*.svg`)
     .pipe(stack())
     .pipe(dest(`${source}images/icons/`));
 };
