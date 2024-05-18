@@ -3,8 +3,9 @@
 //Для мобильных устройств (до 768px)
 @media (max-width: $mobile) {
   .about {
-    background-color: #000000;
-    min-width: 100%;
+    background-color: rgb(0 0 0 / 1);
+    background-image: url('../../images/decors/about-bg.png');
+    background-position: -570px 5px;    min-width: 100%;
     min-height: 620px;
     display: flex;
     flex-direction: column;
@@ -57,7 +58,9 @@
 //Для планшетов (769px - 992px)
 @media (min-width: 769px) and (max-width: $tablet) {
   .about {
-    background-color: #000000;
+    background-color: rgb(0 0 0 / 96%);
+    background-image: url('../../images/decors/about-bg.png');
+    background-position: -400px 5px;
     min-width: 100%;
     min-height: 620px;
     display: flex;
@@ -112,8 +115,9 @@
 //Для компьютеров (993px и более)
 @media (min-width: $desktop) {
   .about {
-    background-color: #000000;
-    background-image: url('');
+    background-color: rgb(0 0 0 / 96%);
+    background-image: url('../../images/decors/about-bg.png');
+    background-position: -400px 5px;
     // min-width: 100%;
     // min-height: 951px;
     margin: 0 auto;
