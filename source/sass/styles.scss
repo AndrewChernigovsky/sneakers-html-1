@@ -1,11 +1,15 @@
-@import "./common/style.scss";
-@import "./blocks/style.scss";
-@import "./layout/style.scss";
+// Глобальные данные
+@import "./common/mixins.scss";
+@import "./common/fonts.scss";
+@import "./common/global.scss";
+@import "./common/links.scss";
+@import "./common/variables.scss";
 
-h1 {
-  padding: 0;
-  margin: 0;
-  display: flex;
-  overflow: hidden;
-  color: #0d7a13;
-}
+// Шаблоны
+@import "./layout/header.scss";
+@import "./layout/footer.scss";
+
+// Блоки
+@import "./blocks/map.scss";
+
+
