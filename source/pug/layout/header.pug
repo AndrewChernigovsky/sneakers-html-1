@@ -1,10 +1,15 @@
 header.header
 	.container
 		.header__wrapper
-			a.header__logo-link(href='./index.html')
-				| Логотип
+			if isIndexPage
+				a.header__logo-link
+					| Логотип
+			else if !isIndexPage
+				a.header__logo-link(href='./../index.html')
+					| Логотип
 			nav.header-navigation.navigation
-				+menu(navHeader, 'navigation__list', 'navigation__item', '')
+				+menu(navHeader, 'navigation__list', 'navigation__item', '', currentPageID)
+				
 
 				if isIndexPage
 					ul.navigation-icons__list.navigation-icons__main

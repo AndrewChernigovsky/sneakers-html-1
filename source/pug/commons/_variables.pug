@@ -8,29 +8,30 @@
 		payment: 'Оформление заказа'
 	}
 
-
-
 -
 	var isCatalogPage = true;
-
 
 -
 	var navHeader = [
 		{
 			title: 'Главная',
-			url: '../index.html'
+			url: './../index.html',
+			key: 'home'
 		},
 		{
 			title: 'Каталог',
-			url: './pages/catalog.html'
+			url: './../pages/catalog.html',
+			key: 'catalog'
 		},
 		{
 			title: 'Оплата и доставка',
-			url: './pages/delivery.html'
+			url: './../pages/calculator.html',
+			key: 'delivery'
 		},
 		{
 			title: 'Контакт',
-			url: './pages/contact.html'
+			url: './../pages/contact.html',
+			key: 'contact'
 		}
 	]
 
@@ -38,16 +39,16 @@
 	var mobileMenuMain = [
 		{
 			'Основные': [
-				{name: 'Главная страница', url: './index.html'},
-				{name: 'Каталог товаров', url: '#'},
-				{name: 'Калькулятор и индифицатор', url: '#'},
-				{name: 'Контакты', url: '#'}
+				{name: 'Главная страница', url: './../index.html', key: 'home'},
+				{name: 'Каталог товаров', url: './../pages/catalog.html'},
+				{name: 'Калькулятор и индифицатор', url: './../pages/calculator-settings.html'},
+				{name: 'Контакты', url: './../pages/contact.html'}
 			]
 		},
 		{
 			'Каталог': [
-				{name: 'Избранное', url: '#'},
-				{name: 'Корзина товаров', url: '#'}
+				{name: 'Избранное', url: './../pages/favorites.html'},
+				{name: 'Корзина товаров', url: './../pages/cart.html'}
 			]
 		},
 		{
@@ -60,8 +61,8 @@
 		},
 		{
 			'Доп. разделы': [
-				{name: 'Faq', url: '#'},
-				{name: 'Наши соцсети', url: '#'}
+				{name: 'Faq', url: './../pages/faqpage.html'},
+				{name: 'Наши соцсети', url: './../pages/contact.html'}
 			]
 		}
 	]
