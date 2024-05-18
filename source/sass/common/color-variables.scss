@@ -1,5 +1,59 @@
 //Color variables
+$text-color-base: $white;
+$text-color-primary: $black;
+$text-color-secondary: $gray-black;
+$text-color-spesial: $green;
+$text-color-error: $red;
+$text-color-old-price: $light-gray;
+$text-color-new-price: $gray;
+$text-color-checkbox: $gray-neutral;
+// $text-color-checkbox-secondary: ;
+$text-color-input: $dark-gray;
+// $text-color-profile-link: ;
+$text-color-order-info: $black-signal;
 
+//-------------------------------------------------------------------------------------------
+$background-color-base: $black;
+$background-color-primary: $light-gray3;
+$background-color-secondary: $white-azure;
+$background-color-decorate: $green;
+// $background-color-decorate2: ;
+$background-color-user-profile: $black-blue;
+// $background-color-pagination:;
+// $background-color-pagination-active: ;
+// $border-color-pagination: ;
+
+//------------------------------------------------------------------------------------------
+
+$button-background-color-base: $green;
+$button-background-color-primary: $black;
+$button-background-color-secondary: $light-gray3;
+$button-border-light: $white;
+
+//--------------------------------------------------------------------------------------------
+
+$checkbox-background-color-active: $green;
+$checkbox-border: $gray-silver;
+
+//---------------------------------------------------------------------------------------------
+
+$box-shadow-cart: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+//---------------------------------------------------------------------------------------------
+
+$input-background-color: $light-gray3; 
+$input-border-neutral: $gray-silver;
+$inpit-border-dark: $black;
+$input-border-light: $white;
+
+//---------------------------------------------------------------------------------------------
+
+$icon-color-base: $white;
+$icon-color-primary: $black;
+$icon-background-color-base: $white;
+$icon-background-color-primary: $green;
+
+//---------------------------------------------------------------------------------------------
 //Black
 $black: #000000;
 $black-blue: #050606;
@@ -34,63 +88,3 @@ $dark-gray: #757575;
 $dark-gray2: #8E8E8E;
 $gray-neutral: #A0A2A5;
 $gray-silver: #AFAFAF;
-
-//------------------------------------------------------------------------------------------
-//---Денис
-// $text-color-base: $white;
-// $text-color-primary: ;
-// $text-color-secondary: ;
-// $text-color-spesial: ;
-// $text-color-error: ;
-// $text-color-old-price: ;
-// $text-color-new-price: ;
-// $text-color-checkbox: ;
-// $text-color-checkbox-secondary: ;
-// $text-color-input: ;
-// $text-color-profile-link: ;
-// $text-color-order-info: ;
-
-//-------------------------------------------------------------------------------------------
-//Таня
-$background-color-base: $black;
-$background-color-primary: $light-gray3;
-$background-color-secondary: $white-azure;
-$background-color-decorate: $green;
-// $background-color-decorate2: ;
-$background-color-user-profile: $black-blue;
-// $background-color-pagination:;
-// $background-color-pagination-active: ;
-
-//-------------------------------------------------------------------------------------------
-
-// $border-color-pagination: ;
-
-//------------------------------------------------------------------------------------------
-
-$button-background-color-base: $green;
-$button-background-color-primary: $black;
-$button-background-color-secondary: $light-gray3;
-$button-border-light: $white;
-
-//--------------------------------------------------------------------------------------------
-
-$checkbox-background-color-active: $green;
-$checkbox-border: $gray-silver;
-
-//---------------------------------------------------------------------------------------------
-
-$box-shadow-cart: 0px 4px 4px rgba(0, 0, 0, 0.25);
-
-//---------------------------------------------------------------------------------------------
-
-$input-background-color: $light-gray3; 
-$input-border-neutral: $gray-silver;
-$inpit-border-dark: $black;
-$input-border-light: $white;
-
-//---------------------------------------------------------------------------------------------
-//----Денис
-// $icon-color-base: ;
-// $icon-color-primary: ;
-// $icon-background-color-base: ;
-// $icon-background-color-primary: ;
