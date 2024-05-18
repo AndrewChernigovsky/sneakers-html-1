@@ -1,0 +1,39 @@
+section.current-orders
+	.current-orders__wrapper
+		h2.current-orders__title Текущие заказы
+			label(class="current-orders__label" for="sort")  Сортировка
+			select.current-orders__sort(name="sort" id="sort")
+				option(value="newest") Ближайшие доставки
+				option(value="oldest") Сначала старые
+				option(value="popular") По умолчанию
+		.current-orders__information
+			dl
+				dt Куда прийдет заказ?
+				dd ул. Н. Островского, 51
+				dt Стоимость заказа:
+				dd 37 999₽
+				dt Выбранный вами параметр будет отражаться у пользователя
+				dd Местоположение заказа на данный момент
+				dt Примерная дата доставки
+				dd 19 января в 15:00
+				dt Количество вещей:
+				dd 7 шт.
+
+section.quick-menu
+	h2.quick-menu__title Быстрое меню
+	ul.quick-menu__list
+		li.quick-menu__item
+			p.quick-menu__text Какие карты принимаются
+		li.quick-menu__item
+			p.quick-menu__text Примерные сроки доставки
+		li.quick-menu__item
+			p.quick-menu__text Наш пункт выдачи
+		li.quick-menu__item
+			p.quick-menu__text Другие проекты
+
+section.promotion
+	h2.promotion__title Приведи своего друга и получи промокод на бесплатный Legit Check
+	+link('promotion__link', 'Поподробнее об реферальной системе', '#')
+	dl
+		dt Акция действует до
+		dd 01.05.2023
