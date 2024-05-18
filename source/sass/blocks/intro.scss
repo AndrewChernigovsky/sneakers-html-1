@@ -1,0 +1,131 @@
+@import '../common/variables.scss';
+
+.base-link {
+  display: block;
+  border-radius: 28px;
+  min-width: 128px;
+  min-height: 31px;
+  padding: 10px 30px 10px 24px;
+}
+
+// .base-link--black {
+//   padding: 10px 18px 10px 16px;
+// }
+
+//Для мобильных устройств (до 768px)
+@media (max-width: $mobile) {
+  .intro {
+    background-image: url();
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+
+    &__container {
+      display: flex;
+      flex-direction: column;
+      align-self: center;
+      align-items: center;
+      margin: 0 auto;
+    }
+
+    &__text {
+      max-width: 285px;
+      min-height: 41px;
+      margin-bottom: 24px;
+      text-align: center;
+    }
+
+    &__buttons {
+      display: flex;
+      gap: 20px;
+    }
+
+    &__img {
+      display: block;
+      margin: 0 auto;
+    }
+  }
+}
+
+//Для планшетов (769px - 992px)
+@media (max-width: $tablet) {
+  .intro {
+    background-image: url();
+    width: 900px;
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+
+    &__container {
+      display: flex;
+      flex-direction: column;
+      align-self: center;
+      align-items: center;
+      margin: 0 auto;
+    }
+
+    &__text {
+      max-width: 500px;
+      min-height: 50px;
+      margin-bottom: 24px;
+      text-align: center;
+    }
+
+    &__buttons {
+      display: flex;
+      gap: 40px;
+    }
+  }
+}
+
+//Для компьютеров (993px и более)
+@media (min-width: $tablet) {
+  .intro {
+    position: relative;
+    background-image: url();
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+
+    &__container {
+      max-width: 590px;
+      display: flex;
+      flex-direction: column;
+      align-self: center;
+      align-items: center;
+      margin: 0 auto;
+      margin-left: 300px;
+    }
+
+    &__title {
+      align-self: flex-start;
+    }
+
+    &__text {
+      max-width: 590px;
+      min-height: 85px;
+      margin-bottom: 24px;
+      align-self: flex-start;
+    }
+
+    &__buttons {
+      display: flex;
+      align-self: flex-start;
+      gap: 43px;
+    }
+
+    &__img {
+      // position: absolute;
+      // left: 736px;
+      display: block;
+      align-self: flex-end;
+    }
+  }
+}

@@ -1,9 +1,15 @@
 section.intro
-	.container
-		h2 LOGISTICS X
-		p Закажем абсолютную любую позицию из Китая! Одежда, обувь, аксессуары, электроника и многое другое! Цены значительно ниже, чем в России.
-		+link('base-link', 'Перейти к каталогу', './pages/catalog.html')
-		+link('base-link base-link--black', 'Перейти к калькулятору', './pages/calculator.html')
-		+img('image', 'images/content/hero-img', 'Image', 634, 'auto', 'png')
+	.intro__container
+		h2.intro__title LOGISTICS X
+		p.intro__text Закажем абсолютную любую позицию из Китая!<br>Одежда, обувь, аксессуары, электроника и многое другое! Цены значительно ниже, чем в России.
+		.intro__buttons
+			+link('base-link', 'Перейти к каталогу', './pages/catalog.html')
+			+link('base-link base-link--black', 'Перейти к калькулятору', './pages/calculator.html')
+		picture
+			source(srcset=" 2x", type="image/png", media="(min-width:993px)")
+			source(srcset=" 2x", type="image/png", media="(max-width:992px)")
+			source(srcset=" 2x", type="image/png", media="(max-width:768px)")
+			//- img(class="intro__img" src='' alt='Логотип магазина Poizon')
+	+img('intro__img', 'images/content/hero-img', 'Image', 634, 'auto', 'png')
 		.scroll-indicator
 			span Вниз
