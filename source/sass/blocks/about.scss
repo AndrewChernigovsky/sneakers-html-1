@@ -1,66 +1,10 @@
 @import '../common/variables.scss';
 
 //Для мобильных устройств (до 768px)
-@media (max-width: $mobile) {
   .about {
     background-color: rgb(0 0 0 / 1);
     background-image: url('../../images/decors/about-bg.png');
-    background-position: -570px 5px;    min-width: 100%;
-    min-height: 620px;
-    display: flex;
-    flex-direction: column;
-    align-self: center;
-    align-items: center;
-    justify-content: center;
-    margin: 0 auto;
-
-    &__container {
-      display: flex;
-      flex-direction: column;
-      align-self: center;
-      align-items: center;
-      margin: 0 auto;
-    }
-
-    &__title {
-      align-self: center;
-      color: #FFFF;
-      text-align: center;
-    }
-
-    &__subtitle {
-      align-self: center;
-      color: $base_link_bg_color;
-      text-align: center;
-      text-transform: uppercase;
-    }
-
-    &__text {
-      max-width: 335px;
-      align-self: center;
-      color: #FFFF;
-      text-align: center;
-    }
-
-    &__text:last-child {
-      margin-bottom: 48px;
-    }
-
-    &__image {
-      display: block;
-      align-self: flex-end;
-      width: 336px;
-      height: 199px;
-    }
-  }
-}
-
-//Для планшетов (769px - 992px)
-@media (min-width: 769px) and (max-width: $tablet) {
-  .about {
-    background-color: rgb(0 0 0 / 96%);
-    background-image: url('../../images/decors/about-bg.png');
-    background-position: -400px 5px;
+    background-position: -570px 5px;
     min-width: 100%;
     min-height: 620px;
     display: flex;
@@ -69,9 +13,9 @@
     align-items: center;
     justify-content: center;
     margin: 0 auto;
+    margin-bottom: 66px;
 
     &__container {
-      width: 100%;
       display: flex;
       flex-direction: column;
       align-self: center;
@@ -79,7 +23,19 @@
       margin: 0 auto;
     }
 
+    &__header {
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 30px;
+    }
+
     &__title {
+      font-family: $first-font;
+      font-size: 33px;
+      font-weight: 600;
+      line-height: 40px;
+      max-width: 326px;
       align-self: center;
       color: #FFFF;
       text-align: center;
@@ -90,13 +46,25 @@
       color: $base_link_bg_color;
       text-align: center;
       text-transform: uppercase;
+      font-family: $first-font;
+      font-size: 15px;
+      font-weight: 600;
+      line-height: 18px;
+      max-width: 215px;
+    }
+
+    &__description {
+      max-width: 333px;
     }
 
     &__text {
-      max-width: 500px;
       align-self: center;
       color: #FFFF;
-      text-align: center;
+      text-align: left;
+      font-family: $first-font;
+      font-size: 12px;
+      font-weight: 500;
+      line-height: 14px;
     }
 
     &__text:last-child {
@@ -110,39 +78,69 @@
       height: 199px;
     }
   }
+
+//Для планшетов (769px - 992px)
+@media (min-width: $tablet){
+  .about {
+    background-position: -400px 5px;
+    margin-bottom: 76px;
+
+    &__title {
+      font-size: 38px;
+      font-weight: 600;
+      line-height: 48px;
+      max-width: 375px;
+    }
+
+    &__subtitle {
+      font-size: 20px;
+      font-weight: 600;
+      line-height: 23px;
+      max-width: 285px;
+    }
+
+    &__description {
+      max-width: 500px;
+    }
+
+    &__text {
+      font-size: 17px;
+      font-weight: 500;
+      line-height: 20px;
+    }
+  }
 }
 
 //Для компьютеров (993px и более)
 @media (min-width: $desktop) {
   .about {
     background-color: rgb(0 0 0 / 96%);
-    background-image: url('../../images/decors/about-bg.png');
-    background-position: -400px 5px;
     // min-width: 100%;
-    // min-height: 951px;
+    min-height: 951px;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
+    padding-top: 128px;
 
     &__header {
-      min-width: 620px;
-      display: flex;
-      flex-direction: column;
       margin: 0 auto;
     }
 
     &__title {
-      color: #FFFF;
       text-align: center;
-      margin-top: 128px;
       justify-self: center;
+      font-size: 64px;
+      font-weight: 600;
+      line-height: 76px;
+      max-width: 625px;
     }
 
     &__subtitle {
-      color: $base_link_bg_color;
-      text-align: center;
-      text-transform: uppercase;
+      font-size: 29px;
+      font-weight: 600;
+      line-height: 34px;
+      max-width: 415px;
       margin-bottom: 84px;
     }
 
@@ -154,7 +152,7 @@
     }
 
     &__description {
-      min-width: 400px;
+      min-width: 500px;
       color: #FFFF;
       text-align: center;
       margin-right: 276px;
