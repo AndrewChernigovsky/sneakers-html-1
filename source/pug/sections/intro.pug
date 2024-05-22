@@ -7,10 +7,10 @@ section.intro
 			+link('base-link base-link--black', 'Перейти к калькулятору', './pages/calculator.html')
 	.intro__container--img
 		picture
-			source(srcset=" 2x", type="image/png", media="(min-width:993px)")
-			source(srcset=" 2x", type="image/png", media="(max-width:992px)")
-			source(srcset=" 2x", type="image/png", media="(max-width:768px)")
+			source(srcset="../../images/content/intro@2x.png 2x", width="429" height="235" type="image/png", media="(max-width:768px)")
+			source(srcset="../../images/content/intro@2x.png 2x", type="image/png", media="(min-width:1440px)")
+			source(srcset="../../images/content/intro@2x.png 2x", type="image/png", media="(max-width:768px)")
 			//- img(class="intro__img" src='' alt='Логотип магазина Poizon')
-		+img('intro__img', 'images/content/hero-img', 'Image', 634, 'auto', 'png')
+		+img('intro__img', "../../images/content/intro@2x.png", 'Image', 634, 'auto', 'png')
 			.scroll-indicator
 				span Вниз
