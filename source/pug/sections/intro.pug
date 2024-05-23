@@ -7,10 +7,12 @@ section.intro
 			+link('base-link base-link--black', 'Перейти к калькулятору', './pages/calculator.html')
 	.intro__container--img
 		picture
-			source(srcset="../../images/content/intro@2x.png 2x", width="429" height="235" type="image/png", media="(max-width:768px)")
-			source(srcset="../../images/content/intro@2x.png 2x", type="image/png", media="(min-width:1440px)")
-			source(srcset="../../images/content/intro@2x.png 2x", type="image/png", media="(max-width:768px)")
-			//- img(class="intro__img" src='' alt='Логотип магазина Poizon')
-		+img('intro__img', "../../images/content/intro@2x.png", 'Image', 634, 'auto', 'png')
+			source(srcset="../../images/content/intro@2x.webp, ../../images/content/intro@2x.webp 2x", type="image/webp", media="(min-width:1440px)")
+			source(srcset="../../images/content/intro@2x.png, ../../images/content/intro@2x.png 2x", type="image/png", media="(min-width:1440px)")
+			source(srcset="../../images/content/intro@1x.webp, ../../images/content/intro@1x.webp 2x", type="image/webp", media="(min-width:768px)")
+			source(srcset="../../images/content/intro@1x.png, ../../images/content/intro@1x.png 2x", type="image/png", media="(min-width:768px)")
+			source(srcset="../../images/content/mobile-intro@1x.webp, ../../images/content/mobile-intro@2x.webp 2x", type="image/webp", media="(max-width:768px)", loading='lazy')
+			img(src='', width='430', height='235', alt='Логотип магазина Poizon')
+		//- +img('intro__img', "../../images/content/intro@2x.png", 'Image', 634, 'auto', 'png')
 			.scroll-indicator
 				span Вниз
