@@ -1,83 +1,87 @@
 @import '../common/variables.scss';
 
 //Для мобильных устройств (до 768px)
-  .about {
-    background-color: rgb(0 0 0 / 1);
-    background-image: url('../../images/decors/about-bg.png');
-    background-position: -570px 5px;
-    min-width: 100%;
-    min-height: 620px;
+.about {
+  background-color: rgb(0 0 0 / 1);
+  background-image: url('../../images/decors/about-bg.png');
+  background-position: -570px 5px;
+  min-width: 100%;
+  min-height: 620px;
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  margin-bottom: 66px;
+
+  &__container {
     display: flex;
     flex-direction: column;
     align-self: center;
     align-items: center;
-    justify-content: center;
     margin: 0 auto;
-    margin-bottom: 66px;
-
-    &__container {
-      display: flex;
-      flex-direction: column;
-      align-self: center;
-      align-items: center;
-      margin: 0 auto;
-    }
-
-    &__header {
-      align-items: center;
-      display: flex;
-      flex-direction: column;
-      margin-bottom: 30px;
-    }
-
-    &__title {
-      font-family: $first-font;
-      font-size: 33px;
-      font-weight: 600;
-      line-height: 40px;
-      max-width: 326px;
-      align-self: center;
-      color: #FFFF;
-      text-align: center;
-    }
-
-    &__subtitle {
-      align-self: center;
-      color: $base_link_bg_color;
-      text-align: center;
-      text-transform: uppercase;
-      font-family: $first-font;
-      font-size: 15px;
-      font-weight: 600;
-      line-height: 18px;
-      max-width: 215px;
-    }
-
-    &__description {
-      max-width: 333px;
-    }
-
-    &__text {
-      align-self: center;
-      color: #FFFF;
-      text-align: left;
-      font-family: $first-font;
-      font-size: 12px;
-      font-weight: 500;
-      line-height: 14px;
-    }
-
-    &__text:last-child {
-      margin-bottom: 48px;
-    }
-
-    &__image {
-      display: block;
-      align-self: flex-end;
-      width: 336px;
-      height: 199px;
-    }
   }
+
+  &__header {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+  }
+
+  &__title {
+    font-family: $first-font;
+    font-size: 33px;
+    font-weight: 600;
+    line-height: 40px;
+    max-width: 326px;
+    align-self: center;
+    color: #FFFF;
+    text-align: center;
+  }
+
+  &__subtitle {
+    align-self: center;
+    color: $base_link_bg_color;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: $first-font;
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 18px;
+    max-width: 215px;
+  }
+
+  &__description {
+    max-width: 333px;
+  }
+
+  &__link {
+    margin-bottom: 20px;
+  }
+
+  &__text {
+    align-self: center;
+    color: #FFFF;
+    text-align: center;
+    font-family: $first-font;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 14px;
+  }
+
+  &__text:last-child {
+    margin-bottom: 48px;
+  }
+
+  &__image {
+    display: block;
+    align-self: flex-end;
+    width: 336px;
+    height: 199px;
+  }
+}
 
 //Для планшетов (769px - 992px)
 @media (min-width: $tablet){
@@ -154,15 +158,36 @@
     &__description {
       min-width: 500px;
       color: #FFFF;
-      text-align: center;
-      margin-right: 276px;
+      align-self: flex-start;
+      // margin-right: 276px;
+      padding-top: 40px;
+      flex-basis: 50%;
+    }
+
+    &__text {
+      text-align: left;
     }
 
     &__link {
       display: block;
-      // width: 777px;
-      // height: 459px;
-      margin-left: 293px;
+      width: 777px;
+      height: 459px;
+      margin-bottom: 161px;
+      margin-left: 100px;
+      flex-basis: 50%;
+      // margin-left: 293px;
     }
+
+    &__link img {
+      border-radius: 30px;
+    }
+
+    // &__image {
+    //   display: inline-block;
+    //   align-self: flex-start;
+    //   border-radius: 30px;
+    //   width: 777px;
+    //   height: 459px;
+    // }
   }
 }
