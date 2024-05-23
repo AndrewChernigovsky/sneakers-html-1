@@ -14,6 +14,7 @@
   justify-content: center;
   margin: 0 auto;
   margin-bottom: 66px;
+  padding: 15px;
 
   &__container {
     display: flex;
@@ -32,10 +33,9 @@
 
   &__title {
     font-family: $first-font;
-    font-size: 33px;
+    font-size: clamp(2rem, calc(1.6rem + 2vw), 4rem);
     font-weight: 600;
     line-height: 40px;
-    max-width: 326px;
     align-self: center;
     color: #FFFF;
     text-align: center;
@@ -47,10 +47,9 @@
     text-align: center;
     text-transform: uppercase;
     font-family: $first-font;
-    font-size: 15px;
+    font-size: clamp(0.94rem, calc(0.76rem + 0.88vw), 1.81rem);
     font-weight: 600;
     line-height: 18px;
-    max-width: 215px;
   }
 
   &__description {
@@ -61,12 +60,16 @@
     margin-bottom: 20px;
   }
 
+  &__link img {
+    border-radius: 30px;
+  }
+
   &__text {
     align-self: center;
     color: #FFFF;
     text-align: center;
     font-family: $first-font;
-    font-size: 12px;
+    font-size: clamp(0.75rem, calc(0.68rem + 0.38vw), 1.13rem);
     font-weight: 500;
     line-height: 14px;
   }
@@ -80,6 +83,7 @@
     align-self: flex-end;
     width: 336px;
     height: 199px;
+    border-radius: 30px;
   }
 }
 
@@ -90,17 +94,13 @@
     margin-bottom: 76px;
 
     &__title {
-      font-size: 38px;
       font-weight: 600;
       line-height: 48px;
-      max-width: 375px;
     }
 
     &__subtitle {
-      font-size: 20px;
       font-weight: 600;
       line-height: 23px;
-      max-width: 285px;
     }
 
     &__description {
@@ -108,9 +108,26 @@
     }
 
     &__text {
-      font-size: 17px;
       font-weight: 500;
       line-height: 20px;
+    }
+  }
+}
+
+@media (min-width: 1100px) and (max-width: 1439px) {
+  .about {
+    &__container {
+      display: flex;
+      flex-direction: row;
+      gap: 15px;
+    }
+
+    &__link {
+      order: 2;
+    }
+
+    &__description {
+      order: 1;
     }
   }
 }
@@ -134,14 +151,12 @@
     &__title {
       text-align: center;
       justify-self: center;
-      font-size: 64px;
       font-weight: 600;
       line-height: 76px;
       max-width: 625px;
     }
 
     &__subtitle {
-      font-size: 29px;
       font-weight: 600;
       line-height: 34px;
       max-width: 415px;
@@ -156,10 +171,9 @@
     }
 
     &__description {
-      min-width: 500px;
+      max-width: 500px;
       color: #FFFF;
       align-self: flex-start;
-      // margin-right: 276px;
       padding-top: 40px;
       flex-basis: 50%;
     }
