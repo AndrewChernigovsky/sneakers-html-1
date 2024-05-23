@@ -1,26 +1,22 @@
 .base-link {
   display: block;
   border-radius: 28px;
-  min-width: 128px;
+  min-width: 125px;
   min-height: 31px;
-  padding: 10px 30px 10px 24px;
+  padding: 11px 19px 10px 12px;
   text-align: center;
   font-family: "SF Pro Display", "Arial", sans-serif;
-  font-size: clamp(0.5rem, calc(0.34rem + 0.8vw), 1.06rem);
+  font-size: clamp(0.7rem, calc(0.34rem + 0.8vw), 1.06rem);
   font-weight: 500;
   line-height: 10px;
-}
-
-.base-link:after {
-  content: "";
-  width: 5px;
-  height: 8px;
   background-image: url("../../images/icons/decors/arrow.svg");
   background-repeat: no-repeat;
+  background-position: 92% 56%;
   background-size: 5px 8px;
-  display: block;
-  margin-top: -9px;
-  margin-left: 85px;
+}
+
+.base-link--black {
+  background-position: 93% 56%;
 }
 
 .base-link--black:after {
@@ -68,6 +64,8 @@
   margin-bottom: 24px;
   text-align: center;
   color: white;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 .intro__buttons {
   display: flex;
@@ -96,7 +94,7 @@
 @media (min-width: 768px) {
   .intro {
     background-position: 1500px -45px;
-    min-width: 700px;
+    min-width: 100%;
     min-height: 650px;
   }
   .intro__container {
@@ -126,15 +124,6 @@
   .base-link {
     min-height: 40px;
     padding: 14px 30px 10px 24px;
-  }
-
-  .base-link:after {
-    content: "";
-    width: 9px;
-    height: 9px;
-    background-size: 9px 9px;
-    margin-top: -9px;
-    margin-left: 161px;
   }
 }
 @media (min-width: 1440px) {
@@ -193,18 +182,5 @@
     font-weight: 500;
     line-height: 21px;
     padding: 21px 37px 21px 40px;
-  }
-
-  .base-link:after {
-    margin-top: -15px;
-    margin-left: 178px;
-    width: 7px;
-    height: 11px;
-    background-size: 7px 11px;
-  }
-
-  .base-link--black:after {
-    margin-top: -15px;
-    margin-left: 220px;
   }
 }
