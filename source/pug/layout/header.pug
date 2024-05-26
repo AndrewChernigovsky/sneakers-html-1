@@ -1,68 +1,74 @@
 header.main-header
 	nav.main-header__navigation
-		+button('Открыть меню', 'main-header__burger-button main-header__burger-button--close', 'button')
+		button.main-header__burger-button.main-header__burger-button--close(type='button')
+			span.visually-hidden Открыть меню
 		if isIndexPage
 			a.main-header__logo-link(href='#')
+				img.main-header__logo-image(src='../images/icons/content/logistics-logo.svg' width='137' header='17' alt='Логотип')
 				span.visually-hidden Логотип
 		else if !isIndexPage
 			a.main-header__logo-link(href='./../index.html')
+				img.main-header__logo-image(src='../images/icons/content/logistics-logo.svg' width='137' header='17' alt='Логотип')
 				span.visually-hidden Логотип
 		+menu(navHeader, 'main-header__navigation-list', 'main-header__navigation-item', 'main-header__navigation-link', currentPageID)
 		ul.main-header__navigation-icon-list
 			li.main-header__navigation-icon-item
-				a.main-header__navigation-icon-link(href='./../pages/favorites.html')
+				a.main-header__navigation-icon-link.main-header__navigation-icon-link--favorite(href='./../pages/favorites.html')
 					span.visually-hidden Избранное
 			li.main-header__navigation-icon-item
-				a.main-header__navigation-icon-link(href='./../pages/cart.html')
+				a.main-header__navigation-icon-link.main-header__navigation-icon-link--cart(href='./../pages/cart.html')
 					span.visually-hidden Корзина
-		+button('Регистрация', 'button main-header__registration-button', 'button')
+		button.main-header__registration-button(type='button')
+			span.main-header__registration-button-text Регистрация
 		a.main-header__user-profile-container(href='#')
 			img.main-header__user-avatar-image(src='#' width='42' height='42' alt='Аватар пользователя')
 			p.main-header__user-profile-name Никита Бульдозеров
 			p.main-header__user-profile-text Перейти в профиль
-		+button('Выход', 'button main-header__signout-button', 'button')
+		button.button.main-header__signout-button(type='button')
+			span.visually-hidden Выход
 		ul.main-header__fast-access-list
 			li.main-header__fast-access-item
-				a.main-header__fast-access-link.main-header__fast-access--main(href='#') Главная
+				a.main-header__fast-access-link.main-header__fast-access-link--main(href='./../index.html') Главная
 			li.main-header__fast-access-item
-				a.main-header__fast-access-link.main-header__fast-access--favorite(href='#') Избранное
+				a.main-header__fast-access-link.main-header__fast-access-link--favorite(href='./../pages/favorites.html') Избранное
 			li.main-header__fast-access-item
-				a.main-header__fast-access-link.main-header__fast-access--catalog(href='#') Каталог
+				a.main-header__fast-access-link.main-header__fast-access-link--catalog(href='#') Каталог
 			li.main-header__fast-access-item
-				a.main-header__fast-access-link.main-header__fast-access--cart(href='#') Корзина
+				a.main-header__fast-access-link.main-header__fast-access-link--cart(href='#') Корзина
 			li.main-header__fast-access-item
-				a.main-header__fast-access-link.main-header__fast-access--profile(href='#') Профиль
-		h2.main-header__burger-menu-title Разделы
-		a.main-header__faq-link Перейти к Faq
-		ul.main-header__burger-menu-list
-			li.main-header__burger-menu-item
-				h3.main-header__burger-menu-subtitle Основные
-				ul.main-header__burger-menu-sublist
-					li.main-header__burger-menu-subitem
-						a.main-header__burger-menu-sublink(href='#') Главная страница
-					li.main-header__burger-menu-subitem
-						a.main-header__burger-menu-sublink(href='#') Каталог товаров
-					li.main-header__burger-menu-subitem
-						a.main-header__burger-menu-sublink(href='#') Калькулятор и идентификатор
-					li.main-header__burger-menu-subitem
-						a.main-header__burger-menu-sublink(href='#') Контакты
-			li.main-header__burger-menu-item
-				h3.main-header__burger-menu-subtitle Каталог
-				ul.main-header__burger-menu-sublist
-					li.main-header__burger-menu-subitem
-						a.main-header__burger-menu-sublink(href='#') Избранное
-					li.main-header__burger-menu-subitem
-						a.main-header__burger-menu-sublink(href='#') Корзина товаров
-			li.main-header__burger-menu-item
-				h3.main-header__burger-menu-subtitle Личный профиль
-				ul.main-header__burger-menu-sublist
-					li.main-header__burger-menu-subitem
-						a.main-header__burger-menu-sublink(href='#') Аккаунт
-					li.main-header__burger-menu-subitem
-						a.main-header__burger-menu-sublink(href='#') История заказов
-					li.main-header__burger-menu-subitem
-						a.main-header__burger-menu-sublink(href='#') Текущие заказы
-					li.main-header__burger-menu-subitem
-						a.main-header__burger-menu-sublink(href='#') Партнерская программа
-					li.main-header__burger-menu-subitem
-						a.main-header__burger-menu-sublink(href='#') Выйти из аккаунта
+				a.main-header__fast-access-link.main-header__fast-access-link--profile(href='#') Профиль
+		.main-header__burger-menu-container.main-header__burger-menu-container--open.main-header__burger-menu-container--no-js
+			h2.main-header__burger-menu-title Разделы
+			a.main-header__faq-link Перейти к Faq
+			ul.main-header__burger-menu-list
+				li.main-header__burger-menu-item
+					h3.main-header__burger-menu-subtitle Основные
+					ul.main-header__burger-menu-sublist
+						li.main-header__burger-menu-subitem
+							a.main-header__burger-menu-sublink(href='#') Главная страница
+						li.main-header__burger-menu-subitem
+							a.main-header__burger-menu-sublink(href='#') Каталог товаров
+						li.main-header__burger-menu-subitem
+							a.main-header__burger-menu-sublink(href='#') Калькулятор и идентификатор
+						li.main-header__burger-menu-subitem
+							a.main-header__burger-menu-sublink(href='#') Контакты
+				li.main-header__burger-menu-item
+					h3.main-header__burger-menu-subtitle Каталог
+					ul.main-header__burger-menu-sublist
+						li.main-header__burger-menu-subitem
+							a.main-header__burger-menu-sublink(href='#') Избранное
+						li.main-header__burger-menu-subitem
+							a.main-header__burger-menu-sublink(href='#') Корзина товаров
+				li.main-header__burger-menu-item
+					h3.main-header__burger-menu-subtitle Личный профиль
+					ul.main-header__burger-menu-sublist
+						li.main-header__burger-menu-subitem
+							a.main-header__burger-menu-sublink(href='#') Аккаунт
+						li.main-header__burger-menu-subitem
+							a.main-header__burger-menu-sublink(href='#') История заказов
+						li.main-header__burger-menu-subitem
+							a.main-header__burger-menu-sublink(href='#') Текущие заказы
+						li.main-header__burger-menu-subitem
+							a.main-header__burger-menu-sublink(href='#') Партнерская программа
+						li.main-header__burger-menu-subitem
+							a.main-header__burger-menu-sublink(href='#') Выйти из аккаунта
