@@ -3,27 +3,58 @@
 .container {
 }
 .delivery {
+  display: flex;
   // .delivery__image
   &__image {
+    width: 57.5%;
   }
   // .delivery__content
   &__content {
+    width: 42.5%;
   }
 }
 
 // .delivery-content
 .delivery-content {
+  background-image: (linear-gradient(rgba(7, 7, 7, 0.9)), url("../../images/decors/stock-background@1x.jpg"));
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  color: #ffffff;
+  padding: 152px 58px 119px 117px;
+
   // .delivery-content__title
   &__title {
+    margin: 0;
+    margin-bottom: 61px;
   }
   // .delivery-content__text
   &__text {
+    margin: 0;
+    margin-bottom: 30px;
   }
+
+  // .delivery-content__address
+  &__address {
+    margin: 45px 0 25px;
+  }
+
   // .delivery-content__time
   &__time {
+    margin: 0;
+  }
+
+  p + p {
+    margin-bottom: 0;
   }
 }
 
 .map-container {
+  height: 100%;
+  margin-right: -2px;
+  img {
+    vertical-align: middle;
+    height: 100%;
+    width: 100%;
+  }
 }
-
