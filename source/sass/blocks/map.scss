@@ -27,6 +27,7 @@
   &__title {
     margin: 0;
     margin-bottom: 61px;
+    font-family: $first-font;
     font-weight: 500;
     font-size: 38px;
   }
@@ -34,6 +35,7 @@
   &__text {
     margin: 0;
     margin-bottom: 30px;
+    font-family: $first-font;
     font-weight: 500;
     font-size: 19px;
   }
@@ -41,8 +43,10 @@
   // .delivery-content__address
   &__address {
     margin: 45px 0 25px;
+    font-family: $first-font;
     font-weight: 500;
     font-size: 17px;
+    font-style: normal;
   }
 
   // .delivery-content__time
@@ -50,6 +54,7 @@
     margin: 0;
   }
 
+  // .delivery-content p+p
   p + p {
     margin-bottom: 0;
   }
@@ -57,7 +62,7 @@
 
 .map-container {
   height: 100%;
-  margin-right: -2px;
+  margin-right: -3px;
   img {
     vertical-align: middle;
     height: 100%;
