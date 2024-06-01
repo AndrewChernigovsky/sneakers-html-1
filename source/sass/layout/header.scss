@@ -1,1 +1,95 @@
 @import './../common/variables.scss';
+
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.main-header {
+  background-color: $base_color;
+  padding-top: 40px;
+}
+.main-header__burger-menu-container,
+.main-header__user-profile-container,
+.main-header__signout-button,
+.main-header__registration-button,
+.main-header__navigation-icon-list,
+.main-header__navigation-list {
+  display: none;
+}
+
+.main-header__navigation {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  justify-items: center;
+}
+
+.main-header__logo-link {
+  grid-column: 2/4;
+  padding-left: 19px;
+  padding-top: 1px;
+}
+
+.main-header__burger-button {
+  background-color: $base_color;
+  background-image: url("../../images/icons/decors/burger-icon.svg");
+  border: none;
+  width: 26px;
+  height: 22px;
+}
+
+.main-header__fast-access-list {
+  width: 100%;
+  list-style-type: none;
+  padding-top: 70px;
+  grid-row: 2/4;
+  grid-column: 1 / 5;
+  display: grid;
+  grid-template-columns: repeat(5,1fr);
+  justify-items: center;
+  gap: 5px;
+}
+
+.main-header__fast-access-link {
+  position: relative;
+  text-decoration: none;
+  color: #FFF;
+  text-align: center;
+  font-family: "PT Sans";
+  font-size: 12.308px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 16px;
+}
+
+.main-header__fast-access-link::after {
+  background-repeat: no-repeat;
+  position: absolute;
+  content: "";
+  width: 20px;
+  height: 20px;
+  top: -25px;
+  left: 31%;
+}
+
+.main-header__fast-access-link--main::after {
+  background-image: url(../../images/icons/decors/home-icon.svg);
+}
+
+.main-header__fast-access-link--favorite::after {
+  background-image: url(../../images/icons/decors/heart-border-icon.svg);
+}
+
+.main-header__fast-access-link--catalog::after {
+  width: 23px;
+  background-image: url(../../images/icons/decors/search-catalog-icon.svg);
+}
+
+.main-header__fast-access-link--cart::after {
+  background-image: url(../../images/icons/decors/basket-icon.svg);
+}
+
+.main-header__fast-access-link--profile::after {
+  background-image: url(../../images/icons/decors/profile-icon.svg);
+}
