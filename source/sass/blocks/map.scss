@@ -3,27 +3,69 @@
 .container {
 }
 .delivery {
+  display: flex;
   // .delivery__image
   &__image {
+    width: 57.5%;
   }
   // .delivery__content
   &__content {
+    width: 42.5%;
   }
 }
 
 // .delivery-content
 .delivery-content {
+  background-image: (linear-gradient(rgba(7, 7, 7, 0.95)), url("../../images/decors/stock-background@1x.jpg"));
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  color: #ffffff;
+  padding: 152px 58px 119px 117px;
+
   // .delivery-content__title
   &__title {
+    margin: 0;
+    margin-bottom: 61px;
+    font-family: $first-font;
+    font-weight: 500;
+    font-size: 38px;
   }
   // .delivery-content__text
   &__text {
+    margin: 0;
+    margin-bottom: 30px;
+    font-family: $first-font;
+    font-weight: 500;
+    font-size: 19px;
   }
+
+  // .delivery-content__address
+  &__address {
+    margin: 45px 0 25px;
+    font-family: $first-font;
+    font-weight: 500;
+    font-size: 17px;
+    font-style: normal;
+  }
+
   // .delivery-content__time
   &__time {
+    margin: 0;
+  }
+
+  // .delivery-content p+p
+  p + p {
+    margin-bottom: 0;
   }
 }
 
 .map-container {
+  height: 100%;
+  margin-right: -3px;
+  img {
+    vertical-align: middle;
+    height: 100%;
+    width: 100%;
+  }
 }
-
