@@ -3,7 +3,7 @@ import { uploadImg, onSubmitForm } from "./registration";
 const registrationForm = document.querySelector('.registration-modal');
 const registrationButton = document.querySelector('.header-navigation__registration-button');
 const usersProfile = document.querySelector('.user-navigation-header');
-const imageUploadButton = registrationForm.querySelector('.registration-modal__input-image-upload');
+const imageUploadButton = document.querySelector('.registration-modal__input-image-upload');
 
 function checkLocalStorage() {
   if (localStorage.getItem('userProfile') !== null) {

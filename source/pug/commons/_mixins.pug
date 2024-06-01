@@ -1,11 +1,15 @@
 
-//- Mиксин для навигации
-mixin menu(items, ulClass, liClass, aClass)
+//- Mиксин для навигации  с проверкой текущая страница или нет
+mixin menu(items, ulClass, liClass, aClass, currentPageID)
 	ul(class=ulClass)
 		each item in items
-			li(class=liClass)
-				a(class=aClass href=item.url)= item.title
-//-Use +menu(navHeader, 'nav__list', 'nav__item')
+			if item.key === currentPageID
+				li(class=liClass)
+					a(class=aClass)= item.title
+			else
+				li(class=liClass)
+					a(class=aClass, href=item.url)= item.title
+
 
 //- Миксин для мобильного меню Главная страница
 mixin menuMobileCategories(categories)
