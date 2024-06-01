@@ -1,0 +1,91 @@
+//Black
+$black: #000000;
+$black-blue: #050606;
+$light-black: #161616;
+$black-amber: #070707;
+$dark-black-amber: #090909;
+$black-borrow: #202020;
+$black-borrow2: #212121;
+$dark-black-borrow: #242424;
+$black-signal: #2E2E2E;
+
+//White
+$white: #ffffff;
+$dark-white: #EBF4F8;
+$white-azure: #F4FDFF;
+
+//Green
+$green: #008968;
+$light-green: #00A481;
+
+//Red
+$red: #ff0000;
+
+//Gray
+$gray: #515151;
+$light-gray: #B8B8B8;
+$light-gray2: #D9D9D9;
+$light-gray3: #E5EFF3;
+$gray-black: #333333;
+$silver-gray: #C1C1C1;
+$dark-gray: #757575;
+$dark-gray2: #8E8E8E;
+$gray-neutral: #A0A2A5;
+$gray-silver: #AFAFAF;
+
+
+//Color variables
+$text-color-base: $white;
+$text-color-primary: $black;
+$text-color-secondary: $gray-black;
+$text-color-spesial: $green;
+$text-color-error: $red;
+$text-color-old-price: $light-gray;
+$text-color-new-price: $gray;
+$text-color-checkbox: $gray-neutral;
+$text-color-checkbox-secondary: $gray-neutral;
+$text-color-input: $dark-gray;
+$text-color-profile-link: $silver-gray;
+$text-color-order-info: $black-signal;
+
+//-------------------------------------------------------------------------------------------
+$background-color-base: $black;
+$background-color-primary: $light-gray3;
+$background-color-secondary: $white-azure;
+$background-color-decorate: $green;
+$background-color-decorate2: $dark-black-amber;
+$background-color-user-profile: $black-blue;
+$background-color-pagination: $white-azure;
+$background-color-pagination-active: $black;
+$border-color-pagination: $black;
+$background-color-link-active: $green;
+
+//------------------------------------------------------------------------------------------
+
+$button-background-color-base: $green;
+$button-background-color-primary: $black;
+$button-background-color-secondary: $light-gray3;
+$button-border-light: $white;
+
+//--------------------------------------------------------------------------------------------
+
+$checkbox-background-color-active: $green;
+$checkbox-border: $gray-silver;
+
+//---------------------------------------------------------------------------------------------
+
+$box-shadow-cart-color: $black;
+
+//---------------------------------------------------------------------------------------------
+
+$input-background-color: $light-gray3;
+$input-border-neutral: $gray-silver;
+$inpit-border-dark: $black;
+$input-border-light: $white;
+
+//---------------------------------------------------------------------------------------------
+
+$icon-color-base: $white;
+$icon-color-primary: $black;
+$icon-background-color-base: $white;
+$icon-background-color-primary: $green;
