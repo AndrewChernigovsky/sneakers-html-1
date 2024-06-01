@@ -1,3 +1,9 @@
+@use "./container.scss";
+@use "./map.scss";
+@use "./page.scss";
+@use "./main-container.scss";
+@use "./menu-footer.scss";
+
 // Глобальные данные
 @import "./common/mixins.scss";
 @import "./common/fonts.scss";
@@ -11,3 +17,4 @@
 
 // Блоки
 @import "./blocks/map.scss";
+
