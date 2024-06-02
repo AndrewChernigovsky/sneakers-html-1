@@ -45,11 +45,7 @@
     font-family: $first-font;
     font-weight: 500;
     font-size: clamp(1.3125rem, 1.0329rem + 1.1184vw, 2.375rem);
-    margin-bottom: 25px;
-
-    @media (min-width: $desktop) {
-      margin-bottom: 61px;
-    }
+    margin-bottom: clamp(1.5625rem, 0.9704rem + 2.3684vw, 3.8125rem);
   }
   // .delivery-content__text
   &__text {
@@ -57,25 +53,19 @@
     font-family: $first-font;
     font-weight: 500;
     font-size: clamp(0.625rem, 0.477rem + 0.5921vw, 1.1875rem);
-    margin-bottom: 16px;
+    margin-bottom: clamp(1rem, 0.7697rem + 0.9211vw, 1.875rem);
     max-width: clamp(22.5rem, 17.7303rem + 19.0789vw, 40.625rem);
-
-    @media (min-width: $desktop) {
-      margin-bottom: 30px;
-    }
   }
 
   // .delivery-content__address
   &__address {
-    margin: 30px 0 16px;
+    margin: 0;
+    margin-top: clamp(1.875rem, 1.6283rem + 0.9868vw, 2.8125rem);
+    margin-bottom: clamp(1rem, 0.852rem + 0.5921vw, 1.5625rem);
     font-family: $first-font;
     font-weight: 500;
     font-size: clamp(0.5625rem, 0.4309rem + 0.5263vw, 1.0625rem);
     font-style: normal;
-
-    @media (min-width: $desktop) {
-      margin: 45px 0 25px;
-    }
   }
 
   // .delivery-content__time
