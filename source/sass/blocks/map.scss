@@ -3,14 +3,21 @@
 .container {
 }
 .delivery {
-  display: flex;
+  @media (min-width: $desktop) {
+    display: flex;
+  }
+
   // .delivery__image
   &__image {
-    width: 57.5%;
+    @media (min-width: $desktop) {
+      width: 57.5%;
+    }
   }
   // .delivery__content
   &__content {
-    width: 42.5%;
+    @media (min-width: $desktop) {
+      width: 42.5%;
+    }
   }
 }
 
@@ -21,37 +28,60 @@
   background-position: center;
   background-size: cover;
   color: #ffffff;
-  padding: 152px 58px 119px 117px;
+  // padding: 50px 64px 40px;
+  padding-top: clamp(3.125rem, 1.4474rem + 6.7105vw, 9.5rem);
+  padding-right: clamp(4rem, 3.1776rem + 3.2895vw, 7.125rem);
+  padding-bottom: clamp(2.5rem, 0.7401rem + 7.0395vw, 9.1875rem);
+  padding-left: clamp(4rem, 3.1283rem + 3.4868vw, 7.3125rem);
+  text-align: center;
+  @media (min-width: $desktop) {
+    text-align: left;
+    // padding: 152px 114px 119px 147px;
+  }
 
   // .delivery-content__title
   &__title {
     margin: 0;
-    margin-bottom: 61px;
     font-family: $first-font;
     font-weight: 500;
-    font-size: 38px;
+    font-size: clamp(1.3125rem, 1.0329rem + 1.1184vw, 2.375rem);
+    margin-bottom: 25px;
+
+    @media (min-width: $desktop) {
+      margin-bottom: 61px;
+    }
   }
   // .delivery-content__text
   &__text {
-    margin: 0;
-    margin-bottom: 30px;
+    margin: 0 auto;
     font-family: $first-font;
     font-weight: 500;
-    font-size: 19px;
+    font-size: clamp(0.625rem, 0.477rem + 0.5921vw, 1.1875rem);
+    margin-bottom: 16px;
+    max-width: clamp(22.5rem, 17.7303rem + 19.0789vw, 40.625rem);
+
+    @media (min-width: $desktop) {
+      margin-bottom: 30px;
+    }
   }
 
   // .delivery-content__address
   &__address {
-    margin: 45px 0 25px;
+    margin: 30px 0 16px;
     font-family: $first-font;
     font-weight: 500;
-    font-size: 17px;
+    font-size: clamp(0.5625rem, 0.4309rem + 0.5263vw, 1.0625rem);
     font-style: normal;
+
+    @media (min-width: $desktop) {
+      margin: 45px 0 25px;
+    }
   }
 
   // .delivery-content__time
   &__time {
     margin: 0;
+    font-size: clamp(0.5625rem, 0.4309rem + 0.5263vw, 1.0625rem);
   }
 
   // .delivery-content p+p
@@ -61,11 +91,19 @@
 }
 
 .map-container {
+  background-image: url("../images/content/map@1x.webp");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  min-height: clamp(24.375rem, 19.6546rem + 18.8816vw, 42.3125rem);
   height: 100%;
-  margin-right: -3px;
-  img {
-    vertical-align: middle;
-    height: 100%;
-    width: 100%;
+  display: block;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../images/content/mobile-map@2x.webp");
+  }
+
+  @media (min-width: $desktop) {
+    min-height: 677px;
   }
 }
