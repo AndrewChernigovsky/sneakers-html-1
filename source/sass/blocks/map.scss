@@ -30,13 +30,13 @@
   color: #ffffff;
   // padding: 50px 64px 40px;
   padding-top: clamp(3.125rem, 1.4474rem + 6.7105vw, 9.5rem);
-  padding-right: clamp(4rem, 3.1776rem + 3.2895vw, 7.125rem);
+  padding-right: clamp(2.1875rem, 0.8882rem + 5.1974vw, 7.125rem);
   padding-bottom: clamp(2.5rem, 0.7401rem + 7.0395vw, 9.1875rem);
-  padding-left: clamp(4rem, 3.1283rem + 3.4868vw, 7.3125rem);
+  padding-left: clamp(2.1875rem, 0.8882rem + 5.1974vw, 7.125rem);
   text-align: center;
   @media (min-width: $desktop) {
     text-align: left;
-    // padding: 152px 114px 119px 147px;
+    padding: 152px 114px 119px 147px;
   }
 
   // .delivery-content__title
@@ -54,7 +54,7 @@
     font-weight: 500;
     font-size: clamp(0.625rem, 0.477rem + 0.5921vw, 1.1875rem);
     margin-bottom: clamp(1rem, 0.7697rem + 0.9211vw, 1.875rem);
-    max-width: clamp(22.5rem, 17.7303rem + 19.0789vw, 40.625rem);
+    max-width: clamp(20.625rem, 15.3618rem + 21.0526vw, 40.625rem);
   }
 
   // .delivery-content__address
