@@ -7,11 +7,12 @@ block mixins
 	include ./../commons/_mixins.pug
 
 block head
+	link(href="./../css/style.min.css", rel="stylesheet")
 	title= titlePage.catalog
 block header
 	include ./../layout/header.pug
 	include ./../sections/mobile-navigation-catalog.pug
-block content 
+block content
 	main.main
 		include ./../sections/catalog-head.pug
 		include ./../sections/filters.pug

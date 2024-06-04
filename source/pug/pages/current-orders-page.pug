@@ -4,13 +4,12 @@ block mixins
 	include ./../commons/_mixins.pug
 
 block head
-
+	link(href="./../css/style.min.css", rel="stylesheet")
 block header
 	include ./../layout/header.pug
 block content
 	main.main
 		include ./../sections/current-order.pug
-
 block footer
 	include ./../layout/footer.pug
 block scripts
