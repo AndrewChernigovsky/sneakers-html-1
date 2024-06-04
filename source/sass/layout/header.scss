@@ -1,1 +1,70 @@
 @import './../common/variables.scss';
+.header {
+  &__wrapper {
+    display: grid;
+    align-items: center;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: 102px;
+    
+  }
+
+  &__button-toggle {
+    padding: 0;
+    display: block;
+    width: 26px;
+    height: 22px;
+    cursor: pointer;
+    border: none;
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+    position: relative;
+    background-color: transparent;
+    margin-left: 28px;
+  
+    &--closed::before, &--closed::after {
+      content: "";
+      position: absolute;
+      width: 26px;
+      height: 2px;
+      left: 0;
+      background-color: #fff;
+    }
+
+    &--closed::before {
+      top: 0;
+    }
+
+    &--closed::after {
+      top: 16px;
+    }
+
+    &--closed {
+      &::before {
+        box-shadow: 
+          0 8px 0 0 #fff, 
+          0 16px 0 0 #fff;
+      }
+    }
+  }
+
+  &__logo-link {
+    width: 137px;
+    height: 17px;
+    grid-column: 2 / 5;
+    grid-row: 1 / 2;
+  }
+  
+  &__button-enter {
+    width: 42px;
+    height: 42px;
+    background-color: $button-background-color-base;
+    border-radius: 50px;
+    background-image: url("./../../images/icons/stack.svg#decors_question-icon");
+    background-repeat: no-repeat;
+    background-size: 11px 16px;
+    background-position: center center;
+    grid-column: 5 / 6;
+    grid-row: 1 / 2;
+    margin-right: 28px;
+  }
+}
