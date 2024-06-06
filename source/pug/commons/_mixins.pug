@@ -11,18 +11,29 @@ mixin menu(items, ulClass, liClass, aClass, currentPageID)
 					a(class=aClass, href=item.url)= item.title
 
 
+mixin menuIcon(items, ulClass, liClass, svgClass, aClass, currentPageID)
+	ul(class=ulClass)
+		each item in items
+			li(class=liClass)
+				svg(class=svgClass)
+					use(xlink:href=item.icon)
+				if item.key === currentPageID
+					a(class=aClass)= item.title
+				else
+					a(class=aClass, href=item.url)= item.title
+
 //- Миксин для мобильного меню Главная страница
-mixin menuMobileCategories(categories)
-	ul(class='mobile-navigation-main__list')
+mixin menuMobileCategories(categories, currentPageID)
+	ul(class='header__mobile-list')
 		each category in categories
-			li(class='mobile-navigation-main__item')
-				h3(class='mobile-navigation-main__title')= Object.keys(category)[0]
-					+menuMobileSubCategories(category[Object.keys(category)[0]])
+			li(class='header__mobile-item')
+				h3(class='header__mobile-title')= Object.keys(category)[0]
+				+menuMobileSubCategories(category[Object.keys(category)[0]])
 mixin menuMobileSubCategories(subcategories)
-	ul(class='mobile-navigation-main__sublist')
+	ul(class='header__mobile-sublist')
 		each subcategory in subcategories
-			li(class='mobile-navigation-main__subitem')
-				a(href=subcategory.url)= subcategory.name
+			li(class='header__mobile-subitem')
+				a(class='header__mobile-subitem-link', href=subcategory.url)= subcategory.name
 
 //- Миксин для мобильного меню страница Каталог
 mixin menuMobile(items, ulClass, liClass, aClass)

@@ -1,7 +1,7 @@
 header.header
 	.container
 		.header__wrapper
-			+button('', 'header__button-toggle header__button-toggle--closed', 'button')
+			+button('', 'header__button-toggle header__button-toggle--closed header__button-toggle--open', 'button')
 				span.visually-hidden Открыть меню
 				
 			if isIndexPage
@@ -16,16 +16,31 @@ header.header
 			+button('', 'header__button-enter', 'button')
 				span.visually-hidden Войти
 			
-			nav.header-navigation.navigation
+			ul.header__mobile-nav-list
+				li.header__mobile-nav-item.header__mobile-nav-item--home
+					a.header__mobile-nav-link(href='./../index.html') Главная
+				li.header__mobile-nav-item.header__mobile-nav-item--favorite
+					a.header__mobile-nav-link(href='./../index.html') Избранное
+				li.header__mobile-nav-item.header__mobile-nav-item--catalog
+					a.header__mobile-nav-link(href='./../index.html') Каталог
+				li.header__mobile-nav-item.header__mobile-nav-item--basket
+					a.header__mobile-nav-link(href='./../index.html') Корзина
+				li.header__mobile-nav-item.header__mobile-nav-item--profile
+					a.header__mobile-nav-link(href='./../index.html') Профиль
+			p.header__mobile-links Разделы
+			a.header__mobile-faq(href='./../index.html') Перейти к Faq
+
+			+menuMobileCategories(mobileMenuMain, currentPageID)
+
+			nav.header__desktop-nav
 				+menu(navHeader, 'navigation__list', 'navigation__item', '', currentPageID)
 				
-
 				if isIndexPage
 					ul.navigation-icons__list.navigation-icons__main
 						li.navigation-icons__item
-							+inlineSvg('navigation-icons__notice', '20', '20', 'svg-bell', 'none', 'red')
+							+inlineSvg('navigation-icons__notice', '20', '20', 'decors_notification-icon', 'none', 'red')
 						li
-							+inlineSvg('navigation-icons__search', '22', '22', 'svg-search', 'none', 'green')
+							+inlineSvg('navigation-icons__search', '22', '22', 'decors_search-icon', 'none', 'green')
 				else if isCatalogPage
 					ul.navigation-icons__list.navigation-icons__catalog
 						li
