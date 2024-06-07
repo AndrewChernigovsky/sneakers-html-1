@@ -9,14 +9,24 @@
   font-size: clamp(0.7rem, calc(0.34rem + 0.8vw), 1.06rem);
   font-weight: 500;
   line-height: 10px;
-  background-image: url("../../images/icons/decors/arrow.svg");
-  background-repeat: no-repeat;
-  background-position: 92% 56%;
-  background-size: 5px 8px;
 }
 
 .base-link--black {
   background-position: 93% 56%;
+}
+
+.base-link:after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 5px;
+  height: 8px;
+  background-image: url(../../images/icons/decors/arrow.svg);
+  background-repeat: no-repeat;
+  background-size: 5px 8px;
+  /* background-position: 100px 11px; */
+  margin-top: -8px;
+  margin-left: 124px;
 }
 
 .base-link--black:after {
