@@ -5,13 +5,13 @@ block mixins
 
 block head
 	title= titlePage.editing_orders_list
+	link(href="./../css/style.min.css", rel="stylesheet")
 block header
 	include ./../layout/header.pug
 block content
 	main.main
 		include ./../sections/editing-orders.pug
-
 block footer
 	include ./../layout/footer.pug
 block scripts
-	script(type="module", src="js/script.min.js")
+	script(type="module", src="./../js/script.min.js")

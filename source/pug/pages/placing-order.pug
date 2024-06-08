@@ -5,12 +5,12 @@ block mixins
 
 block head
 	title= titlePage.placing_order
+	link(href="./../css/style.min.css", rel="stylesheet")
 block header
 	include ./../layout/header.pug
 block content
 	main.main
 		include ./../sections/placing-orders.pug
-
 block footer
 	include ./../layout/footer.pug
 block scripts

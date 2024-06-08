@@ -4,15 +4,14 @@ block mixins
 	include ./../commons/_mixins.pug
 
 block head
-	title= titlePage.cart
-	link(href="./../css/style.min.css", rel="stylesheet")
 
 block header
 	include ./../layout/header.pug
 block content
 	main.main
-		include ./../sections/cart-goods.pug
+		include ./../sections/order-details.pug
+
 block footer
 	include ./../layout/footer.pug
 block scripts
-	script(type="module", src="./../js/script.min.js")
+	script(type="module", src="js/script.min.js")

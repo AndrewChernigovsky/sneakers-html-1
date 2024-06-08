@@ -8,13 +8,14 @@ block mixins
 	include ./commons/_mixins.pug
 
 block head
+	link(href="./css/style.min.css", rel="stylesheet")
 	title= titlePage.index
 block header
 	include ./layout/header.pug
-	
+
 	include ./sections/registration-modal.pug
 block content
-	main.main
+	main.main-container
 		include ./sections/intro.pug
 		include ./sections/slider.pug
 		include ./sections/about.pug

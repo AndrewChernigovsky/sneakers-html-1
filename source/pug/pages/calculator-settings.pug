@@ -4,6 +4,7 @@ block mixins
 	include ./../commons/_mixins.pug
 
 block head
+	link(href="./../css/style.min.css", rel="stylesheet")
 	title= titlePage.calc_settings
 block header
 	include ./../layout/header.pug
@@ -14,4 +15,4 @@ block content
 block footer
 	include ./../layout/footer.pug
 block scripts
-	script(type="module", src="js/script.min.js")
+	script(type="module", src="./../js/script.min.js")
