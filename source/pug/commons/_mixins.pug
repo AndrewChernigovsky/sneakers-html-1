@@ -53,7 +53,15 @@ mixin list(items, ulClass, liClass)
 	ul(class=ulClass)
 		each item in items
 			li(class=liClass)= item
+
 //-Use +list(['Пункт 1', 'Пункт 2', 'Пункт 3'], 'my-ul-class', 'my-li-class')
+
+mixin socialList(items)
+	ul(class='social')
+		each item in items
+			li(class='social__item')
+				a(class='social__link', href=item.href)
+					span(class='visually-hidden')= item.text
 
 //- Mиксин для категории и подкатегорий каталога
 mixin categoryList (categories)

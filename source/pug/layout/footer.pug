@@ -7,7 +7,8 @@ footer.footer
 			+menuFooterCategories(menuFooter)
 		.footer__wrapper-info
 			.footer__social-wrapper
-				+list(socialLinks, 'footer__social-list', 'footer__social-item')
+				+socialList(socialLinks)
+
 			.footer__copyright
 				+link('footer__copyright-link', 'Пользовательское соглашение', '#')
 				p.footer__copyright-text: <small>© 2022-2023 “Астраханская область”</small>
