@@ -1,9 +1,9 @@
 // Глобальные данные
+@import "./common/variables.scss";
 @import "./common/mixins.scss";
 @import "./common/fonts.scss";
 @import "./common/global.scss";
 @import "./common/links.scss";
-@import "./common/variables.scss";
 @import "./common/color-variables.scss";
 // Шаблоны
 @import "./layout/header.scss";
@@ -12,5 +12,3 @@
 // Блоки
 @import "./blocks/map.scss";
 @import "./blocks/intro.scss";
-
-
