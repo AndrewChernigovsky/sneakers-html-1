@@ -1,7 +1,34 @@
+//- section.slider
+//- 	h2.slider__title Что кладется в заказ?
+//- 	p.slider__description Мы решили как-то выделить наших клиентов на фоне остальных
+//- 	.slider__box
+//- 		h3.slider__box-title Как мы упаковываем посылки?
+//- 		p.slider__box-description Каждый товар покупаемый через нас кладется сертификат и стикер свидетельствующий о приобретении позиции именно через наш сервис. Для чего мы это делаем? В первую очередь данный печатный носитель сможет вам помочь подтвердить подлинность вещи.
+//- 		+img('slider__box-img', './../images/content/slider-sertificate', 'Image', 634, 'auto', 'png')
+
+
 section.slider
-  h2.slider__title Что кладется в заказ?
-  p.slider__description Мы решили как-то выделить наших клиентов на фоне остальных
-  .slider__box
-    h3.slider__box-title Как мы упаковываем посылки?
-    p.slider__box-description Каждый товар покупаемый через нас кладется сертификат и стикер свидетельствующий о приобретении позиции именно через наш сервис. Для чего мы это делаем? В первую очередь данный печатный носитель сможет вам помочь подтвердить подлинность вещи.
-    +img('slider__box-img', './../images/content/slider-sertificate', 'Image', 634, 'auto', 'png') 
+	.slider__wrapper
+		.slider__slides
+			.slider__slide.slider__prev-slide(data-slide="1")
+				h2 Что кладется в заказ?
+				p Мы решили как-то выделить наших клиентов на фоне остальных
+			.slider__slide.slider__current-slide(data-slide="2")
+				h2 Что кладется в заказ?
+				p Мы решили как-то выделить наших клиентов на фоне остальных
+			.slider__slide.slider__next-slide(data-slide="3")
+				h2 Что кладется в заказ?
+				p Мы решили как-то выделить наших клиентов на фоне остальных
+		.slider__pagination
+			ol.slider__pagination-list
+				li.slider__pagination-item
+					a(href="") 1
+				li.slider__pagination-item
+					a(href="") 2
+				li.slider__pagination-item
+					a(href="") 3
+		.slider__buttons
+			button.slider__button-prev(type="button")
+			button.slider__button-next(type="button")
+		.slider__scroll
+
