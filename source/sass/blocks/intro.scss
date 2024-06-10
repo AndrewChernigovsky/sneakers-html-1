@@ -14,6 +14,7 @@
   font-weight: 500;
   line-height: 10px;
 
+
   &::after {
     content: '';
     width: 5px;
@@ -31,6 +32,7 @@
       right: 48px;
     }
   }
+
 
   @media screen and (min-width: $tablet) {
     padding: 0 54px 0 25px;
