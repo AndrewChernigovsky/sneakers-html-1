@@ -53,9 +53,10 @@
 }
 
 .intro {
-  background-image: linear-gradient(0, 0, 0.85), url('../../images/decors/people-background@1x.webp');
-  background-size: 100% 100%;
-  background-position: 1050px;
+  background: linear-gradient(rgba(0, 0, 0, 0.85)), url('../../images/decors/people-background@1x.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
   background-color: rgb(42, 42, 42);
   min-width: 100%;
   min-height: 570px;
@@ -67,13 +68,11 @@
   margin: 0 auto;
 
   @media screen and (min-width: $tablet) {
-    background-position: 1500px -45px;
     min-width: 100%;
     min-height: 650px;
   }
 
   @media screen and (min-width: $desktop) {
-    background-position: 100px 0;
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
