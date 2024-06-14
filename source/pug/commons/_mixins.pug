@@ -61,10 +61,10 @@ mixin categoryList (categories)
 		each category in categories
 			li(class='category__item')
 				h3(class='category__title')= Object.keys(category)[0]
-					ul(class='sub-category__list')
-						each subcategory in category[Object.keys(category)[0]]
-							li(class='sub-category__list')
-								a(class='sub-category__link', href=subcategory.url)= subcategory.name
+				ul(class='sub-category__list')
+					each subcategory in category[Object.keys(category)[0]]
+						li(class='sub-category__item')
+							a(class='sub-category__link', href=subcategory.url)= subcategory.name
 mixin menuFooterSubCategories(subcategories)
 	ul(class='menu-footer__sub-list')
 		each subcategory in subcategories
