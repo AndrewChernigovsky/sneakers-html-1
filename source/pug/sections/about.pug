@@ -4,12 +4,7 @@ section.about
 		p.about__subtitle Сейчас мы все объясним
 	.about__container
 		a.about__link(href="#")
-			picture
-				source(srcset="../../images/content/video-preview-image@2x.png", type="image/png", width="777", height="459", media="(min-width:1440px)")
-				source(srcset="../../images/content/video-preview-image@2x.png", type="image/png", width="400", height="240", media="(min-width: 768px)")
-				source(srcset="../../images/content/mobile-video-preview-image@2x.png", type="image/png", width="336", height="199", media="(max-width:768px)")
-				img(src='../../images/content/video-preview-image@2x.png', width="777", height="459", alt='Превью видео про магазин Poizon')
-			//- +img('about__image', 'images/decors/main-about-poizon@1x.png', 'Лучший сервис для заказа с POIZON', 336, 198, 'png')
+			+img('about__image', '../../images/content/mobile-video-preview-image', 'Лучший сервис для заказа с POIZON', 336, 198, 'png')
 		.about__description
 			p.about__text В данном видеоролике мы подробно рассказываем о таких маркетплейсах, как Poizon, 95, Alibaba.
 			p.about__text Какой путь проходят вещи перед тем как попасть в руки наших клиентов?
