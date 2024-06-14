@@ -1,6 +1,4 @@
-@import './variables.scss';
-
-
+@import "./variables.scss";
 
 *,
 *::after,
@@ -31,6 +29,7 @@ img {
 
 .container {
   max-width: 1310px;
+  padding: 0 9px;
   margin: 0 auto;
 }
 

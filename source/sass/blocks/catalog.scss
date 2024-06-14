@@ -1,0 +1,186 @@
+.main {
+  background-color: $light-gray3;
+  color: $black;
+  padding: 25px 0 34px;
+}
+.catalog-head {
+  input[type="text"] {
+    display: none;
+  }
+
+  label {
+    display: none;
+  }
+}
+
+.catalog-title {
+  font-family: $second-font;
+  font-weight: 600;
+  text-align: center;
+  border-radius: 13px;
+  margin: 0 0 11px;
+  padding: 28px 20px;
+  background-color: $white-azure;
+  font-size: 23px;
+  line-height: 1.33;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.16);
+}
+
+.category {
+  // .category__list
+  &__list {
+  }
+  // .category__item
+  &__item {
+  }
+
+  &__item:not(:last-child) {
+    margin-bottom: 17px;
+  }
+  // .category__title
+  &__title {
+    font-family: $first-font;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 1.43;
+    margin: 0;
+    padding: 11px 10px 12px;
+    background-color: $white-azure;
+    border-bottom: 0.98px solid rgba(175, 175, 175, 0.5);
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.16);
+  }
+}
+.sub-category {
+  // .sub-category__list
+  &__list {
+  }
+
+  // .sub-category__item
+  &__item {
+    padding: 11px 10px 12px;
+    background-color: $white-azure;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.16);
+  }
+
+  &__item:not(:last-child) {
+    border-bottom: 0.98px solid rgba(175, 175, 175, 0.5);
+  }
+  // .sub-category__link
+  &__link {
+    color: $black;
+    font-family: $first-font;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 1.43;
+  }
+}
+.user-favorites {
+  display: none;
+}
+.user-link {
+  display: none;
+}
+.filters {
+  background-color: $white-azure;
+}
+
+.filters-title {
+}
+.filters-subtitle {
+}
+.filters-button {
+}
+.form {
+}
+.form-price {
+  // .form-price__title
+  &__title {
+  }
+}
+.price-checkbox {
+  // .price-checkbox__list
+  &__list {
+  }
+  // .price-checkbox__item
+  &__item {
+  }
+  // .price-checkbox__label
+  &__label {
+  }
+  // .price-checkbox__input
+  &__input {
+  }
+}
+.checkbox {
+  // .checkbox__count
+  &__count {
+  }
+}
+.form-brand {
+  // .form-brand__title
+  &__title {
+  }
+}
+.firm-checkbox {
+  // .firm-checkbox__list
+  &__list {
+  }
+  // .firm-checkbox__item
+  &__item {
+  }
+  // .firm-checkbox__label
+  &__label {
+  }
+  // .firm-checkbox__input
+  &__input {
+  }
+}
+.form-size {
+  // .form-size__title
+  &__title {
+  }
+}
+// карточки товаров
+.product-list {
+  // .product-list__item
+  &__item {
+    background-color: $white-azure;
+  }
+  // .product-list__img
+  &__img {
+  }
+  // .product-list__title
+  &__title {
+  }
+  // .product-list__status
+  &__status {
+  }
+}
+.current-price {
+}
+.old-price {
+}
+.card {
+}
+.slider {
+}
+.slider-image {
+}
+.card-button {
+}
+.card-title {
+}
+.favorites {
+}
+.card-link {
+}
+.size-range {
+}
+.button-list {
+}
+.button {
+}
+.card-subtitle {
+}
+.card-discription {
+}
