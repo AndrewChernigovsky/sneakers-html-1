@@ -8,7 +8,153 @@
 }
 .main-header {
   background-color: $base_color;
-  padding-top: 30px;
+  padding: 30px 28px 30px 28px;
+
+  &__navigation {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-items: center;
+  }
+
+  &__logo-link {
+    grid-column: 2/4;
+    padding-top: 12px;
+  }
+
+  &__user-link {
+    justify-self: end;
+  }
+
+  &__burger-button {
+    background-color: $base_color;
+    background-image: url("../../images/icons/decors/burger-icon.svg");
+    border: none;
+    width: 26px;
+    height: 22px;
+    margin-top: 10px;
+    justify-self: start;
+  }
+
+  &__fast-access-list {
+    width: 100%;
+    list-style-type: none;
+    padding: 30px 0 0 0;
+    grid-row: 2 / 4;
+    grid-column: 1 / 5;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    justify-items: center;
+    gap: 26px;
+  }
+
+
+  &__fast-access-link {
+    text-decoration: none;
+    color: $white;
+    text-align: center;
+    font-family: "PT Sans";
+    font-size: 12.308px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 16px;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    gap: 6px;
+
+    &::after {
+      background-repeat: no-repeat;
+      content: "";
+      width: 20px;
+      height: 20px;
+    }
+  }
+
+  &__burger-menu-container {
+    width: 100%;
+    grid-column: 1/5;
+    justify-self: start;
+    padding: 42px 0 0 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+  }
+
+  &__burger-menu-title {
+    position: relative;
+    color: $white;
+    font-family: Montserrat;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 200;
+    line-height: normal;
+    padding-left: 15px;
+
+    &::after {
+      position: absolute;
+      content: "";
+      top: 6px;
+      left: -3px;
+      width: 9px;
+      height: 17px;
+      background-image: url("../../images/icons/decors/arrow-left.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+  }
+
+  &__faq-link {
+    color: $green;
+    justify-self: end ;
+  }
+
+  &__burger-menu-list {
+    grid-column: 1/3;
+    padding-top: 65px;
+    list-style-type: none;
+  }
+
+  &__burger-menu-subtitle {
+    position: relative;
+    color: $white;
+    font-family: Montserrat;
+    font-size: 23px;
+    font-style: normal;
+    font-weight: 200;
+    line-height: normal;
+    margin-bottom: 25px;
+  }
+
+  &__burger-menu-sublist {
+    list-style-type: none;
+  }
+
+  &__burger-menu-subitem{
+    background: rgba(244, 253, 255, 0.05);
+    height: 43px;
+    box-shadow: 0px 0.979px 1.959px 0px rgba(0, 0, 0, 0.16);
+    margin-bottom: 4px;
+    display: flex;
+    align-items: center;
+    padding-left: 2vw;
+    background-image: url("../../images/icons/decors/arrow.svg");
+    background-repeat: no-repeat;
+    background-position: right 25px center;
+    }
+
+  &__burger-menu-sublink {
+    text-decoration: none;
+    color: $white;
+    font-family: "SF Pro Display";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 22px;
+  }
+
+  &__burger-menu-item {
+    margin-bottom: 25px;
+  }
 }
 
 .main-header__user-profile-container,
@@ -19,63 +165,7 @@
   display: none;
 }
 
-.main-header__navigation {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  justify-items: center;
-}
 
-.main-header__logo-link {
-  grid-column: 2/4;
-  padding-top: 12px;
-}
-
-.main-header__user-link {
-  padding-left: 20px;
-}
-
-.main-header__burger-button {
-  background-color: $base_color;
-  background-image: url("../../images/icons/decors/burger-icon.svg");
-  border: none;
-  width: 26px;
-  height: 22px;
-  margin-top: 10px;
-}
-
-.main-header__fast-access-list {
-  width: 100%;
-  list-style-type: none;
-  padding: 55px 20px 0 20px;
-  grid-row: 2 / 4;
-  grid-column: 1 / 5;
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  justify-items: center;
-  gap: 30px;
-}
-
-.main-header__fast-access-link {
-  position: relative;
-  text-decoration: none;
-  color: $white;
-  text-align: center;
-  font-family: "PT Sans";
-  font-size: 12.308px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 16px;
-}
-
-.main-header__fast-access-link::after {
-  background-repeat: no-repeat;
-  position: absolute;
-  content: "";
-  width: 20px;
-  height: 20px;
-  top: -25px;
-  left: 31%;
-}
 
 .main-header__fast-access-link--main::after {
   background-image: url(../../images/icons/decors/home-icon.svg);
@@ -96,95 +186,4 @@
 
 .main-header__fast-access-link--profile::after {
   background-image: url(../../images/icons/decors/profile-icon.svg);
-}
-
-.main-header__burger-menu-container {
-  width: 100%;
-  grid-column: 1/5;
-  justify-self: start;
-  padding-left: 28px;
-  padding-right: 28px;
-  padding-top: 42px;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  align-items: center;
-}
-
-.main-header__burger-menu-title {
-  position: relative;
-  color: $white;
-  font-family: Montserrat;
-  font-size: 22px;
-  font-style: normal;
-  font-weight: 200;
-  line-height: normal;
-  padding-left: 15px;
-}
-
-.main-header__burger-menu-title::after {
-  position: absolute;
-  content: "";
-  top: 6px;
-  left: -3px;
-  width: 9px;
-  height: 17px;
-  background-image: url("../../images/icons/decors/arrow-left.svg");
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
-.main-header__faq-link {
-  color: $green;
-  justify-self: end ;
-}
-
-.main-header__burger-menu-list {
-  grid-column: 1/3;
-  padding-top: 65px;
-  list-style-type: none;
-}
-
-.main-header__burger-menu-subtitle {
-  position: relative;
-  color: $white;
-  font-family: Montserrat;
-  font-size: 23px;
-  font-style: normal;
-  font-weight: 200;
-  line-height: normal;
-  padding-left: 15px;
-  margin-bottom: 25px;
-}
-
-.main-header__burger-menu-sublist {
-  list-style-type: none;
-  padding-left: 15px;
-}
-
-.main-header__burger-menu-subitem{
-  background: rgba(244, 253, 255, 0.05);
-  height: 43px;
-  box-shadow: 0px 0.979px 1.959px 0px rgba(0, 0, 0, 0.16);
-  margin-bottom: 4px;
-  display: flex;
-  align-items: center;
-  padding-left: 2vw;
-  background-image: url("../../images/icons/decors/arrow.svg");
-  background-repeat: no-repeat;
-  background-position-y: center;
-  background-position-x: 76vw;
-}
-
-.main-header__burger-menu-sublink {
-  text-decoration: none;
-  color: $white;
-  font-family: "SF Pro Display";
-  font-size: 14px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 22px;
-}
-
-.main-header__burger-menu-item {
-  margin-bottom: 25px;
 }
