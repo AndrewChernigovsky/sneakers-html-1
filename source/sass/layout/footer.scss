@@ -3,7 +3,7 @@
 .footer__container {
   padding: 45px 36px;
 
-  @media (width >= 1440px) {
+  @media (min-width: 1440px) {
     padding: 77px 0;
   }
 }
@@ -12,7 +12,7 @@
   display: grid;
   margin-bottom: 23px;
 
-  @media (width >= 768px) {
+  @media (min-width: 768px) {
     display: flex;
     justify-content: space-between;
   }
@@ -56,11 +56,11 @@
   font-size: 5px;
   text-align: left;
 
-  @media (width >= 768px) {
+  @media (min-width: 768px) {
     font-size: 12px;
   }
 
-    @media (width >= 1440px) {
+    @media (min-width: 1440px) {
       font-size: 16px;
     }
 }
