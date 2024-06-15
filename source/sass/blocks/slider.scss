@@ -4,12 +4,12 @@
   background-size: cover;
 
   &__wrapper {
-    width: 640px;
+    width: 800px;
     overflow: hidden;
   }
 
   &__slides {
-    min-width: 320px;
+    min-width: 400px;
     display: flex;
   }
 
