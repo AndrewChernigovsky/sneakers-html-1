@@ -1,18 +1,14 @@
 .slider {
-  background-color: $background-color-decorate;
+  background-image: url('./../../images/decors/mobile-slider-background@2x.png');
 
   .slider__title {
-    margin: 0 10px;
-    padding: 0;
+    margin: 0 0 4px 0;
+    padding: 40px 0 0 0;
     font-size: 20px;
     line-height: 37px;
     font-weight: 700;
     text-align: center;
-    padding-top: 40px;
-    margin-bottom: 4px;
     text-transform: uppercase;
-    border: 1px solid red;
-    box-sizing: border-box;
   }
   
   .slider__description {
@@ -24,9 +20,11 @@
 }
 
 .slider__box {
-  margin: 0 41px;
-  border: 2px solid red;
-  
+  width: 260px;
+  margin: 0 auto;
+  padding: 25px 24px 12px;
+  background-color: rgba($black, 0.7);
+  border-radius: 14px;
 
   .slider__box-title {
     margin: 0;
@@ -34,6 +32,7 @@
     line-height: 14px;
     font-weight: 700;
     text-transform: uppercase;
+    margin-bottom: 8px;
   }
 
   .slider__box-description {
@@ -46,6 +45,5 @@
   .slider__box-img {
     width: 323px;
     height: 355px;
-    background-color: $gray-neutral;
   }
 }
