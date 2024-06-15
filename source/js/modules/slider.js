@@ -5,10 +5,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Функция для переключения слайдов
   const changeSlide = () => {
-    slides[currentSlide].classList.remove('slider__active');
-    
+    slides[currentSlide].classList.remove('slider__active');   //удаляет класс
     currentSlide = (currentSlide + 1) % slides.length; // Рассчитать следующий слайд
-    
     slides[currentSlide].classList.add('slider__active'); // Добавить класс 'slider__active' следующему слайду
   };
 

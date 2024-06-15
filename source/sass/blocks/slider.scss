@@ -14,7 +14,6 @@
   }
 
   &__slide {
-    transition: transform 0.3s ease;
     display: none;
   }
 
@@ -82,7 +81,7 @@
   }
 
   .slider__slides {
-    min-width: 700px;
+    min-width: 768px;
   }
 
   .slider__slide {
