@@ -57,9 +57,21 @@
 
   // .sub-category__item
   &__item {
-    padding: 11px 10px 12px;
+    position: relative;
     background-color: $white-azure;
     box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.16);
+
+    &::after {
+      content: "";
+      position: absolute;
+      mask-image: url("../images/icons/stack.svg#decors_arrow");
+      background-color: $black;
+      width: 7px;
+      height: 13px;
+      top: 50%;
+      transform: translateY(-50%);
+      right: 20px;
+    }
   }
 
   &__item:not(:last-child) {
@@ -67,11 +79,13 @@
   }
   // .sub-category__link
   &__link {
+    display: block;
     color: $black;
     font-family: $first-font;
     font-size: 15px;
     font-weight: 400;
     line-height: 1.43;
+    padding: 11px 10px 12px;
   }
 }
 .user-favorites {
