@@ -4,11 +4,11 @@
   grid-template-columns: repeat(4, 1fr);
   gap: 15px;
 
-  @media (min-width: 768px) {
+  @media (min-width: $tablet) {
     font-size: 8px;
   }
 
-    @media (min-width: 1440px) {
+    @media (min-width: $desktop) {
       font-size: 18px;
     }
 }
@@ -20,11 +20,11 @@
 .menu-footer__sub-list {
   margin-top: 9px;
 
-  @media (min-width: 768px) {
+  @media (min-width: $tablet) {
     margin-top: 16px;
   }
 
-    @media (min-width: 1440px) {
+    @media (min-width: $desktop) {
       margin-top: 24px;
     }
 }
@@ -33,11 +33,11 @@
   white-space: nowrap;
   margin-bottom: 4px;
 
-  @media (min-width: 768px) {
+  @media (min-width: $tablet) {
     margin-bottom: 8px;
   }
 
-    @media (min-width: 1440px) {
+    @media (min-width: $desktop) {
       margin-bottom: 10px;
     }
 }

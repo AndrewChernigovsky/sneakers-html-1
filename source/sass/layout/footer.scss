@@ -3,7 +3,7 @@
 .footer__container {
   padding: 45px 36px;
 
-  @media (min-width: 1440px) {
+  @media (min-width: $desktop) {
     padding: 77px 0;
   }
 }
@@ -12,7 +12,7 @@
   display: grid;
   margin-bottom: 23px;
 
-  @media (min-width: 768px) {
+  @media (min-width: $tablet) {
     display: flex;
     justify-content: space-between;
   }
@@ -25,7 +25,7 @@
 }
 
 .footer__callback-wrapper {
-  @media (width <= 767px) {
+  @media (max-width: $mobile-width-only) {
     display: none;
   }
 }
@@ -56,11 +56,11 @@
   font-size: 5px;
   text-align: left;
 
-  @media (min-width: 768px) {
+  @media (min-width: $tablet) {
     font-size: 12px;
   }
 
-    @media (min-width: 1440px) {
+    @media (min-width: $desktop) {
       font-size: 16px;
     }
 }
