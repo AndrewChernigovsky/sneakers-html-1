@@ -2,13 +2,17 @@
 
 .footer__container {
   padding: 45px 36px;
+
+  @media (width >= 1440px) {
+    padding: 77px 0;
+  }
 }
 
 .footer__wrapper {
   display: grid;
   margin-bottom: 23px;
 
-  @media (width >= 700px) {
+  @media (width >= 768px) {
     display: flex;
     justify-content: space-between;
   }
@@ -16,11 +20,12 @@
 
 .footer__wrapper-info {
   display: flex;
+  align-items: center;
   justify-content: space-between;
 }
 
 .footer__callback-wrapper {
-  @media (width <= 699px) {
+  @media (width <= 767px) {
     display: none;
   }
 }
