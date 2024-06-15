@@ -3,3 +3,5 @@ import "./modules/calculator.js";
 import { onWindowLoad } from "./modules/auth/auth";
 
 window.addEventListener('DOMContentLoaded', onWindowLoad);
+
+//import "./modules/slider.js";
