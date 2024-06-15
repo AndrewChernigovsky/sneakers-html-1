@@ -4,4 +4,4 @@ import { onWindowLoad } from "./modules/auth/auth";
 
 window.addEventListener('DOMContentLoaded', onWindowLoad);
 
-//import "./modules/slider.js";
+import "./modules/slider.js";
