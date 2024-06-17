@@ -5,7 +5,7 @@ mixin menu(items, ulClass, liClass, aClass, currentPageID)
 		each item in items
 			if item.key === currentPageID
 				li(class=liClass)
-					a(class=aClass)= item.title
+					a(class=`${aClass} ${aClass}--current`, href='#')= item.title
 			else
 				li(class=liClass)
 					a(class=aClass, href=item.url)= item.title

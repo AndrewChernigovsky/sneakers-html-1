@@ -1,5 +1,6 @@
 import "./modules/calculator.js";
 import { DATA } from "./data/data.js";
 import { onWindowLoad } from "./modules/auth/auth";
+import { burgerMenuToggle } from "./modules/burger-menu.js"
 
-window.addEventListener('DOMContentLoaded', onWindowLoad, console.log(DATA, 'data'));
+window.addEventListener('DOMContentLoaded', onWindowLoad, burgerMenuToggle(), console.log(DATA, 'data'));
