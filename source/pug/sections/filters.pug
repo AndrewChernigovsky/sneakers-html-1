@@ -1,9 +1,9 @@
 section.filters
 	.container
 		h2.filters-title Фильтры
-		h3.filters-subtitle Настройте параметры для более точного поиска
 		+button('Сбросить всё', 'filters-button', 'reset')#buttonReset
 		form.form(action="#" method="post")
+			h3.form__title Настройте параметры для более точного поиска
 			+checkbox('form-input', 'checked', 'availability', 'В наличии на складе')
 			+checkbox('form-input', 'checked', 'order', 'Под заказ с Poizon')
 			fieldset.form-price

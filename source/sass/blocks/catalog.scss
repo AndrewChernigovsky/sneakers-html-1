@@ -1,0 +1,96 @@
+.main {
+  background-color: $light-gray3;
+  color: $black;
+  padding: 25px 0 34px;
+}
+.catalog-head {
+  input[type="text"] {
+    display: none;
+  }
+
+  label {
+    display: none;
+  }
+}
+
+.catalog-title {
+  font-family: $second-font;
+  font-weight: 600;
+  text-align: center;
+  border-radius: 13px;
+  margin: 0 0 11px;
+  padding: 28px 20px;
+  background-color: $white-azure;
+  font-size: 23px;
+  line-height: 1.33;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.16);
+}
+
+.category {
+  // .category__list
+  &__list {
+  }
+  // .category__item
+  &__item {
+  }
+
+  &__item:not(:last-child) {
+    margin-bottom: 17px;
+  }
+  // .category__title
+  &__title {
+    font-family: $first-font;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 1.43;
+    margin: 0;
+    padding: 11px 10px 12px;
+    background-color: $white-azure;
+    border-bottom: 0.98px solid rgba(175, 175, 175, 0.5);
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.16);
+  }
+}
+.sub-category {
+  // .sub-category__list
+  &__list {
+  }
+
+  // .sub-category__item
+  &__item {
+    position: relative;
+    background-color: $white-azure;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.16);
+
+    &::after {
+      content: "";
+      position: absolute;
+      mask-image: url("../images/icons/stack.svg#decors_arrow");
+      background-color: $black;
+      width: 7px;
+      height: 13px;
+      top: 50%;
+      transform: translateY(-50%);
+      right: 20px;
+    }
+  }
+
+  &__item:not(:last-child) {
+    border-bottom: 0.98px solid rgba(175, 175, 175, 0.5);
+  }
+  // .sub-category__link
+  &__link {
+    display: block;
+    color: $black;
+    font-family: $first-font;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 1.43;
+    padding: 11px 10px 12px;
+  }
+}
+.user-favorites {
+  display: none;
+}
+.user-link {
+  display: none;
+}
