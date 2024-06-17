@@ -54,9 +54,27 @@
     margin: 0;
     padding-right: 60px;
   }
+
+  label {
+    font-family: $first-font;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1.25;
+  }
+
+  input[type="checkbox"] {
+    appearance: none;
+    margin: 0;
+    height: 18px;
+    width: 18px;
+    background-color: $green;
+    border-radius: 5px;
+  }
 }
 
 .form-price {
+  margin: 0;
+  padding: 0;
   // .form-price__title
   &__title {
   }
@@ -64,12 +82,21 @@
 .price-checkbox {
   // .price-checkbox__list
   &__list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
   }
   // .price-checkbox__item
   &__item {
   }
   // .price-checkbox__label
   &__label {
+    input[type="checkbox"] {
+      width: 16px;
+      height: 16px;
+      background-color: inherit;
+      border: 1px solid $gray-silver;
+    }
   }
   // .price-checkbox__input
   &__input {
