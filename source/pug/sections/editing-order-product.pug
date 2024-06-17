@@ -3,7 +3,7 @@ section.editing-order-product
 		h2.editing-order-product__title Редактировать информацию о заказе 3347348
 		.editing-order-product__information
 			dl
-				dt Куда прийдет заказ?
+				dt Куда придет заказ?
 				dd ул. Н. Островского, 51
 				dt Стоимость заказа:
 				dd 37 999₽
@@ -13,14 +13,14 @@ section.editing-order-product
 				dd 19 января в 15:00
 				dt Количество вещей:
 				dd 7 шт.
-			select.form__sort(name="sort")
-							option(value="toMoscow") В пути в москву
-							option(value="toCity") Еще куда то в пути
-							option(value="toSP") В пути в Санкт-Петербург
+			select.sort(name="sort")
+				option(value="toMoscow") В пути в москву
+				option(value="toCity") Еще куда то в пути
+				option(value="toSP") В пути в Санкт-Петербург
 
-		.editing-orders__products
+		.editing-orders__products.products
 			h2 Какие именно позиции в данном заказе
-			ul.products__list
+			ul.products__list2
 				li.products__items
 					h3.products__title Zion Williamson x Air Jordan 1 Retro Low OG "Voodoo"
 					p Количество: 1
