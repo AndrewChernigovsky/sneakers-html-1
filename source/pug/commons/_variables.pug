@@ -144,12 +144,12 @@
 
 -
 	var priceCheckbox = [
-		{description: 'Менее 4 000 ₽', count: 26},
-		{description: '4 001 - 6 000 ₽', count: 24},
-		{description: '6 001 - 10 000 ₽', count: 23},
-		{description: '10 001 - 18 000 ₽', count: 26},
-		{description: '18 001 - 35 000 ₽', count: 26},
-		{description: '35 001 ₽ и более', count: 26}
+		{desc: 'Менее 4 000 ₽',  minCost: '0', maxCost: '4000', count: 26},
+		{desc: '4 001 - 6000 ₽',  minCost: '4001', maxCost: '6000', count: 24},
+		{desc: '6 001 - 10000 ₽', minCost: '6001', maxCost: '10000',  count: 23},
+		{desc: '10 001 - 18000 ₽',minCost: '10001', maxCost: '18000',   count: 26},
+		{desc: '18 001 - 35000 ₽',minCost: '18001', maxCost: '35000',   count: 26},
+		{desc: '35 001 ₽ и более',minCost: '35001', maxCost: '150000',  count: 26}
 	]
 
 -
@@ -188,9 +188,6 @@
 			status: 'new'
 		}
 	]
-
--
-	var productItemSeller = true;
 
 -
 	var menuFooter = [
