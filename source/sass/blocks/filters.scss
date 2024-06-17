@@ -1,48 +1,106 @@
 .filters {
+  position: relative;
+  background-color: $white-azure;
 }
 .container {
 }
 .filters-title {
+  min-height: 93px;
+  display: flex;
+  align-items: center;
+  padding-left: 7px;
+  background-color: $gray-steel;
+  font-family: $second-font;
+  font-weight: 600;
+  font-size: 22px;
+  margin: 0;
+
+  &::before {
+    content: "";
+    mask-image: url("../images/icons/stack.svg#decors_arrow");
+    background-color: $black;
+    width: 10px;
+    height: 18px;
+    transform: rotate(180deg);
+    margin-right: 20px;
+  }
 }
+
 .filters-subtitle {
 }
 .filters-button {
+  position: absolute;
+  top: 28px;
+  right: 10px;
+  // min-height: 40px;
+  padding: 10px 20px;
+  border: none;
+  background-color: inherit;
+  color: $green;
+  font-family: $second-font;
+  font-size: 13px;
+  font-weight: 500;
 }
+
 .form {
+  padding: 33px 38px;
+  // .form__title
+  &__title {
+    font-family: $first-font;
+    font-size: 19px;
+    font-weight: 600;
+    line-height: 1.24;
+    color: $black;
+    margin: 0;
+    padding-right: 60px;
+  }
 }
+
 .form-price {
-		// .form-price__title
-		&__title {}
+  // .form-price__title
+  &__title {
+  }
 }
 .price-checkbox {
-		// .price-checkbox__list
-		&__list {}
-		// .price-checkbox__item
-		&__item {}
-		// .price-checkbox__label
-		&__label {}
-		// .price-checkbox__input
-		&__input {}
+  // .price-checkbox__list
+  &__list {
+  }
+  // .price-checkbox__item
+  &__item {
+  }
+  // .price-checkbox__label
+  &__label {
+  }
+  // .price-checkbox__input
+  &__input {
+  }
 }
 .checkbox {
-		// .checkbox__count
-		&__count {}
+  // .checkbox__count
+  &__count {
+  }
 }
 .form-brand {
-		// .form-brand__title
-		&__title {}
+  // .form-brand__title
+  &__title {
+  }
 }
 .firm-checkbox {
-		// .firm-checkbox__list
-		&__list {}
-		// .firm-checkbox__item
-		&__item {}
-		// .firm-checkbox__label
-		&__label {}
-		// .firm-checkbox__input
-		&__input {}
+  // .firm-checkbox__list
+  &__list {
+  }
+  // .firm-checkbox__item
+  &__item {
+  }
+  // .firm-checkbox__label
+  &__label {
+  }
+  // .firm-checkbox__input
+  &__input {
+  }
 }
 .form-size {
-		// .form-size__title
-		&__title {}
+  // .form-size__title
+  &__title {
+  }
 }
