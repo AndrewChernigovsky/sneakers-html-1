@@ -3,7 +3,7 @@
 }
 
 .page__body {
-  font-family: Montserrat, Arial, sans-serif;
+  font-family: $first-font;
   font-size: 12px;
   line-height: 1.5;
   background-color: #000;
@@ -14,7 +14,7 @@
   min-width: 320px;
   min-height: 100%;
 
-  @media (min-width: $tablet) {
-    font-size: 18px;
-  }
+  @media (min-width: $desktop) {
+      font-size: 18px;
+    }
 }
