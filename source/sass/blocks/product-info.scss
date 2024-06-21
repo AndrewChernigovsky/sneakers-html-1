@@ -1,8 +1,72 @@
 .product-info {
   background-color: rgb(229 239 243 / 100%);
 
+  &__container {
+    width: 400px;
+    margin: 0 auto;
+
+    @media screen and (min-width: $tablet--wide) {
+      display: grid;
+      justify-content: center;
+      grid-template-columns: 300px 300px 300px;
+      gap: 25px;
+    }
+
+    @media screen and (min-width: $desktop) {
+      width: 1300px;
+      grid-template-columns: 200px 300px 300px;
+      gap: 25px;
+    }
+  }
+
   &__wrapper {
+    max-width: 374px;
     background-color: rgb(244 253 255 / 100%);
     border-radius: 13px;
+    padding: 27px 24px;
+    margin-bottom: 26px;
+
+    @media screen and (min-width: $tablet) {
+      max-width: 700px;
+    }
+
+    @media screen and (min-width: $desktop) {
+      max-width: 834px;
+    }
+  }
+
+  &__title {
+    font-family: $fifth-font;
+    font-weight: 600;
+    font-size:  clamp(1.19rem, calc(1.08rem + 0.54vw), 1.56rem);
+    line-height: 1.2;
+  }
+
+  &__text {
+    font-family: $fifth-font;
+    font-weight: 400;
+    font-size: clamp(nanrem, calc(nanrem + nanvw), 1.1rem);
+    line-height: 1.3;
+  }
+
+  &__article--description {
+    @media screen and (min-width: $desktop) {
+      grid-column: 1/4;
+      // z-index: 2;z-indexz-indexz-indexz-indexz-indexz-indexz-indexz-index
+    }
+  }
+
+  &__article--addition {
+    @media screen and (min-width: $desktop) {
+      grid-column: 4/5;
+      // z-index: 1;z-indexz-indexz-indexz-indexz-indexz-indexz-indexz-index
+    }
+  }
+
+  &__article--more {
+    @media screen and (min-width: $desktop) {
+      display: none;
+    }
   }
 }
+
