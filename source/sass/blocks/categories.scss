@@ -1,5 +1,4 @@
-.categories {
-}
+.categories {}
 
 .product-list {
   display: grid;
@@ -15,6 +14,7 @@
     grid-template-columns: 1fr 1fr 1fr 1fr;
     gap: 25px 19px;
   }
+
   // .product-list__item
   &__item {
     position: relative;
@@ -28,10 +28,12 @@
       border-radius: 25px;
     }
   }
+
   // .product-list__link
   &__link {
     cursor: pointer;
   }
+
   // .product-list__img
   &__img {
     width: 158px;
@@ -57,6 +59,7 @@
       font-size: 14px;
     }
   }
+
   // .product-list__status
   &__status {
     position: absolute;
@@ -81,6 +84,7 @@
     }
   }
 }
+
 .current-price {
   display: inline-block;
   margin: 0;
@@ -93,6 +97,7 @@
     font-size: 12px;
   }
 }
+
 .old-price {
   display: inline-block;
   font-family: $second-font;
@@ -104,9 +109,4 @@
   @media (min-width: $tablet) {
     font-size: 12px;
   }
-}
-
-.container {
-}
-.visually-hidden {
 }
