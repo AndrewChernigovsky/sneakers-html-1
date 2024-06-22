@@ -15,7 +15,6 @@
     @media screen and (min-width: $desktop) {
       width: 1300px;
       grid-template-columns: 200px 300px 300px;
-      gap: 25px;
     }
   }
 
@@ -52,14 +51,12 @@
   &__article--description {
     @media screen and (min-width: $desktop) {
       grid-column: 1/4;
-      // z-index: 2;z-indexz-indexz-indexz-indexz-indexz-indexz-indexz-index
     }
   }
 
   &__article--addition {
     @media screen and (min-width: $desktop) {
       grid-column: 4/5;
-      // z-index: 1;z-indexz-indexz-indexz-indexz-indexz-indexz-indexz-index
     }
   }
 
