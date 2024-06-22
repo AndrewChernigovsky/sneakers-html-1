@@ -3,7 +3,8 @@ const DATA_BREND_NAMES = [
   'Abibas',
   'New DisBalance',
   'Fly Bordan',
-  'Battilioni'
+  'Battilioni',
+  'Nike'
 ]
 
 const DATA_NAMES = [
@@ -52,6 +53,8 @@ const DATA_PRODUCT_TYPE = [
 ]
 
 const DATA_COSTS = [
+  4999,
+  11999,
   23999,
   24999,
   25322,
@@ -59,6 +62,8 @@ const DATA_COSTS = [
 ]
 
 const DATA_OLD_COSTS = [
+  5999,
+  12999,
   28111,
   29222,
   30654,
@@ -79,18 +84,18 @@ const DATA_IMAGES = [
 ]
 
 //Функция создания числа из диапазона чисел
-function createRandomNumber (min, max) {
+function createRandomNumber(min, max) {
   min = Math.ceil(min);
   max = Math.floor(max);
   return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
 //Cортировка размеров
-function getSizesArray (sizesArray) {
+function getSizesArray(sizesArray) {
   const arrayLength = createRandomNumber(1, sizesArray.length - 1);
   const noRepeatIndex = createRandomNoRepeatInteger(0, sizesArray.length - 1);
   const newArray = [];
-  for(let i = 0; arrayLength > i; i++){
+  for (let i = 0; arrayLength > i; i++) {
     const arrayItem = sizesArray[noRepeatIndex()];
     newArray.push(arrayItem);
   }
@@ -107,15 +112,15 @@ function sortingSizesArray(a, b) {
 const getRandomArrayElement = (elements) => elements[createRandomNumber(0, elements.length - 1)];
 
 // Создание уникального не повторяющего числа
-function createRandomNoRepeatInteger (min, max) {
+function createRandomNoRepeatInteger(min, max) {
   const idValue = [];
   return function () {
-    let currentValue = createRandomNumber (min, max);
+    let currentValue = createRandomNumber(min, max);
     if (idValue.length >= (max - min + 1)) {
       return null;
     }
-    while(idValue.includes(currentValue)) {
-      currentValue = createRandomNumber (min, max);
+    while (idValue.includes(currentValue)) {
+      currentValue = createRandomNumber(min, max);
     }
     idValue.push(currentValue);
     return currentValue;
@@ -125,13 +130,13 @@ function createRandomNoRepeatInteger (min, max) {
 function createImagesArray(imagesArray) {
   let images = [];
   let imagesIndex = IMAGES_ARRAY_INDEX();
-  for(let i = 0; createRandomNumber(1, imagesArray.length) > i; i++) {
+  for (let i = 0; createRandomNumber(1, imagesArray.length) > i; i++) {
     images[i] = imagesArray[imagesIndex];
   }
   return images;
 }
 
-const DATA_ID  = createRandomNoRepeatInteger(1, DATA_IMAGES.length);
+const DATA_ID = createRandomNoRepeatInteger(1, DATA_IMAGES.length);
 const IMAGES_ARRAY_INDEX = createRandomNoRepeatInteger(0, (DATA_IMAGES.length - 1));
 
 const createData = () => {
@@ -152,4 +157,4 @@ const createData = () => {
   return data;
 }
 
-export const DATA = Array.from({length: DATA_IMAGES.length}, createData);
+export const DATA = Array.from({ length: DATA_IMAGES.length }, createData);

@@ -4,8 +4,8 @@ block mixins
 	include ./../commons/_mixins.pug
 
 block head
+	title= titlePage.placing_order
 	link(href="./../css/style.min.css", rel="stylesheet")
-	title= titlePage.payment
 block header
 	include ./../layout/header.pug
 block content

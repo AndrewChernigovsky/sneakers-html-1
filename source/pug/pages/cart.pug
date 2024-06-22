@@ -4,8 +4,9 @@ block mixins
 	include ./../commons/_mixins.pug
 
 block head
+	title= titlePage.cart
 	link(href="./../css/style.min.css", rel="stylesheet")
-	title= titlePage.calculator
+
 block header
 	include ./../layout/header.pug
 block content
