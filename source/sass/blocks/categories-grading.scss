@@ -1,0 +1,51 @@
+.categories-grading {
+  background-color: $white-azure;
+  border-radius: 13px;
+  margin-bottom: 18px;
+}
+
+.grading {
+  padding: 24px 12px 17px 21px;
+  // .grading__title
+  &__title {
+  }
+  // .grading__select
+  &__select {
+    border: none;
+    background-color: transparent;
+    outline: none;
+  }
+  // .grading__option
+  &__option {
+  }
+}
+
+.brand-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 19px;
+  // .brand-list__item
+  &__item {
+    background-color: $light-gray3;
+    font-family: $second-font;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 1.29;
+    text-transform: uppercase;
+    padding: 6px 10px 8px;
+    border-radius: 10px;
+    display: inline-block;
+    color: $gray-black;
+  }
+}
+
+.filter-challenge {
+  border: none;
+  background-color: transparent;
+  font-family: $first-font;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.43;
+  color: $black;
+  padding: 0;
+}
