@@ -22,6 +22,26 @@
     }
 }
 
+.footer__logo-link {
+  @media (min-width: $tablet) {
+    margin-top: 4px;
+    width: 80px;
+    height: 10px;
+    background-image: url('../../images/icons/content/logistics.svg');
+    background-size: 80px 10px;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+    @media (min-width: $desktop) {
+      margin-top: 8px;
+      width: 106px;
+      height: 16px;
+      background-size: 106px 16px;
+
+    }
+}
+
 .footer__wrapper-info {
   display: flex;
   align-items: center;
@@ -32,13 +52,21 @@
   @media (max-width: $mobile-width-only) {
     display: none;
   }
+
+    display: flex;
+    flex-direction: column;
 }
 
 .footer__callback-list {
   display: grid;
   grid-template-columns: repeat(2, min-content);
+  margin-top: 12px;
   margin-bottom: 20px;
   gap: 11px;
+
+  @media (min-width: $desktop) {
+    margin-top: 32px;
+  }
 }
 
 .footer__callback-item:last-child {
