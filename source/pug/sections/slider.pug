@@ -1,8 +1,21 @@
 section.slider
-  .container
-    h2 ЧТО КЛАДЕТСЯ В ЗАКАЗ?
-    p Мы решили как-то выделить наших клиентов на фоне остальных
-    .packing-info
-      h3 КАК МЫ УПАКОВЫВАЕМ ПОСЫЛКИ?
-      p Каждый товар покупаемый через нас кладется сертификат и стикер свидетельствующий о приобретении позиции именно через наш сервис.
-      p Для чего мы это делаем? В первую очередь данный печатный носитель сможет вам помочь подтвердить подлинность вещи.
+  .slider__wrapper
+    .slider__slide.slider__active(data-slide="1")
+      .slider__slide-wrapper
+        h2.slider__slide-title Что кладется в заказ?
+        p.slider__slide-description Мы решили как-то выделить наших клиентов на фоне остальных
+        .slider__slide-box
+          h3.slider__slide-box-title Как мы упаковываем посылки?
+          p.slider__slide-box-description Каждый товар покупаемый через нас кладется сертификат и стикер свидетельствующий о приобретении позиции именно через наш сервис.
+          p.slider__slide-box-description Для чего мы это делаем? В первую очередь данный печатный носитель сможет вам помочь подтвердить подлинность вещи.
+      +img('slider__slide-img', './../images/content/slider-sertificate', 'Image', '340px', 'auto', 'png')
+    .slider__slide.slider__slide-second(data-slide="2")
+      .slider__slide-wrapper
+        h2.slider__slide-title Самая быстрая доставка
+        p.slider__slide-description Срок доставки вещей через нас не превышает 21 дня
+        .slider__slide-box
+          h3.slider__slide-box-title Почему так?
+          p.slider__slide-box-description У нас есть собственный склад вещей в китае, благодаря чему вещи доставляются значительно быстрее, нежели у конкурентов. 
+          p.slider__slide-box-description Если же вы решили заказать позицию с нашего склада в москве, то скрок её доставки до 7 дней курьерской службой СДЭК.
+      +img('slider__slide-img slider__slide-img-second', './../images/decors/slider-airplane', 'Изображение самолета', '340px', 'auto', 'png')
+
