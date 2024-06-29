@@ -2,6 +2,7 @@
   grid-column: 1/3;
   width: 1311px;
   height: 366px;
+  // @fix добавить скролл
   overflow: hidden;
   margin: 0 auto;
   background-color: #050505;
@@ -44,9 +45,7 @@
   line-height: normal;
 }
 
-.current-orders__information {
-
-}
+.current-orders__information {}
 
 .current-orders__list {
   font-family: $fifth-font;
