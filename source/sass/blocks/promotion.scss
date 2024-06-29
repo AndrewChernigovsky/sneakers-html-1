@@ -1,0 +1,60 @@
+.promotion {
+  position: relative;
+  width: 897px;
+  background-color: #050505;
+  border-radius: 17px;
+  padding: 54px 41px 70px;
+}
+
+.promotion::after {
+  position: absolute;
+  top: -10px;
+  right: -30px;
+  width: 512px;
+  height: 354px;
+  content: "";
+  background-image: url('../../images/decors/phones-with-sneakers@1x.webp');
+  background-size: 512px 354px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.promotion__title {
+  margin: 0;
+  margin-bottom: 9px;
+  width: 511px;
+  font-family: $fifth-font;
+  font-size: 24px;
+}
+
+.promotion__link {
+  color: $green;
+  font-family: $fifth-font;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.promotion__list {
+  margin: 0;
+  margin-top: 81px;
+}
+
+.promotion__term {
+  font-family: $fifth-font;
+  font-size: 11px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.promotion__description {
+  margin: 0;
+  color: $green;
+  font-family: $fifth-font;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}

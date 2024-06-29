@@ -1,23 +1,52 @@
 section.current-orders
 	.current-orders__wrapper
 		h2.current-orders__title Текущие заказы
-			label(class="current-orders__label" for="sort")  Сортировка
+		label(class="current-orders__label" for="sort")  Сортировка:
 			select.current-orders__sort(name="sort" id="sort")
 				option(value="newest") Ближайшие доставки
 				option(value="oldest") Сначала старые
 				option(value="popular") По умолчанию
-		.current-orders__information
-			dl
-				dt Куда прийдет заказ?
-				dd ул. Н. Островского, 51
-				dt Стоимость заказа:
-				dd 37 999₽
-				dt Выбранный вами параметр будет отражаться у пользователя
-				dd Местоположение заказа на данный момент
-				dt Примерная дата доставки
-				dd 19 января в 15:00
-				dt Количество вещей:
-				dd 7 шт.
+
+	.current-orders__information
+		dl.current-orders__list
+			dt.current-orders__term Информация о заказе
+			dd.current-orders__description Номер заказа: 1632
+			dt.current-orders__term Статус посылки
+			dd.current-orders__description Посылка находится в сц
+			dt.current-orders__term Примерная дата доставки
+			dd.current-orders__description 19 января в 15:00
+			dt.current-orders__term Куда прийдет заказ?
+			dd.current-orders__description ул. Н. Островского, 51
+			dt.current-orders__term Стоимость заказа:
+			dd.current-orders__description 37 999₽
+			dt.current-orders__term Количество вещей:
+			dd.current-orders__description 7 шт.
+		dl.current-orders__list
+			dt.current-orders__term Информация о заказе
+			dd.current-orders__description Номер заказа: 1632
+			dt.current-orders__term Статус посылки
+			dd.current-orders__description Посылка находится в сц
+			dt.current-orders__term Примерная дата доставки
+			dd.current-orders__description 19 января в 15:00
+			dt.current-orders__term Куда прийдет заказ?
+			dd.current-orders__description ул. Н. Островского, 51
+			dt.current-orders__term Стоимость заказа:
+			dd.current-orders__description 37 999₽
+			dt.current-orders__term Количество вещей:
+			dd.current-orders__description 7 шт.
+		dl.current-orders__list
+			dt.current-orders__term Информация о заказе
+			dd.current-orders__description Номер заказа: 1632
+			dt.current-orders__term Статус посылки
+			dd.current-orders__description Посылка находится в сц
+			dt.current-orders__term Примерная дата доставки
+			dd.current-orders__description 19 января в 15:00
+			dt.current-orders__term Куда прийдет заказ?
+			dd.current-orders__description ул. Н. Островского, 51
+			dt.current-orders__term Стоимость заказа:
+			dd.current-orders__description 37 999₽
+			dt.current-orders__term Количество вещей:
+			dd.current-orders__description 7 шт.
 
 section.quick-menu
 	h2.quick-menu__title Быстрое меню
@@ -34,6 +63,6 @@ section.quick-menu
 section.promotion
 	h2.promotion__title Приведи своего друга и получи промокод на бесплатный Legit Check
 	+link('promotion__link', 'Поподробнее об реферальной системе', '#')
-	dl
-		dt Акция действует до
-		dd 01.05.2023
+	dl.promotion__list
+		dt.promotion__term Акция действует до
+		dd.promotion__description 01.05.2023
