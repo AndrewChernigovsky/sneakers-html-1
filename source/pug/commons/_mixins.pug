@@ -146,15 +146,14 @@ mixin menuFooterSubCategories(subcategories)
 	ul(class='menu-footer__sub-list list-reset')
 		each subcategory in subcategories
 			li(class='menu-footer__sub-item')
-				a(href=subcategory.url)= subcategory.name
+				a(class='menu-footer__sub-link' href=subcategory.url)= subcategory.name
 
 //- Миксин для обратной связи в футере
 mixin footerCallback(categories)
 	ul(class='footer__callback-list list-reset')
 		each category in categories
 			li(class='footer__callback-item')
-				a(href=category.url)=category.namе
-				a(href=category.url)=category.name
+				a(class='footer__callback-link' href=category.url)=category.name
 
 //- Боковое меню для страницы избранное
 mixin asideMenu(categories)
