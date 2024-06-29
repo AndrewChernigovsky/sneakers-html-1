@@ -61,6 +61,7 @@
   padding: 0;
   grid-column: 2 / -1;
   grid-row: 1 / 2;
+  margin-left: auto;
 
   &::before {
     content: "";
