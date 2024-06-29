@@ -6,14 +6,21 @@
 
 .grading {
   padding: 24px 12px 17px 21px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  row-gap: 23px;
+
   // .grading__title
   &__title {
+    display: none;
   }
   // .grading__select
   &__select {
     border: none;
     background-color: transparent;
     outline: none;
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
   }
   // .grading__option
   &__option {
@@ -24,6 +31,8 @@
   display: flex;
   flex-wrap: wrap;
   gap: 19px;
+  grid-column: 1 / -1;
+
   // .brand-list__item
   &__item {
     background-color: $light-gray3;
@@ -40,6 +49,8 @@
 }
 
 .filter-challenge {
+  display: flex;
+  align-items: center;
   border: none;
   background-color: transparent;
   font-family: $first-font;
@@ -48,13 +59,15 @@
   line-height: 1.43;
   color: $black;
   padding: 0;
+  grid-column: 2 / -1;
+  grid-row: 1 / 2;
 
   &::before {
     content: "";
     width: 16px;
     height: 12px;
-    mask-image: url("../images/icons/stack.svg#filters-icon");
-    display: block;
+    margin-right: 10px;
+    mask-image: url("../images/icons/stack.svg#decors_filters-icon");
     background-color: $black;
   }
 }
