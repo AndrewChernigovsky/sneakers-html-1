@@ -1,0 +1,135 @@
+.items-cart {
+  padding: 0 9px 0;
+  max-width: 700px;
+  margin: 0 auto;
+  
+  &__wrapper-buttons {
+    padding: 18px 12px 17px 12px;
+    display: grid;
+    grid-template-columns: 25% 1fr;
+    gap: 10px;
+    background-color: $background-color-secondary;
+    border-radius: 13px;
+    margin-bottom: 16px;
+    align-items: center;
+  }
+}
+
+.cart-buttons {
+  &__title {
+    margin: 0;
+    font-weight: 600;
+  }
+
+  &__cost {
+    margin: 0;
+    font-size: clamp(0.688rem, 0.471rem + 0.87vw, 1.25rem);
+    font-weight: 600;
+    line-height: 15px;
+  }
+
+  &__cost span {
+    margin-left: 5px;
+  }
+
+  &__worth {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    grid-column: 1 / -1;
+  }
+}
+
+.worth {
+  &__list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+  }
+
+  &__item {
+    position: relative;
+
+    input[type="checkbox"] {
+      position: absolute;
+      opacity: 0;
+      cursor: pointer;
+    }
+
+    label {
+      font-size: clamp(0.688rem, 0.471rem + 0.87vw, 1.25rem);
+      font-weight: 500;
+      line-height: 10px;
+      padding: 8px 8px 8px 24px;
+      background-color: $background-color-primary;
+      border-radius: 8px;
+      position: relative;
+    }
+
+    label::before {     /* Стилизация квадратa чекбокса */
+      content: "";
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 10px;
+      border-radius: 2px;
+      background-color: $checkbox-background-color-active;
+    }
+
+    input[type="checkbox"]:checked + label::after {
+      content: "";
+      position: absolute;
+      width: 2px;
+      height: 5px;
+      top: 7px;
+      left: 12px;
+      mask-image: url("../images/icons/decors/arrow.svg");
+      background-repeat: no-repeat;
+    } 
+  }
+
+  &__button-reset {
+    font-family: $first-font;
+    font-size: clamp(0.688rem, 0.471rem + 0.87vw, 1.25rem);
+    font-weight: 500;
+    line-height: 10px;
+    padding: 8px;
+    border: 0;
+    background-color: $background-color-primary;
+    border-radius: 8px;
+  }
+
+  &__link {
+    font-size: clamp(0.688rem, 0.471rem + 0.87vw, 1.25rem);
+    font-weight: 500;
+    line-height: 10px;
+    padding: 8px;
+    background-color: $background-color-primary;
+    border-radius: 8px;
+    color: $text-color-primary;
+
+    &--all-in-cart {
+      display: none;
+    }
+  }
+}
+
+.selected-products {
+
+  &__list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  &__items {
+    background-color: $background-color-secondary;
+    border-radius: 13px;
+  }
+}

@@ -1,20 +1,20 @@
 section.items-cart
-	h1.items-cart__title Корзина товаров
-	fieldset.items-cart__worth
-		p.worth__cart-cost
-			span#totalProducts 6
-			|	товаров на сумму:
+	.items-cart__wrapper-buttons.cart-buttons
+		h1.cart-buttons__title Корзина
+		p.cart-buttons__cost
+			span#totalProducts 6 товаров на сумму:
 			span#totalProductsPrice 142 794 ₽
-		ul.worth__list
-			li.worth__item
-				+checkbox('all-items', 'checked', 'all-items', 'Все товары')
-			li.worth__item
-				+button('Удалить выбранное', 'worth__button-reset', 'reset')
-			li.worth__item
-				+link('worth__item-link', 'Перейти к избранному', '#')
-			li.worth__item
-				+link('worth__item-link', 'Все в корзине', '#')
-	fieldset.items-cart__selected-products
+		fieldset.cart-buttons__worth.worth
+			ul.worth__list
+				li.worth__item
+					+checkbox('worth__all-items', 'checked', 'all-items', 'Выбрать все')
+				li.worth__item
+					+button('Удалить выбранное', 'worth__button-reset', 'reset')
+				li.worth__item
+					+link('worth__link', 'Перейти к избранному', '#')
+				li.worth__item
+					+link('worth__link worth__link--all-in-cart', 'Все в корзине', '#')
+	fieldset.items-cart__selected-products.selected-products
 		ul.selected-products__list
 			li.selected-products__items
 				+checkbox('item', 'checked', 'item', 'Товар')
