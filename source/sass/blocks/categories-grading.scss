@@ -12,8 +12,10 @@
 
   // .grading__title
   &__title {
+    // @fix на десктопе должно быть отображено
     display: none;
   }
+
   // .grading__select
   &__select {
     border: none;
@@ -22,9 +24,9 @@
     grid-column: 1 / 2;
     grid-row: 1 / 2;
   }
+
   // .grading__option
-  &__option {
-  }
+  &__option {}
 }
 
 .brand-list {
@@ -45,6 +47,10 @@
     border-radius: 10px;
     display: inline-block;
     color: $gray-black;
+
+    &--not-checked {
+      display: none;
+    }
   }
 }
 
