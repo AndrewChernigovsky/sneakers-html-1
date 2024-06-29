@@ -6,9 +6,8 @@
 
 .grading {
   padding: 24px 12px 17px 21px;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  row-gap: 23px;
+  display: flex;
+  flex-direction: column-reverse;
 
   // .grading__title
   &__title {
@@ -19,21 +18,34 @@
   // .grading__select
   &__select {
     border: none;
-    background-color: transparent;
     outline: none;
-    grid-column: 1 / 2;
-    grid-row: 1 / 2;
+    appearance: none;
+    background-color: transparent;
+    font-family: $first-font;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.43;
+    color: $black;
+  }
+
+  select::-ms-expand {
+    display: none; /* удалите стрелку по умолчанию в IE 10 и 11 */
   }
 
   // .grading__option
-  &__option {}
+  &__option {
+    font-family: $first-font;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.43;
+    color: $black;
+  }
 }
 
 .brand-list {
   display: flex;
   flex-wrap: wrap;
   gap: 19px;
-  grid-column: 1 / -1;
 
   // .brand-list__item
   &__item {
@@ -54,6 +66,40 @@
   }
 }
 
+.brand-list__item--unchecked {
+  display: none;
+}
+
+.categories-granding {
+  // .categories-granding__wrapper
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
+    margin-bottom: 22px;
+    position: relative;
+    overflow: hidden;
+  }
+}
+
+.select-wrapper {
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    display: block;
+    background-color: #000000;
+    mask-image: url("../images/icons/stack.svg#decors_arrow");
+    mask-repeat: no-repeat;
+    transform: rotate(90deg);
+    width: 5px;
+    height: 9px;
+    right: -15px;
+    top: 6px;
+  }
+}
+
 .filter-challenge {
   display: flex;
   align-items: center;
@@ -65,8 +111,6 @@
   line-height: 1.43;
   color: $black;
   padding: 0;
-  grid-column: 2 / -1;
-  grid-row: 1 / 2;
   margin-left: auto;
 
   &::before {
