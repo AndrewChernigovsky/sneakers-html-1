@@ -1,0 +1,77 @@
+.current-orders {
+  grid-column: 1/3;
+  width: 1311px;
+  height: 366px;
+  overflow: hidden;
+  margin: 0 auto;
+  background-color: #050505;
+  border-radius: 20px;
+  padding: 34px 22px 0 41px;
+}
+
+.current-orders__wrapper {
+  display: flex;
+  align-items: center;
+  margin-bottom: 29px;
+}
+
+.current-orders__title {
+  font-family: $fifth-font;
+  font-size: 27px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  margin: 0;
+  margin-right: 30px;
+  text-align: left;
+}
+
+.current-orders__label {
+  font-family: $fifth-font;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.current-orders__sort {
+  appearance: none;
+  border: none;
+  color: $green;
+  background-color: #050505;
+  font-family: $fifth-font;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.current-orders__information {
+
+}
+
+.current-orders__list {
+  font-family: $fifth-font;
+  line-height: normal;
+  display: grid;
+  grid-template-columns: repeat(6, min-content);
+  grid-template-rows: min-content min-content;
+  column-gap: 37px;
+  padding: 20px 30px 20px 36px;
+  margin: 0;
+  margin-bottom: 28px;
+  border-radius: 20px;
+  border: 2px solid $white;
+  white-space: nowrap;
+}
+
+.current-orders__term {
+  color: $dark-gray2;
+  font-size: 10px;
+  font-weight: 400;
+  margin-bottom: 6px;
+}
+
+.current-orders__description {
+  margin: 0;
+  font-weight: 500;
+  grid-row: 2/3;
+}

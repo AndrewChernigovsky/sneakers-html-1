@@ -1,0 +1,52 @@
+.quick-menu {
+  width: 373px;
+  background-color: $black-blue;
+  border-radius: 17px;
+  padding: 54px 130px 32px 47px;
+  margin-right: 40px;
+}
+
+.quick-menu__title {
+  margin: 0;
+  margin-bottom: 35px;
+  font-family: $fifth-font;
+  font-size: 27px;
+  font-weight: 500;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.quick-menu__list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.quick-menu__item:not(:last-child) {
+  margin-bottom: 38px;
+}
+
+.quick-menu__text {
+  position: relative;
+  margin: 0;
+  font-family: $fifth-font;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.quick-menu__text::after {
+    position: absolute;
+    top: 3px;
+    right: 7px;
+    width: 7px;
+    height: 13px;
+    content: "";
+    background: $white;
+    mask-image: url('../../images/icons/decors/arrow.svg');
+    mask-size: 7px 13px;
+    mask-repeat: no-repeat;
+    mask-position: center;
+    rotate: 90deg;
+  }
+
