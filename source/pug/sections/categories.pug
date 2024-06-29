@@ -3,11 +3,13 @@ section.categories
 		section.categories-grading.grading
 			+list(['Nike', 'Adidas', 'New Balance', 'Reebock', 'Vans', 'Lacoste', 'Old Older', 'Asics', 'Puma'], 'brand-list list-reset', 'brand-list__item')
 			+button('Фильтры', 'filter-challenge', 'button')
+				//- @fix это span
 			h3.grading__title Сортировка
-			select.grading__select (name="select-control", aria-label="Сортировка.")
+			select.grading__select(name="select-control", aria-label="Сортировка.")
 				option.grading__option(value="cheap", selected) Сначала недорогие
-				option.grading__option(value="cheap", selected) Сначала дорогие
-				option.grading__option(value="cheap", selected) Сначала избранные
-				option.grading__option(value="cheap", selected) Сначала популярные
+				option.grading__option(value="luxery") Сначала дорогие
+				option.grading__option(value="likes") Сначала избранные
+				option.grading__option(value="popular") Сначала популярные
+			//- .categories-granding__wrapper
 		h2.visually-hidden Категории товаров
 		+productList(products)
