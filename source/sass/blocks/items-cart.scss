@@ -13,6 +13,12 @@
     margin-bottom: 16px;
     align-items: center;
   }
+
+  &__selected-products {
+    margin: 0;
+    padding: 0;
+    border: 0;
+  }
 }
 
 .cart-buttons {
@@ -41,14 +47,15 @@
 }
 
 .worth {
+
   &__list {
+    width: 100%;
     list-style-type: none;
     margin: 0;
     padding: 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    
   }
 
   &__item {
@@ -82,15 +89,16 @@
       background-color: $checkbox-background-color-active;
     }
 
-    input[type="checkbox"]:checked + label::after {
+    input[type="checkbox"]:checked + label::after {  /* Стилизация галочки чекбокса */
       content: "";
       position: absolute;
-      width: 2px;
-      height: 5px;
-      top: 7px;
-      left: 12px;
-      mask-image: url("../images/icons/decors/arrow.svg");
+      width: 5px;
+      height: 6px;
+      top: 13px;
+      left: 13px;
+      background-image: url("./../../images/icons/decors/check-mark-icon.svg");
       background-repeat: no-repeat;
+      background-size: 5px 6px;
     } 
   }
 
@@ -121,6 +129,7 @@
 }
 
 .selected-products {
+  min-height: 163px;
 
   &__list {
     list-style-type: none;
@@ -129,7 +138,59 @@
   }
 
   &__items {
+    min-height: 63px;
+    display: grid;
+    grid-template-columns: 102px 1fr 1fr;
+    grid-template-rows: min-content 63px min-content min-content;
+    align-items: center;
     background-color: $background-color-secondary;
     border-radius: 13px;
+
+    input[type="checkbox"] {
+      grid-column: 1 / -1;
+      grid-row: 1 / 2;
+    }
+
+    &-title {
+      margin: 0;
+      grid-column: 2 / -1;
+      grid-row: 2 / 3;
+    }
+
+    &-size {
+      margin: 0;
+      grid-column: 2 / 3;
+      grid-row: 3 / 4;
+    }
+
+    &-buttons-value {
+      grid-column: 1 / 2;
+
+      input[type="text"] {
+        width: 25px;
+      }
+    }
+
+    &-price-wrapper {
+      grid-column: 3 / -1;
+    }
+  }
+
+  &__button-favorites {
+    display: none;
+  }
+
+  &__button-buy {
+    display: none;
+  }
+}
+
+.cart-price {
+
+  &__wrapper {
+    display: flex;
+    &-element {
+      margin: 0;
+    }
   }
 }

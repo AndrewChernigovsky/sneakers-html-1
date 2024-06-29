@@ -17,17 +17,17 @@ section.items-cart
 	fieldset.items-cart__selected-products.selected-products
 		ul.selected-products__list
 			li.selected-products__items
-				+checkbox('item', 'checked', 'item', 'Товар')
+				+checkbox('item', 'checked', 'item', '')
 				//- img.selected-products__image
-				h2.selected-products__cart-title: +link('my-link-class', 'Zion Williamson x Air Jordan 1 Retro Low OG "Voodoo"', '#')
-				p.selected-products__size Размер: 41
-				.selected-products__buttons-value
+				h2.selected-products__items-title: +link('my-link-class', 'Zion Williamson x Air Jordan 1 Retro Low OG "Voodoo"', '#')
+				p.selected-products__items-size Размер: 41
+				.selected-products__items-buttons-value
 					+button('-', 'selected-products__button-decrease', 'button')
-					+inputField('Количество товаров','text', 'quantity-product', 'quantity-product', '1')
+					+inputField('','text', 'quantity-product', 'quantity-product', '1')
 					+button('+', 'selected-products__button-increase', 'button')
-				.selected-products__terms-wrapper
-					dl.terms-wrapper
-						dt.terms-wrapper__setting Цена:
-						dd.terms-wrapper__element 23 799 ₽
+				.selected-products__items-price-wrapper.cart-price
+					dl.cart-price__wrapper
+						dt.cart-price__wrapper-setting Цена:
+						dd.cart-price__wrapper-element 23 799 ₽
 					+button('Добавить в избранное', 'selected-products__button-favorites', 'button')
 					+button('Купить', 'selected-products__button-buy', 'button')
