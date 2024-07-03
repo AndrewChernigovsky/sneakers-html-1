@@ -1,12 +1,18 @@
 .slider {
-  background-image: linear-gradient(rgba($black, 0.3)), url('./../../images/decors/mobile-slider-background@2x.png');
+  background-image: linear-gradient(rgba($black, 0.3)), image-set(url('./../../images/decors/mobile/mobile-slider-background@1x.png') 1x, url('./../../images/decors/mobile/mobile-slider-background@2x.png') 2x);
   background-repeat: no-repeat;
   background-size: cover;
 
+  background-image: image-set(url("bg.png") 1x,
+      url("bg-2x.png") 2x);
+
   @media (min-width:$desktop) {
-    background-image: url('./../../images/decors/slider-background@2x.png');
+    background-image: linear-gradient(rgba($black, 0.3)), image-set(url('./../../images/decors/desktop/desktop-slider-background@1x.png') 1x, url('./../../images/decors/desktop/desktop-slider-background@2x.png') 2x);
+    background-repeat: no-repeat;
+    background-size: cover;
+
   }
-  
+
   &__wrapper {
     width: 100%;
     min-height: 640px;
@@ -44,7 +50,7 @@
 
   &.slider__slide-second {
     flex-direction: row-reverse;
-    
+
   }
 
   &-wrapper {
@@ -112,7 +118,7 @@
       padding: 25px 24px 25px;
       margin-bottom: 10px;
     }
-  
+
     @media (min-width:$desktop) {
       width: 100%;
       padding: 33px 58px 26px 70px;
@@ -132,7 +138,7 @@
         margin-bottom: 15px;
       }
     }
-  
+
     &-description {
       margin: 0;
       font-family: $first-font;
