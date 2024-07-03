@@ -82,11 +82,11 @@ mixin menuFooterSubCategories(subcategories)
 //- Миксин для изображений
 mixin img(className, src, name, alt, width, height, ext)
 	picture
-		source(type='image/webp' srcset=`${src}/tablet-${name}@1x.webp 1x, ${src}/tablet-${name}@2x.webp 2x` media="(min-width: 768px)" width=width height=height)
-		source(type='image/webp' srcset=`${src}/desktop-${name}@1x.webp 1x, ${src}/desktop-${name}@2x.webp 2x` media="(min-width: 1440px)" width=width height=height)
-		source(type=`image/${ext}` srcset=`${src}/tablet-${name}@1x.${ext} 1x, ${src}/tablet-${name}@2x.${ext} 2x` media="(min-width: 768px)" width=width height=height)
-		source(type=`image/${ext}` srcset=`${src}/desktop-${name}@1x.${ext} 1x, ${src}/desktop-${name}@2x.${ext} 2x` media="(min-width: 1440px)" width=width height=height)
-		img(class=className src=`${src}/${name}.${ext}`, alt=alt, width=width, height=height)
+		source(type='image/webp' srcset=`${src}/tablet/tablet-${name}@1x.webp 1x, ${src}/tablet/tablet-${name}@2x.webp 2x` media="(min-width: 768px)" width=width height=height)
+		source(type='image/webp' srcset=`${src}/desktop/desktop-${name}@1x.webp 1x, ${src}/desktop/desktop-${name}@2x.webp 2x` media="(min-width: 1440px)" width=width height=height)
+		source(type=`image/${ext}` srcset=`${src}/tablet/tablet-${name}@1x.${ext} 1x, ${src}/tablet/tablet-${name}@2x.${ext} 2x` media="(min-width: 768px)" width=width height=height)
+		source(type=`image/${ext}` srcset=`${src}/desktop/desktop-${name}@1x.${ext} 1x, ${src}/desktop/desktop-${name}@2x.${ext} 2x` media="(min-width: 1440px)" width=width height=height)
+		img(class=className src=`${src}/mobile/mobile-${name}.${ext}`, alt=alt, width=width, height=height)
 
 //- Миксин для SVG картинки из стека
 mixin inlineSvg(className, width, height, id, fill, stroke)
