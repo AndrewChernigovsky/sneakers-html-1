@@ -54,7 +54,7 @@
 }
 
 .intro {
-  background: linear-gradient(rgba(0, 0, 0, 0.85)), url('../../images/decors/people-background@1x.jpg');
+  background: linear-gradient(rgba(0, 0, 0, 0.85)), url('../../images/decors/mobile/mobile-people-background@1x.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -71,9 +71,19 @@
   @media screen and (min-width: $tablet) {
     min-width: 100%;
     min-height: 650px;
+    background: linear-gradient(rgba(0, 0, 0, 0.85)), url('../../images/decors/tablet/tablet-people-background@1x.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-color: rgb(42, 42, 42);
   }
 
   @media screen and (min-width: $desktop) {
+    background: linear-gradient(rgba(0, 0, 0, 0.85)), url('../../images/decors/desktop/desktop-people-background@1x.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-color: rgb(42, 42, 42);
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
