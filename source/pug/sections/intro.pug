@@ -1,9 +1,8 @@
 section.intro
 	.intro__wrapper
-		h2.intro__title LOGISTICS X
+		+inlineSvg('intro__img', '300', '250',  'content_logistics-logo')
 		p.intro__text Закажем абсолютную любую позицию из Китая!<br>Одежда, обувь, аксессуары, электроника и многое другое! Цены значительно ниже, чем в России.
 		.intro__buttons
 			+link('base-link', 'Перейти к каталогу', './pages/catalog.html')
 			+link('base-link base-link--black', 'Перейти к калькулятору', './pages/calculator.html')
-	.intro__container--img
-		+img('intro__img', "../../images/content/intro", 'Логотип магазина Poizon', 430, 235, 'png')
+
