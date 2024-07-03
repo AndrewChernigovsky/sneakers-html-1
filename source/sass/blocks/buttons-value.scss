@@ -1,0 +1,38 @@
+.buttons-value {
+  display: flex;
+
+  label {
+    padding: 0;
+  }
+
+  label::before {
+    width: 0;
+    height: 0;
+    border: none;
+    padding-left: 0;
+  }
+
+  input[type="text"] {
+    width: 25px;
+    height: 28px;
+    background-color: $background-color-primary;
+    border: none;
+    text-align: center;
+  }
+
+  &__button-decrease {
+    width: 25px;
+    height: 28px;
+    background-color: $background-color-primary;
+    border: none;
+    border-radius: 9px;
+  }
+
+  &__button-increase {
+    width: 25px;
+    height: 28px;
+    background-color: $background-color-primary;
+    border: none;
+    border-radius: 9px;
+  }
+}

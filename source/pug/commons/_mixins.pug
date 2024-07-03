@@ -32,8 +32,8 @@ mixin menuMobile(items, ulClass, liClass, aClass)
 				a(class=aClass href=item.url)= item.title
 
 //- Mиксин для кнопки
-mixin button(text='Кнопка', className='button', type='button')
-	button(type=type, class=className)= text
+mixin button(text='Кнопка', className='button', type='button', id)
+	button(type=type, class=className, id=id)= text
 //-Use +button('Войти через VK', 'vk-login', 'button')
 
 //- Миксин для списка кнопок
