@@ -1,0 +1,20 @@
+.items-cart {
+  padding: 0 9px 0;
+  max-width: 700px;
+  margin: 0 auto;
+
+  &__wrapper {
+    padding: 18px 12px 17px 12px;
+    background-color: $background-color-secondary;
+    border-radius: 13px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  &__selected-products {
+    margin: 0;
+    padding: 0;
+    border: 0;
+  }
+}
