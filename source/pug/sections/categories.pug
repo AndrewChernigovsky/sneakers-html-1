@@ -1,4 +1,15 @@
 section.categories
 	.container
+		section.categories-grading.grading
+			+list(['Nike', 'Adidas', 'New Balance', 'Reebock', 'Vans', 'Lacoste', 'Old Older', 'Asics', 'Puma'],'brand-list list-reset', 'brand-list__item')
+			.categories-granding__wrapper
+				+button('Фильтры', 'filter-challenge', 'button')
+				span.grading__title Сортировка
+				.select-wrapper
+					select.grading__select(name="select-control", aria-label="Сортировка.")
+						option.grading__option(value="cheap", selected) Сначала недорогие
+						option.grading__option(value="expensive") Сначала дорогие
+						option.grading__option(value="favorites") Сначала избранные
+						option.grading__option(value="popular") Сначала популярные
 		h2.visually-hidden Категории товаров
 		+productList(products)
