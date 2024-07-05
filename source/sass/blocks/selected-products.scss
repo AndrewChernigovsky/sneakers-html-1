@@ -18,7 +18,6 @@
 
     input[type="checkbox"] {
       margin: 0;
-      justify-self: start;
       position: absolute;
       opacity: 0;
       cursor: pointer;
@@ -32,18 +31,17 @@
         left: 0;
         background-image: url("./../../images/icons/decors/check-mark-icon.svg");
         background-repeat: no-repeat;
-        background-size: 5px 6px;
+        background-size: 10px 11px;
         background-position: center center;
         background-color: $checkbox-background-color-active;
-        border-radius: 2px;
+        border-radius: 4px;
       }
     }
 
     label {
-      font-weight: 500;
-      line-height: 10px;
       padding-left: 24px;
       position: relative;
+      margin-bottom: 4px;
 
       &::before {
         content: "";
@@ -52,8 +50,8 @@
         height: 19px;
         top: 10%;
         left: 0;
-        border: 1px solid black;
-        border-radius: 2px;
+        border: 1px solid $inpit-border-dark;
+        border-radius: 5px;
       }
     }
 
@@ -64,8 +62,17 @@
     &-size {
       margin: 0;
       padding: 8px 25px;
-      background-color: $background-color-secondary;
-      color: red;
+      font-family: $second-font;
+      font-size: clamp(0.563rem, 0.418rem + 0.58vw, 0.938rem);
+      font-weight: 500;
+      line-height: 12px;
+      color: $text-color-primary;
+      background-color: $background-color-primary;
+      border-radius: 9px;
+
+        & span {
+          margin-left: 5px;
+        }
     }
 
     // &-buttons-value {
@@ -87,6 +94,15 @@
     justify-content: flex-start;
     min-width: 100%;
     gap: 12px;
+    margin-bottom: 14px;
+
+    &-link {
+      font-family: $second-font;
+      font-size: clamp(1rem, 0.904rem + 0.38vw, 1.25rem);
+      font-weight: 600;
+      line-height: 20px;
+      color: $text-color-primary;
+    }
   }
 
   &__choose {
@@ -99,5 +115,14 @@
     display: flex;
     align-items: center;
     gap: 14px;
+    
+    label {
+      padding-left: 0;
+
+      &::before {
+        content: none;
+        border: none;
+      }
+    }
   }
 }

@@ -24,8 +24,9 @@ section.items-cart
 					+checkbox('item', 'checked', 'item', '')
 				.selected-products__image
 					img(src="https://img.freepik.com/free-photo/abstract-autumn-beauty-multi-colored-leaf-vein-pattern-generated-by-ai_188544-9871.jpg?size=626&ext=jpg&ga=GA1.1.1413502914.1719964800&semt=ais_user", width="102" height="63" style="background-color: blue; display: block")
-					h3.selected-products__item-title: +link('my-link-class', 'Zion Williamson x Air Jordan 1 Retro Low OG "Voodoo"', '#')
-
+					//h3.selected-products__item-title: 
+					+link('selected-products__image-link', 'Zion Williamson x Air Jordan 1 Retro Low OG "Voodoo"', '#')
+						h3.selected-products__item-title
 				.selected-products__characteristics
 					.selected-products__character
 						.selected-products__item-buttons-value.buttons-value

@@ -3,8 +3,18 @@
   &__wrapper {
     display: flex;
 
+    &-setting {
+      display: none;
+    }
+
     &-element {
       margin: 0;
+      font-family: $second-font;
+      font-size: clamp(1.438rem, 1.534rem + -0.38vw, 1.188rem);
+      font-weight: 600;
+      line-height: 28px;
+      color: $text-color-primary;
+      
     }
   }
 
