@@ -2,7 +2,7 @@
 
 .about {
   background-color: rgb(0 0 0 / 1);
-  background: linear-gradient(rgba(0, 0, 0, 0.9)), url('../../images/decors/stock-background@1x.jpg');
+  background: linear-gradient(rgba(0, 0, 0, 0.9)), url('../../images/decors/mobile/mobile-stock-background@1x.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -14,15 +14,18 @@
   align-items: center;
   justify-content: center;
   margin: 0 auto;
-  margin-bottom: 66px;
   padding: 15px;
   position: relative;
 
   @media screen and (min-width: $tablet) {
-    background: linear-gradient(rgba(0, 0, 0, 0.9)), url('../../images/decors/sneakers-background@2x.jpg');
+    background: linear-gradient(rgba(0, 0, 0, 0.9)), url('../../images/decors/tablet/tablet-sneakers-background@1x.jpg');
     background-size: 135% 100%;
     background-position: -200px;
     margin-bottom: 76px;
+
+    @media (min-resolution: 2dppx) {
+      background: linear-gradient(rgba(0, 0, 0, 0.9)), url('../../images/decors/tablet/tablet-sneakers-background@2x.jpg');
+    }
   }
 
   @media screen and (min-width: $desktop) {
