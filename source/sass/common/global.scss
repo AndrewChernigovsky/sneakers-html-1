@@ -36,9 +36,13 @@ img {
 }
 
 .container {
-  max-width: 1310px;
-  padding: 0 9px;
+  padding: 0 17px;
   margin: 0 auto;
+
+  @media (min-width: $desktop) {
+    padding: 0 9px;
+    max-width: 1310px;
+  }
 }
 
 .main-container {
