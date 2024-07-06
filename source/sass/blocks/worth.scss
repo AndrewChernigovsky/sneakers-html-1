@@ -20,7 +20,7 @@
 
   &__item {
     position: relative;
-    
+
 
     input[type="checkbox"] {
       position: absolute;
@@ -90,6 +90,11 @@
     padding: 10px 8px;
     border: 0;
     background-color: $background-color-primary;
+    background-image: url('../../images/icons/stack.svg#decors_trash-icon');
+    background-size: 15px 15px;
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
     border-radius: 8px;
     cursor: pointer;
 
@@ -115,7 +120,7 @@
 
     &--all-in-cart {
       display: none;
-      
+
       @media (min-width:$desktop) {
         display: block;
         padding: 10px 25px;

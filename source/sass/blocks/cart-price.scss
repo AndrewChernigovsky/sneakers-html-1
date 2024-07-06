@@ -9,26 +9,28 @@
       margin: 0;
     }
 
-    &-setting {
-      display: none;
 
-      @media (min-width:$desktop) {
-        display: block;
-        font-family: $second-font;
-        font-size: clamp(1.438rem, 1.534rem + -0.38vw, 1.188rem);
-        font-weight: 500;
-        margin-right: 18px;
-      }
-    }
+  }
 
-    &-element {
-      margin: 0;
+  &__cost-title {
+    display: none;
+
+    @media (min-width:$desktop) {
+      display: block;
       font-family: $second-font;
       font-size: clamp(1.438rem, 1.534rem + -0.38vw, 1.188rem);
-      font-weight: 600;
-      line-height: 28px;
-      color: $text-color-primary;
+      font-weight: 500;
+      margin-right: 18px;
     }
+  }
+
+  &__cost-value {
+    margin: 0;
+    font-family: $second-font;
+    font-size: clamp(1.438rem, 1.534rem + -0.38vw, 1.188rem);
+    font-weight: 600;
+    line-height: 28px;
+    color: $text-color-primary;
   }
 
   &__buttons {
@@ -39,9 +41,20 @@
       gap: 0;
       justify-content: space-between;
     }
+  }
 
-    &-favorites {
+
+  &__button {
+
+    &--favorites {
       display: none;
+      transition: 0.3s ease-in-out;
+
+      &:hover {
+        opacity: 0.6;
+      }
+
+
       @media (min-width:$desktop) {
         display: block;
         padding: 0;
@@ -50,7 +63,7 @@
         border: none;
         border-radius: 8px;
         background-color: $button-background-color-primary;
-        background-image: url('../../images/icons/stack.svg#decors_heart-border-icon');
+        background-image: url('../../images/decors/mobile/like.png');
         background-size: 15px 15px;
         background-repeat: no-repeat;
         background-position: center;
@@ -58,8 +71,15 @@
       }
     }
 
-    &-buy {
+    &--buy {
       display: none;
+      cursor: pointer;
+      transition: 0.3s ease-in-out;
+
+      &:hover {
+        opacity: 0.6;
+      }
+
       @media (min-width:$desktop) {
         display: block;
         border: none;
