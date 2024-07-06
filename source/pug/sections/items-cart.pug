@@ -12,7 +12,8 @@ section.items-cart
 				li.worth__item
 					+checkbox('worth__all-items', 'checked', 'all-items', 'Выбрать все')
 				li.worth__item
-					+button('Удалить выбранное', 'worth__button-reset', 'reset')
+					+buttonSpan('Удалить выбранное', 'worth__button-reset', 'button', '', 'worth__button-reset-span')
+						//+inlineSvg('', '18px', '18px', 'decors_trash-icon', '', 'red')
 				li.worth__item
 					+link('worth__link', 'Перейти к избранному', '#')
 				li.worth__item
@@ -39,5 +40,5 @@ section.items-cart
 							dt.cart-price__wrapper-setting Цена:
 							dd.cart-price__wrapper-element 23 799 ₽
 						.cart-price__buttons
-							+buttonSpan('', 'cart-price__buttons-favorites', 'button', 'button-favorites', 'Добавить в избранное')
+							+buttonSpan('', 'cart-price__buttons-favorites', 'button', 'button-favorites', '')
 							+button('Купить', 'cart-price__buttons-buy', 'button')
