@@ -13,13 +13,23 @@
     padding-left: 0;
   }
 
-  input[type="text"] {
+  input[type="number"] {
     padding: 0;
     width: 28px;
     height: 28px;
+    font-family: $second-font;
+    font-size: clamp(0.938rem, 0.721rem + 0.87vw, 1.5rem);
+    font-weight: 500;
+    line-height: 18px;
+    color: $text-color-primary;
     background-color: $background-color-primary;
     border: none;
     text-align: center;
+
+    @media (min-width:$tablet) {
+      width: 39px;
+      height: 39px;
+    }
 
     &::placeholder {
       font-family: $second-font;
@@ -28,6 +38,12 @@
       line-height: 18px;
       color: $text-color-primary;
     }
+  }
+
+  input[type="number"]::-webkit-outer-spin-button,
+  input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
   }
 
   &__button-decrease {
@@ -41,6 +57,11 @@
     background-color: $background-color-primary;
     border: none;
     border-radius: 9px 0 0 9px;
+
+    @media (min-width:$tablet) {
+      width: 39px;
+      height: 39px;
+    }
   }
 
   &__button-increase {
@@ -54,5 +75,10 @@
     background-color: $background-color-primary;
     border: none;
     border-radius: 0 9px 9px 0;
+
+    @media (min-width:$tablet) {
+      width: 39px;
+      height: 39px;
+    }
   }
 }

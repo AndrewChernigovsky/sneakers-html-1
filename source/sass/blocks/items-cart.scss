@@ -8,10 +8,13 @@
     background-color: $background-color-secondary;
     border-radius: 13px;
     display: flex;
-    /* flex-direction: column; */
     flex-wrap: wrap;
     align-items: center;
     gap: 10px;
+
+    @media (min-width:$tablet) {
+      padding: 18px 30px 17px 30px;
+    }
   }
 
   &__selected-products {

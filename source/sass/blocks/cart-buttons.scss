@@ -3,6 +3,8 @@
 
   &__title {
     margin: 0;
+    font-family: $second-font;
+    font-size: clamp(1.125rem, 0.957rem + 0.67vw, 1.563rem);
     font-weight: 600;
   }
 
