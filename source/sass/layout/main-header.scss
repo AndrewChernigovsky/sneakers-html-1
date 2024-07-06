@@ -22,6 +22,7 @@ $mobile-padding: 30px 28px 8px 28px;
   grid-template-rows: 42px 50px;
   gap: 20px;
   align-items: center;
+  z-index: 11;
 
   @media (min-width: $tablet) {
     position: static;
@@ -36,6 +37,9 @@ $mobile-padding: 30px 28px 8px 28px;
   grid-column: 1 / 2;
   padding: 0;
   border: none;
+  width: 24px;
+  height: 24px;
+  background-image: url('../../images/icons/stack.svg#decors_close-menu');
   background-color: transparent;
 
   &--close {
@@ -257,13 +261,14 @@ $mobile-padding: 30px 28px 8px 28px;
   background-color: $background-color-base;
 
   &--open {
-  position: absolute;
-  top: 118px;
-  left: 50%;
-  transform: translateX(-50%);
-  padding: 28px;
-  padding-top: 23px;
-  padding-bottom: 10px;
+    position: absolute;
+    top: 118px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 28px;
+    padding-top: 23px;
+    padding-bottom: 10px;
+    z-index: 11;
   }
 
   &--close {
@@ -340,7 +345,7 @@ $mobile-padding: 30px 28px 8px 28px;
   line-height: 22px;
   color: $text-color-base;
   background-color: rgba($background-color-secondary, 5%);
-  background-image:url('../../images/icons/stack.svg#decors_arrow');
+  background-image: url('../../images/icons/stack.svg#decors_arrow');
   background-repeat: no-repeat;
   background-size: 6px 12px;
   background-position: center right 25px;

@@ -1,8 +1,11 @@
 section.intro
 	.intro__wrapper
-		+inlineSvg('intro__img', '300', '250',  'content_logistics-logo')
-		p.intro__text Закажем абсолютную любую позицию из Китая!<br>Одежда, обувь, аксессуары, электроника и многое другое! Цены значительно ниже, чем в России.
-		.intro__buttons
-			+link('base-link', 'Перейти к каталогу', './pages/catalog.html')
-			+link('base-link base-link--black', 'Перейти к калькулятору', './pages/calculator.html')
-
+		.intro__inner
+			+inlineSvg('intro__img', '500', '200',  'content_logistics-logo')
+			p.intro__text Закажем абсолютную любую позицию из Китая!<br>Одежда, обувь, аксессуары, электроника и многое другое! Цены значительно ниже, чем в России.
+			.intro__buttons
+				+link('base-link', 'Перейти к каталогу', './pages/catalog.html')
+				+link('base-link base-link--black', 'Перейти к калькулятору', './pages/calculator.html')
+		.intro__images
+			+img('intro__image active', '../../images/content', 'main-intro', 'Лучший сервис для заказа с POIZON', 430, 234, 'png')
+			+img('intro__image', '../../images/content', 'main-intro-2', 'Лучший сервис для заказа с POIZON', 430, 234, 'png')
