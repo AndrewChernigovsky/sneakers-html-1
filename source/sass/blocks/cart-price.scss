@@ -2,17 +2,75 @@
 
   &__wrapper {
     display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+
+    @media (min-width:$desktop) {
+      margin: 0;
+    }
+
+    &-setting {
+      display: none;
+
+      @media (min-width:$desktop) {
+        display: block;
+        font-family: $second-font;
+        font-size: clamp(1.438rem, 1.534rem + -0.38vw, 1.188rem);
+        font-weight: 500;
+        margin-right: 18px;
+      }
+    }
 
     &-element {
       margin: 0;
+      font-family: $second-font;
+      font-size: clamp(1.438rem, 1.534rem + -0.38vw, 1.188rem);
+      font-weight: 600;
+      line-height: 28px;
+      color: $text-color-primary;
     }
   }
 
-  &__button-favorites {
-    display: none;
-  }
+  &__buttons {
+    display: flex;
+    gap: 10px;
 
-  &__button-buy {
-    display: none;
+    @media (min-width:$desktop) {
+      gap: 0;
+      justify-content: space-between;
+    }
+
+    &-favorites {
+      display: none;
+      @media (min-width:$desktop) {
+        display: block;
+        padding: 0;
+        width: 35px;
+        height: 35px;
+        border: none;
+        border-radius: 8px;
+        background-color: $button-background-color-primary;
+        background-image: url('../../images/icons/stack.svg#decors_heart-border-icon');
+        background-size: 15px 15px;
+        background-repeat: no-repeat;
+        background-position: center;
+        cursor: pointer;
+      }
+    }
+
+    &-buy {
+      display: none;
+      @media (min-width:$desktop) {
+        display: block;
+        border: none;
+        font-family: $sixth-font;
+        font-size: 13px;
+        line-height: 34px;
+        padding: 2px 44px;
+        color: $text-color-base;
+        background-color: $button-background-color-base;
+        border-radius: 8px;
+      }
+    }
   }
 }

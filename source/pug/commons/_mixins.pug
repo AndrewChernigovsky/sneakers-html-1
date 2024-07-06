@@ -36,6 +36,11 @@ mixin button(text='Кнопка', className='button', type='button', id)
 	button(type=type, class=className, id=id)= text
 //-Use +button('Войти через VK', 'vk-login', 'button')
 
+//- Mиксин для кнопки с иконкой
+mixin buttonSpan(text='Кнопка', className='button', type='button', id, spanClass='button__text')
+	button(type=type, class=className, id=id)
+		span(class=spanClass)= text
+
 //- Миксин для списка кнопок
 mixin listButton(...items)
 	ol(class='button-list list-reset')

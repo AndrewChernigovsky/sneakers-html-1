@@ -1,0 +1,124 @@
+.categories-grading {
+  background-color: $white-azure;
+  border-radius: 13px;
+  margin-bottom: 18px;
+}
+
+.grading {
+  padding: 24px 12px 17px 21px;
+  display: flex;
+  flex-direction: column-reverse;
+
+  // .grading__title
+  &__title {
+    // @fix на десктопе должно быть отображено
+    display: none;
+  }
+
+  // .grading__select
+  &__select {
+    border: none;
+    outline: none;
+    appearance: none;
+    background-color: transparent;
+    font-family: $first-font;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.43;
+    color: $black;
+  }
+
+  select::-ms-expand {
+    display: none; /* удалите стрелку по умолчанию в IE 10 и 11 */
+  }
+
+  // .grading__option
+  &__option {
+    font-family: $first-font;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.43;
+    color: $black;
+  }
+}
+
+.brand-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 19px;
+
+  // .brand-list__item
+  &__item {
+    background-color: $light-gray3;
+    font-family: $second-font;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 1.29;
+    text-transform: uppercase;
+    padding: 6px 10px 8px;
+    border-radius: 10px;
+    display: inline-block;
+    color: $gray-black;
+
+    &--not-checked {
+      display: none;
+    }
+  }
+}
+
+.brand-list__item--unchecked {
+  display: none;
+}
+
+.categories-granding {
+  // .categories-granding__wrapper
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
+    margin-bottom: 22px;
+    position: relative;
+    overflow: hidden;
+  }
+}
+
+.select-wrapper {
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    display: block;
+    background-color: #000000;
+    mask-image: url("../images/icons/stack.svg#decors_arrow");
+    mask-repeat: no-repeat;
+    transform: rotate(90deg);
+    width: 5px;
+    height: 9px;
+    right: -15px;
+    top: 6px;
+  }
+}
+
+.filter-challenge {
+  display: flex;
+  align-items: center;
+  border: none;
+  background-color: transparent;
+  font-family: $first-font;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.43;
+  color: $black;
+  padding: 0;
+  margin-left: auto;
+
+  &::before {
+    content: "";
+    width: 16px;
+    height: 12px;
+    margin-right: 10px;
+    mask-image: url("../images/icons/stack.svg#decors_filters-icon");
+    background-color: $black;
+  }
+}
