@@ -39,5 +39,6 @@ section.items-cart
 						dl.cart-price__wrapper
 							dt.cart-price__wrapper-setting Цена:
 							dd.cart-price__wrapper-element 23 799 ₽
-						+button('Добавить в избранное', 'cart-price__button-favorites', 'button')
-						+button('Купить', 'cart-price__button-buy', 'button')
+						.cart-price__buttons
+							+button('Добавить в избранное', 'cart-price__buttons-favorites', 'button')
+							+button('Купить', 'cart-price__buttons-buy', 'button')

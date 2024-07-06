@@ -2,9 +2,22 @@
 
   &__wrapper {
     display: flex;
+    align-items: center;
+
+    @media (min-width:$desktop) {
+      margin: 0;
+    }
 
     &-setting {
       display: none;
+
+      @media (min-width:$desktop) {
+        display: block;
+        font-family: $second-font;
+        font-size: clamp(1.438rem, 1.534rem + -0.38vw, 1.188rem);
+        font-weight: 500;
+        margin-right: 10px;
+      }
     }
 
     &-element {
@@ -14,15 +27,24 @@
       font-weight: 600;
       line-height: 28px;
       color: $text-color-primary;
-      
     }
   }
 
-  &__button-favorites {
-    display: none;
-  }
+  &__buttons {
+    display: flex;
+    
+    &-favorites {
+      display: none;
+      @media (min-width:$desktop) {
+        display: block;
+      }
+    }
 
-  &__button-buy {
-    display: none;
+    &-buy {
+      display: none;
+      @media (min-width:$desktop) {
+        display: block;
+      }
+    }
   }
 }
