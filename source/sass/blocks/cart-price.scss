@@ -1,0 +1,18 @@
+.cart-price {
+
+  &__wrapper {
+    display: flex;
+
+    &-element {
+      margin: 0;
+    }
+  }
+
+  &__button-favorites {
+    display: none;
+  }
+
+  &__button-buy {
+    display: none;
+  }
+}

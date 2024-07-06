@@ -32,8 +32,8 @@ mixin menuMobile(items, ulClass, liClass, aClass)
 				a(class=aClass href=item.url)= item.title
 
 //- Mиксин для кнопки
-mixin button(text='Кнопка', className='button', type='button')
-	button(type=type, class=className)= text
+mixin button(text='Кнопка', className='button', type='button', id)
+	button(type=type, class=className, id=id)= text
 //-Use +button('Войти через VK', 'vk-login', 'button')
 
 //- Миксин для списка кнопок
@@ -82,11 +82,11 @@ mixin menuFooterSubCategories(subcategories)
 //- Миксин для изображений
 mixin img(className, src, name, alt, width, height, ext)
 	picture
-		source(type='image/webp' srcset=`${src}/tablet-${name}@1x.webp 1x, ${src}/tablet-${name}@2x.webp 2x` media="(min-width: 768px)" width=width height=height)
-		source(type='image/webp' srcset=`${src}/desktop-${name}@1x.webp 1x, ${src}/desktop-${name}@2x.webp 2x` media="(min-width: 1440px)" width=width height=height)
-		source(type=`image/${ext}` srcset=`${src}/tablet-${name}@1x.${ext} 1x, ${src}/tablet-${name}@2x.${ext} 2x` media="(min-width: 768px)" width=width height=height)
-		source(type=`image/${ext}` srcset=`${src}/desktop-${name}@1x.${ext} 1x, ${src}/desktop-${name}@2x.${ext} 2x` media="(min-width: 1440px)" width=width height=height)
-		img(class=className src=`${src}/${name}.${ext}`, alt=alt, width=width, height=height)
+		source(type='image/webp' srcset=`${src}/tablet/tablet-${name}@1x.webp 1x, ${src}/tablet/tablet-${name}@2x.webp 2x` media="(min-width: 768px)" width=width height=height)
+		source(type='image/webp' srcset=`${src}/desktop/desktop-${name}@1x.webp 1x, ${src}/desktop/desktop-${name}@2x.webp 2x` media="(min-width: 1440px)" width=width height=height)
+		source(type=`image/${ext}` srcset=`${src}/tablet/tablet-${name}@1x.${ext} 1x, ${src}/tablet/tablet-${name}@2x.${ext} 2x` media="(min-width: 768px)" width=width height=height)
+		source(type=`image/${ext}` srcset=`${src}/desktop/desktop-${name}@1x.${ext} 1x, ${src}/desktop/desktop-${name}@2x.${ext} 2x` media="(min-width: 1440px)" width=width height=height)
+		img(class=className src=`${src}/mobile/mobile-${name}.${ext}`, alt=alt, width=width, height=height)
 
 //- Миксин для SVG картинки из стека
 mixin inlineSvg(className, width, height, id, fill, stroke)
@@ -146,15 +146,14 @@ mixin menuFooterSubCategories(subcategories)
 	ul(class='menu-footer__sub-list list-reset')
 		each subcategory in subcategories
 			li(class='menu-footer__sub-item')
-				a(href=subcategory.url)= subcategory.name
+				a(class='menu-footer__sub-link' href=subcategory.url)= subcategory.name
 
 //- Миксин для обратной связи в футере
 mixin footerCallback(categories)
 	ul(class='footer__callback-list list-reset')
 		each category in categories
 			li(class='footer__callback-item')
-				a(href=category.url)=category.namе
-				a(href=category.url)=category.name
+				a(class='footer__callback-link' href=category.url)=category.name
 
 //- Боковое меню для страницы избранное
 mixin asideMenu(categories)

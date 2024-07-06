@@ -1,0 +1,194 @@
+.slider {
+  background: linear-gradient(rgba($black, 0.3)), image-set(url('./../../images/decors/mobile/mobile-slider-background@1x.png') 1x, url('./../../images/decors/mobile/mobile-slider-background@2x.png') 2x);
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  @media (min-width:$desktop) {
+    background: linear-gradient(rgba($black, 0.3)),
+      image-set(url('./../../images/decors/desktop/desktop-slider-background@1x.png') 1x, url('./../../images/decors/desktop/desktop-slider-background@2x.png') 2x);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  &__wrapper {
+    width: 100%;
+    min-height: 640px;
+    overflow: hidden;
+    position: relative;
+    margin: 0 auto;
+
+    @media (min-width:$tablet) {
+      min-height: 650px;
+    }
+
+    @media (min-width:$desktop) {
+      width: 1800px;
+      min-height: 750px;
+    }
+  }
+}
+
+.slider__slide {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+
+  @media (min-width:$tablet) {
+    width: 100%;
+  }
+
+  @media (min-width:$desktop) {
+    display: flex;
+    padding-left: 150px;
+    padding-right: 150px;
+  }
+
+  &.slider__slide-second {
+    flex-direction: row-reverse;
+
+  }
+
+  &-wrapper {
+    @media (min-width:$desktop) {
+      width: 710px;
+      align-self: center;
+      margin-right: 0;
+    }
+  }
+
+  &-title {
+    font-family: $first-font;
+    font-size: clamp(1.4rem, 0.8rem + 2vw, 3rem);
+    line-height: 37px;
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+    margin: 0 0 4px 0;
+    padding: 40px 0 0 0;
+
+    @media (min-width:$tablet) {
+      margin-bottom: 30px;
+    }
+
+    @media (min-width: $desktop) {
+      width: 100%;
+      grid-area: title;
+      line-height: 83px;
+      padding: 0;
+      margin-bottom: 9px;
+    }
+  }
+
+  &-description {
+    margin: 0;
+    font-family: $first-font;
+    font-size: clamp(0.7rem, 0.5rem + 0.85vw, 1.5rem);
+    text-align: center;
+    padding: 0 41px;
+    margin-bottom: 32px;
+
+    @media (min-width:$tablet) {
+      margin-bottom: 30px;
+    }
+
+    @media (min-width: $desktop) {
+      grid-area: desc;
+      width: 412px;
+      padding: 0;
+      text-align: left;
+    }
+  }
+
+  &-box {
+    width: 330px;
+    min-height: 110px;
+    margin: 0 auto 50px;
+    padding: 25px 24px 15px;
+    background-color: rgba($black, 0.7);
+    border-radius: 14px;
+
+    @media (min-width:$tablet) {
+      grid-area: content;
+      min-width: 400px;
+      padding: 25px 24px 25px;
+      margin-bottom: 10px;
+    }
+
+    @media (min-width:$desktop) {
+      width: 100%;
+      padding: 33px 58px 26px 70px;
+      margin-bottom: 0;
+    }
+
+    &-title {
+      margin: 0;
+      font-family: $fourth-font;
+      font-size: clamp(0.6rem, 0.5rem + 0.6vw, 1.3rem);
+      line-height: 14px;
+      font-weight: 700;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+
+      @media (min-width: $desktop) {
+        margin-bottom: 15px;
+      }
+    }
+
+    &-description {
+      margin: 0;
+      font-family: $first-font;
+      font-size: clamp(0.5rem, 0.4rem + 0.6vw, 1.1rem);
+      font-weight: 500;
+      line-height: 12px;
+
+      @media (min-width:$tablet) {
+        margin-bottom: 5px;
+      }
+
+      @media (min-width: $desktop) {
+        line-height: 24px;
+        margin-bottom: 8px;
+      }
+    }
+  }
+
+  &-img {
+    display: block;
+    width: 323px;
+    height: auto;
+    margin: 0 auto;
+    align-items: end;
+
+    @media (min-width:$tablet) {
+      width: 480px;
+      margin: 0 auto;
+      padding: 0;
+    }
+
+    @media (min-width: $desktop) {
+      width: 800px;
+      height: 738px;
+    }
+
+    &-second {
+      padding-top: 50px;
+
+      @media (min-width: $desktop) {
+        padding-top: 0;
+        width: 800px;
+        height: 680px;
+      }
+    }
+  }
+}
+
+.slider__pagination,
+.slider__buttons {
+  display: none;
+}
+
+.slider__active {
+  opacity: 1;
+}

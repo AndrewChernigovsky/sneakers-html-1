@@ -26,14 +26,15 @@
 }
 
 .social__item:first-child .social__link {
-  background-image: url('../../images/icons/content/vkontakte-logo.svg');
+  background-image: url('../../images/icons/content/vkontakte.svg');
 }
 
 .social__item:nth-child(2) .social__link {
-  background-image: url('../../images/icons/content/email-logo.svg');
+  background-image: url('../../images/icons/content/email.svg');
 }
 
 .social__item:nth-child(3) .social__link {
-  background-image: url('../../images/icons/content/telegram-logo.svg');
+  margin-right: 0;
+  background-image: url('../../images/icons/content/telegram.svg');
 }
 
