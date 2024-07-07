@@ -43,3 +43,34 @@ section.items-cart
 						.cart-price__buttons
 							+buttonSpan('', 'cart-price__button--favorites', 'button', 'button-favorites', '')
 							+button('Купить', 'cart-price__button--buy', 'button')
+	.items-cart__mini-order.mini-order
+		.mini-order__wrapper
+			.mini-order__buttons.order-buttons
+			p.cart-buttons__title.order-buttons__title Итого:
+			p.cart-buttons__cost.order-buttons__cost
+				span.total-count 6
+				span товаров:
+				span.total-price 142 794
+				span.currency ₽
+			ol.mini-order__list
+			li.mini-order__item
+				+link('selected-products__image-link mini-order__item-link', 'Zion Williamson x Air Jordan 1 Retro Low OG "Voodoo"', '#')
+					h3.selected-products__item-title
+				dl.cart-price__wrapper.mini-order__price
+					dt.cart-price__cost-title.mini-order__price--title Цена:
+					dd.cart-price__cost-value.mini-order__price--value 23 799 ₽
+			li.mini-order__item
+				+link('selected-products__image-link mini-order__item-link', 'Zion Williamson x Air Jordan 1 Retro Low OG "Voodoo"', '#')
+					h3.selected-products__item-title
+				dl.cart-price__wrapper.mini-order__price
+					dt.cart-price__cost-title.mini-order__price--title Цена:
+					dd.cart-price__cost-value.mini-order__price--value 23 799 ₽
+			.mini-order__buttons.mini-order-buttons.cart-buttons__worth.worth
+			ul.worth__list.mini-order-buttons__list
+				li.worth__item.mini-order-buttons__item-placing
+					+link('worth__button-order--mini mini-order-buttons__placing', 'Перейти к оформлению', '#')
+				li.worth__item.mini-order-buttons__item-favorite
+					+link('worth__link mini-order-buttons__favorite', 'Перейти к избранному', '#')
+				li.worth__item.mini-order-buttons__item-all-in-cart
+					+link('worth__link worth__link--all-in-cart mini-order-buttons__all-in-cart', 'Все в корзине', '#')
+		+link('worth__button-back mini-order-buttons__back', 'Вернуться обратно к каталогу', '#')

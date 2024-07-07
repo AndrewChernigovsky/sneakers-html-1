@@ -182,6 +182,12 @@
     @media (min-width:$desktop) {
       display: none;
     }
+
+    &--mini {
+      @media (min-width:$desktop) {
+        display: block;
+      }
+    }
   }
 
   &__link {

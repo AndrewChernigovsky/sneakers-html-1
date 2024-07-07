@@ -1,0 +1,30 @@
+.mini-order-buttons {
+  border: 2px solid red;
+
+  &__list {
+    @media (min-width:$desktop) {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  &__item {
+    &-placing {
+      @media (min-width:$desktop) {
+        grid-column: 1 / -1;
+      }
+    }
+
+    &-favorite {
+      @media (min-width:$desktop) {
+        grid-column: 1 / 2;
+      }
+    }
+
+    &-all-in-cart {
+      @media (min-width:$desktop) {
+        grid-column: 2 / 3;
+      }
+    }
+  }
+}
