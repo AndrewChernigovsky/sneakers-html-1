@@ -2,8 +2,35 @@
 
   &__wrapper {
     @media (min-width:$desktop) {
+      padding: 27px 18px 22px 24px;
       background-color: $background-color-secondary;
       border-radius: 9px;
+    }
+  }
+
+  &__summary {
+    @media (min-width:$desktop) {
+      margin-bottom: 10px;
+
+      .total-count {
+        margin: 0;
+      }
+
+      .total-text {
+        margin-right: 35px;
+      }
+    }
+
+    &-title {
+      @media (min-width:$desktop) {
+        display: block;
+        margin: 0;
+        font-family: $second-font;
+        font-size: 10px;
+        font-weight: 600;
+        line-height: 13px;
+        margin-bottom: 2px;
+      }
     }
   }
 
@@ -11,24 +38,53 @@
     
     @media (min-width:$desktop) {
       margin: 0;
+      padding: 0;
+      padding-left: 10px;
+      counter-reset: myCounter;
     }
   }
 
   &__item {
+
+    @media (min-width:$desktop) {
+      list-style-type: none;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      position: relative;
+    }
+
     &-link {
-      font-family: $second-font;
-      font-size: 9px;
-      font-weight: 600;
-      line-height: 11px;
-      display: inline-block;
-      max-width: 160px;
-      white-space: nowrap;  /*Запрещает перенос текста на новую строку*/
-      overflow: hidden;
-      text-overflow: ellipsis;  /*...*/
+      @media (min-width:$desktop) {
+        font-family: $second-font;
+        font-size: 9px;
+        font-weight: 600;
+        line-height: 11px;
+        display: inline-block;
+        max-width: 150px;
+        white-space: nowrap;  /*Запрещает перенос текста на новую строку*/
+        overflow: hidden;
+        text-overflow: ellipsis;  /*...*/
+      }
     }
   }
 
+  &__item:before {
+    content: "";
+    position: absolute;
+    counter-increment: myCounter;
+    content:counter(myCounter)".";
+    top: -7px;
+    left: -14px;
+    font-size: 11px;
+    line-height: 40px;
+  }
+
   &__price {
+
+    @media (min-width:$desktop) {
+      /* display: inline-block; */
+    }
 
     &--title {
       @media (min-width:$desktop) {
