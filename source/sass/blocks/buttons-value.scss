@@ -1,5 +1,6 @@
 .buttons-value {
   display: flex;
+  width: auto;
 
   label {
     padding: 0;
@@ -14,8 +15,8 @@
 
   input[type="number"] {
     padding: 0;
-    width: 2ch!important;
-    max-width: 10ch!important;
+    width: 28px;
+    max-width: 60px;
     height: 28px;
     font-family: $second-font;
     font-size: clamp(0.938rem, 0.721rem + 0.87vw, 1.5rem);
@@ -33,6 +34,7 @@
 
     @media (min-width:$desktop) {
       width: 30px;
+      max-width: 70px;
     }
 
     &::placeholder {
