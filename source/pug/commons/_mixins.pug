@@ -105,12 +105,11 @@ mixin inputField(label, type, name, id, placeholder, value)
 //-Use +inputField('Search', 'text', 'name-search', 'id-search', 'Введите placeholder')
 
 //- Миксин для input с динамической шириной
-mixin inputFieldNumber(type, name, value, size)
+mixin inputFieldNumber(type, name, value)
 	input(
 		type=type,
 		name=name,
 		value=value,
-		size=size,
 		oninput="this.style.width = (this.value.length + 1) * 15 + 'px'" /*на каждую цифру width +15px*/
 	)
 
