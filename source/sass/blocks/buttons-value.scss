@@ -14,7 +14,8 @@
 
   input[type="number"] {
     padding: 0;
-    width: 28px;
+    width: 2ch!important;
+    max-width: 10ch!important;
     height: 28px;
     font-family: $second-font;
     font-size: clamp(0.938rem, 0.721rem + 0.87vw, 1.5rem);

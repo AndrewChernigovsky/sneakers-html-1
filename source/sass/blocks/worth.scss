@@ -30,7 +30,7 @@
       cursor: pointer;
     }
 
-    label {
+    .worth-label {
       display: block;
       font-family: $fifth-font;
       font-size: clamp(0.5rem, 0.404rem + 0.38vw, 0.75rem);
@@ -55,13 +55,13 @@
       }
     }
 
-    label:hover {
+    .worth-label:hover {
       @media (min-width:$desktop) {
         opacity: 0.6;
       }
     }
 
-    label::before {
+    .worth-label::before {
       /* Стилизация квадратa чекбокса */
       content: "";
       position: absolute;

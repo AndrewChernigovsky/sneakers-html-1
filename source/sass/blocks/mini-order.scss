@@ -49,12 +49,22 @@
     @media (min-width:$desktop) {
       margin-bottom: 10px;
 
+      .cart-buttons__cost {
+        display: flex;
+        width: 70px;
+      }
+
       .total-count {
-        margin: 0;
+        margin: 0 5px 0 0;
       }
 
       .total-text {
         margin-right: 35px;
+      }
+
+      .total-price {
+        width: 70px;
+        margin-right: 10px;
       }
     }
 
@@ -128,6 +138,13 @@
     .cart-price__cost-value {
       @media (min-width:$desktop) {
         font-size: 11px;
+      }
+    }
+
+    .currency {
+      @media (min-width:$desktop) {
+        font-size: 11px;
+        font-weight: 600;
       }
     }
   }
