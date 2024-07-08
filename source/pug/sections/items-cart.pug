@@ -1,6 +1,6 @@
 section.items-cart
+	h2.visually-hidden Корзина товаров кроссовок....
 	.items-cart__wrapper.cart-buttons
-		h2.visually-hidden Корзина товаров кроссовок....
 		p.cart-buttons__title Корзина
 		p.cart-buttons__cost
 			span.total-count 6
@@ -14,9 +14,9 @@ section.items-cart
 				li.worth__item
 					+buttonSpan('Удалить выбранное', 'worth__button-reset', 'button', '', 'worth__button-reset-span')
 				li.worth__item
-					+link('worth__button-order', 'Перейти к оформлению', '#')
+					+link('worth__button-order', 'Перейти к оформлению', 'order-details-page.html')
 				li.worth__item
-					+link('worth__link', 'Перейти к избранному', '#')
+					+link('worth__link', 'Перейти к избранному', 'favorites.html')
 				li.worth__item
 					+link('worth__link worth__link--all-in-cart', 'Все в корзине', '#')
 	.items-cart__selected-products.selected-products
@@ -26,7 +26,29 @@ section.items-cart
 					+checkbox('item', 'checked', 'item', '')
 				.selected-products__image
 					img(src="https://img.freepik.com/free-photo/abstract-autumn-beauty-multi-colored-leaf-vein-pattern-generated-by-ai_188544-9871.jpg?size=626&ext=jpg&ga=GA1.1.1413502914.1719964800&semt=ais_user", width="102" height="63" style="background-color: blue; display: block")
-					+link('selected-products__image-link', 'Zion Williamson x Air Jordan 1 Retro Low OG "Voodoo"', '#')
+					+link('selected-products__image-link', 'Zion Williamson x Air Jordan 1 Retro Low OG "Voodoo"', 'placing-order.html')
+						h3.selected-products__item-title
+				.selected-products__characteristics
+					.selected-products__character
+						.selected-products__item-buttons-value.buttons-value
+							+button('-', 'buttons-value__button--decrease', 'button')
+							+inputField('','number', 'buttons-value__quantity-product', 'quantity-product', '1')
+							+button('+', 'buttons-value__button--increase', 'button')
+						p.selected-products__item-size Размер:
+							span 41
+					.selected-products__item-price-wrapper.cart-price
+						dl.cart-price__wrapper
+							dt.cart-price__cost-title Цена:
+							dd.cart-price__cost-value 23 799 ₽
+						.cart-price__buttons
+							+buttonSpan('', 'cart-price__button--favorites', 'button', 'button-favorites', '')
+							+button('Купить', 'cart-price__button--buy', 'button')
+			li.selected-products__item
+				.selected-products__choose
+					+checkbox('item', 'checked', 'item', '')
+				.selected-products__image
+					img(src="https://img.freepik.com/free-photo/abstract-autumn-beauty-multi-colored-leaf-vein-pattern-generated-by-ai_188544-9871.jpg?size=626&ext=jpg&ga=GA1.1.1413502914.1719964800&semt=ais_user", width="102" height="63" style="background-color: blue; display: block")
+					+link('selected-products__image-link', 'Zion Williamson x Air Jordan 1 Retro Low OG "Voodoo"', 'placing-order.html')
 						h3.selected-products__item-title
 				.selected-products__characteristics
 					.selected-products__character
@@ -47,48 +69,48 @@ section.items-cart
 		.mini-order__wrapper
 			.mini-order__summary
 				p.mini-order__summary-title Итого:
-				p.cart-buttons__cost.mini-order__summary-cost
+				p.cart-buttons__cost
 					span.total-count 6
 					span.total-text товаров:
 					span.total-price 142 794
 					span.currency ₽
 			ol.mini-order__list
 				li.mini-order__item
-					+link('selected-products__image-link mini-order__item-link', 'Zion Williamson x Air Jordan 1 Retro Low OG "Voodoo"', '#')
+					+link('selected-products__image-link', 'Zion Williamson x Air Jordan 1 Retro Low OG "Voodoo"', '#')
 						h3.selected-products__item-title
-					dl.cart-price__wrapper.mini-order__price
-					dt.cart-price__cost-title.mini-order__price--title Цена:
-					dd.cart-price__cost-value.mini-order__price--value 23 799 ₽
+					dl.cart-price__wrapper
+						dt.cart-price__cost-title Цена:
+						dd.cart-price__cost-value 23 799 ₽
 				li.mini-order__item
-					+link('selected-products__image-link mini-order__item-link', 'Zion Williamson x Air Jordan 1 Retro Low OG "Voodoo"', '#')
+					+link('selected-products__image-link', 'Zion Williamson x Air Jordan 1 Retro Low OG "Voodoo"', '#')
 						h3.selected-products__item-title
-					dl.cart-price__wrapper.mini-order__price
-					dt.cart-price__cost-title.mini-order__price--title Цена:
-					dd.cart-price__cost-value.mini-order__price--value 23 799 ₽
+					dl.cart-price__wrapper
+						dt.cart-price__cost-title Цена:
+						dd.cart-price__cost-value 23 799 ₽
 				li.mini-order__item
-					+link('selected-products__image-link mini-order__item-link', 'Zion Williamson x Air Jordan 1 Retro Low OG "Voodoo"', '#')
+					+link('selected-products__image-link', 'Zion Williamson x Air Jordan 1 Retro Low OG "Voodoo"', '#')
 						h3.selected-products__item-title
-					dl.cart-price__wrapper.mini-order__price
-					dt.cart-price__cost-title.mini-order__price--title Цена:
-					dd.cart-price__cost-value.mini-order__price--value 23 799 ₽
+					dl.cart-price__wrapper
+						dt.cart-price__cost-title Цена:
+						dd.cart-price__cost-value 23 799 ₽
 				li.mini-order__item
-					+link('selected-products__image-link mini-order__item-link', 'Zion Williamson x Air Jordan 1 Retro Low OG "Voodoo"', '#')
+					+link('selected-products__image-link', 'Zion Williamson x Air Jordan 1 Retro Low OG "Voodoo"', '#')
 						h3.selected-products__item-title
-					dl.cart-price__wrapper.mini-order__price
-					dt.cart-price__cost-title.mini-order__price--title Цена:
-					dd.cart-price__cost-value.mini-order__price--value 23 799 ₽
+					dl.cart-price__wrapper
+						dt.cart-price__cost-title Цена:
+						dd.cart-price__cost-value 23 799 ₽
 				li.mini-order__item
-					+link('selected-products__image-link mini-order__item-link', 'Zion Williamson x Air Jordan 1 Retro Low OG "Voodoo"', '#')
+					+link('selected-products__image-link', 'Zion Williamson x Air Jordan 1 Retro Low OG "Voodoo"', '#')
 						h3.selected-products__item-title
-					dl.cart-price__wrapper.mini-order__price
-					dt.cart-price__cost-title.mini-order__price--title Цена:
-					dd.cart-price__cost-value.mini-order__price--value 23 799 ₽
+					dl.cart-price__wrapper
+						dt.cart-price__cost-title Цена:
+						dd.cart-price__cost-value 23 799 ₽
 			.mini-order__buttons.mini-order-btn.cart-buttons__worth.worth
-				ul.worth__list.mini-order-btn__list
-					li.worth__item.mini-order-btn__item.mini-order-btn__item--placing
-						+link('worth__button-order--mini mini-order-btn__link mini-order-btn__link--placing', 'Перейти к оформлению', '#')
-					li.worth__item.mini-order-btn__item.mini-order-btn__item--favorite
-						+link('worth__link mini-order-btn__link mini-order-btn__item--favorite', 'Перейти к избранному', '#')
-					li.worth__item.mini-order-btn__item.mini-order-btn__item--all-in-cart
-						+link('worth__link worth__link--all-in-cart mini-order-btn__link mini-order-btn__item--all-in-cart', 'Все в корзине', '#')
-		+link('worth__button-back mini-order-buttons__back', 'Вернуться обратно к каталогу', '#')
+				ul.mini-order-btn__list
+					li.mini-order-btn__item
+						+link('worth__button-order', 'Перейти к оформлению', 'order-details-page.html')
+					li.mini-order-btn__item
+						+link('worth__link', 'Перейти к избранному', 'favorites.html')
+					li.mini-order-btn__item
+						+link('worth__link worth__link--all-in-cart', 'Все в корзине', '#')
+		+link('link-go-back', 'Вернуться обратно к каталогу', 'catalog.html')

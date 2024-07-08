@@ -1,10 +1,47 @@
 .mini-order {
+  display: none;
 
+  @media (min-width:$desktop) {
+    display: block;
+  }
+  
   &__wrapper {
     @media (min-width:$desktop) {
-      padding: 27px 18px 22px 24px;
+      padding: 27px 15px 22px 20px;
       background-color: $background-color-secondary;
       border-radius: 9px;
+      margin-bottom: 20px;
+    }
+  }
+
+  .link-go-back {
+    @media (min-width:$desktop) {
+      display: block;
+      text-decoration: none;
+      font-size: 11px;
+      font-weight: 600;
+      line-height: 14px;
+      color: $text-color-base;
+      background-color: $button-background-color-primary;
+      padding: 24px 29px 24px 48px;
+      border-radius: 13px;
+      text-align: center;
+      position: relative;
+      
+      &::before {
+        content: "";
+        position: absolute;
+        width: 12px;
+        height: 12px;
+        top: 50%;
+        transform: translateY(-50%) scaleX(-1);
+        left: 20%;
+        background-image: url('../../images/icons/stack.svg#decors_arrow');
+      }
+
+      &:hover {
+        opacity: 0.6;
+      }
     }
   }
 
@@ -40,7 +77,8 @@
       margin: 0;
       padding: 0;
       padding-left: 10px;
-      counter-reset: myCounter;
+      margin-bottom: 13px;
+      counter-reset: myCounter;  /*обнуляет css-счетчик myCounter внутри каждого <ol>*/
     }
   }
 
@@ -50,11 +88,24 @@
       list-style-type: none;
       display: flex;
       align-items: center;
-      gap: 10px;
+      gap: 20px;
       position: relative;
+
+      &::before {
+        content: "";
+        position: absolute;
+        counter-increment: myCounter;
+        content:counter(myCounter)".";
+        top: -7px;
+        left: -14px;
+        font-family: $first-font;
+        font-size: 9px;
+        font-weight: 600;
+        line-height: 40px;
+      }
     }
 
-    &-link {
+    .selected-products__image-link {
       @media (min-width:$desktop) {
         font-family: $second-font;
         font-size: 9px;
@@ -67,32 +118,14 @@
         text-overflow: ellipsis;  /*...*/
       }
     }
-  }
 
-  &__item:before {
-    content: "";
-    position: absolute;
-    counter-increment: myCounter;
-    content:counter(myCounter)".";
-    top: -7px;
-    left: -14px;
-    font-size: 11px;
-    line-height: 40px;
-  }
-
-  &__price {
-
-    @media (min-width:$desktop) {
-      /* display: inline-block; */
-    }
-
-    &--title {
+    .cart-price__cost-title {
       @media (min-width:$desktop) {
         display: none;
       }
     }
 
-    &--value {
+    .cart-price__cost-value {
       @media (min-width:$desktop) {
         font-size: 11px;
       }
