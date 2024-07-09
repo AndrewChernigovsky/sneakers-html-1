@@ -9,10 +9,22 @@
   display: flex;
   flex-direction: column-reverse;
 
+  @media (min-width: $tablet) {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
   // .grading__title
   &__title {
     // @fix на десктопе должно быть отображено
     display: none;
+    @media (min-width: $tablet) {
+      display: block;
+      margin-right: 5px;
+      font-size: 15px;
+      line-height: 1.29;
+      color: $gray-black;
+    }
   }
 
   // .grading__select
@@ -26,6 +38,14 @@
     font-size: 14px;
     line-height: 1.43;
     color: $black;
+    cursor: pointer;
+
+    @media (min-width: $tablet) {
+      color: $green;
+      text-transform: lowercase;
+      font-size: 15px;
+      line-height: 1.29;
+    }
   }
 
   select::-ms-expand {
@@ -46,6 +66,10 @@
   display: flex;
   flex-wrap: wrap;
   gap: 19px;
+
+  @media (min-width: $tablet) {
+    padding-right: 34px;
+  }
 
   // .brand-list__item
   &__item {
@@ -79,11 +103,25 @@
     margin-bottom: 22px;
     position: relative;
     overflow: hidden;
+
+    @media (min-width: $tablet) {
+      flex-direction: row;
+      justify-content: flex-end;
+      padding-right: 40px;
+      overflow: visible;
+      align-items: flex-start;
+      margin-bottom: 0;
+    }
   }
 }
 
 .select-wrapper {
   position: relative;
+
+  @media (min-width: $tablet) {
+    display: flex;
+    align-items: center;
+  }
 
   &::after {
     content: "";
@@ -97,6 +135,14 @@
     height: 9px;
     right: -15px;
     top: 6px;
+
+    @media (min-width: $tablet) {
+      mask-image: url("../images/icons/stack.svg#decors_sorting-icon");
+      width: 13px;
+      height: 12px;
+      transform: none;
+      top: 3px;
+    }
   }
 }
 
@@ -112,6 +158,11 @@
   color: $black;
   padding: 0;
   margin-left: auto;
+  cursor: pointer;
+
+  @media (min-width: $tablet) {
+    display: none;
+  }
 
   &::before {
     content: "";
