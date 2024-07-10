@@ -1,0 +1,53 @@
+.mini-order-btn {
+  
+  &__list {
+    @media (min-width:$desktop) {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 13px;
+    }
+  }
+
+  &__item {
+
+    .worth__button-order {
+      @media (min-width:$desktop) {
+        display: block;
+        width: 240px;
+        font-family: $fifth-font;;
+        font-size: clamp(0.5rem, 0.404rem + 0.38vw, 0.75rem);
+        font-weight: 500;
+        line-height: 10px;
+        padding: 15px 12px 15px 15px;
+        background-color: $button-background-color-base;
+        border-radius: 9px;
+        color: $text-color-base;
+        text-decoration: none;
+        text-align: center;
+      }
+    }
+
+    .worth__button-order:hover {
+      @media (min-width:$desktop) {
+        opacity: 0.6;
+      }
+    }
+
+    .worth__link {
+      @media (min-width:$desktop) {
+        font-size: 10px;
+        padding: 9px 9px 9px 14px;
+      }
+    }
+
+    .worth__link--all-in-cart {
+      @media (min-width:$desktop) {
+        display: block;
+        padding: 9px 10px 9px 13px;
+      }
+    }
+  }
+}

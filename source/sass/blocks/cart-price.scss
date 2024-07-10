@@ -2,17 +2,103 @@
 
   &__wrapper {
     display: flex;
+    align-items: center;
+    margin-bottom: 10px;
 
-    &-element {
+    @media (min-width:$desktop) {
       margin: 0;
     }
   }
 
-  &__button-favorites {
+  &__cost-title {
     display: none;
+
+    @media (min-width:$desktop) {
+      display: block;
+      font-family: $second-font;
+      font-size: clamp(1.438rem, 1.534rem + -0.38vw, 1.188rem);
+      font-weight: 500;
+      margin-right: 18px;
+    }
   }
 
-  &__button-buy {
-    display: none;
+  &__cost-value {
+    margin: 0;
+    font-family: $second-font;
+    font-size: clamp(1.438rem, 1.534rem + -0.38vw, 1.188rem);
+    font-weight: 600;
+    line-height: 28px;
+    color: $text-color-primary;
+    margin-right: 5px;
+  }
+
+  .currency {
+    font-family: $second-font;
+    font-size: clamp(1.438rem, 1.534rem + -0.38vw, 1.188rem);
+    font-weight: 600;
+    line-height: 28px;
+    color: $text-color-primary;
+  }
+
+  &__buttons {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    @media (min-width:$desktop) {
+      gap: 0;
+      justify-content: space-between;
+    }
+  }
+
+
+  &__button {
+
+    &--favorites {
+      display: none;
+      transition: 0.3s ease-in-out;
+
+      &:hover {
+        opacity: 0.6;
+      }
+
+      @media (min-width:$desktop) {
+        display: block;
+        padding: 0;
+        width: 35px;
+        height: 35px;
+        border: none;
+        border-radius: 8px;
+        background-color: $button-background-color-primary;
+        background-image: url('../../images/decors/mobile/like.png');
+        background-size: 15px 15px;
+        background-repeat: no-repeat;
+        background-position: center;
+        cursor: pointer;
+      }
+    }
+
+    &--buy {
+      display: none;
+      cursor: pointer;
+      transition: 0.3s ease-in-out;
+
+      &:hover {
+        opacity: 0.6;
+      }
+
+      @media (min-width:$desktop) {
+        display: block;
+        border: none;
+        width: 125px;
+        font-family: $sixth-font;
+        font-size: 13px;
+        line-height: 34px;
+        padding: 2px 44px;
+        color: $text-color-base;
+        background-color: $button-background-color-base;
+        border-radius: 8px;
+      }
+    }
   }
 }
