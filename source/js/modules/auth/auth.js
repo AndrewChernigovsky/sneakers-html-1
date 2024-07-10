@@ -2,13 +2,13 @@ import { uploadImg, onSubmitForm } from "./registration";
 
 const registrationForm = document.querySelector('.registration-modal');
 const registrationButton = document.querySelector('.header-navigation__registration-button');
-const usersProfile = document.querySelector('.user-navigation-header');
-const imageUploadButton = document.querySelector('.registration-modal__input-image-upload');
+const usersProfile = registrationForm.querySelector('.user-navigation-header');
+const imageUploadButton = registrationForm.querySelector('.registration-modal__input-image-upload');
 
 function checkLocalStorage() {
   if (localStorage.getItem('userProfile') !== null) {
 
-    if (registrationForm !== null) {
+    if (registrationForm && registrationButton) {
 
       registrationButton.classList.add('hidden');
       usersProfile.classList.remove('hidden');
@@ -22,7 +22,7 @@ function checkLocalStorage() {
 }
 
 function onRegistrationButton() {
-  if (registrationForm !== null) {
+  if (registrationForm && registrationButton) {
     registrationForm.classList.remove('hidden');
     imageUploadButton.addEventListener('change', uploadImg);
     registrationForm.addEventListener('submit', onSubmitForm);
@@ -30,7 +30,7 @@ function onRegistrationButton() {
 }
 
 function onWindowLoad() {
-  if (registrationForm !== null) {
+  if (registrationForm && registrationButton) {
     registrationButton.addEventListener('click', onRegistrationButton);
     checkLocalStorage();
   }
