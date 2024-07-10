@@ -105,12 +105,13 @@ mixin inputField(label, type, name, id, placeholder, value)
 //-Use +inputField('Search', 'text', 'name-search', 'id-search', 'Введите placeholder')
 
 //- Миксин для input с динамической шириной
-mixin inputFieldNumber(type, name, value)
+mixin inputFieldNumber(className, type, name, value)
 	input(
+		class=className,
 		type=type,
 		name=name,
-		value=value,
-		oninput="this.style.width = (this.value.length + 1) * 15 + 'px'" /*на каждую цифру width +15px*/
+		value=value
+		max=999
 	)
 
 //-Миксин для отдельного checkbox
