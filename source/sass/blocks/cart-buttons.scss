@@ -1,9 +1,15 @@
 .cart-buttons {
   margin-bottom: 10px;
-
+  
   &__title {
     margin: 0;
+    font-family: $second-font;
+    font-size: clamp(1.125rem, 0.957rem + 0.67vw, 1.563rem);
     font-weight: 600;
+
+    @media (min-width:$desktop) {
+      display: none;
+    }
   }
 
   &__cost {
@@ -11,16 +17,24 @@
     font-size: clamp(0.688rem, 0.471rem + 0.87vw, 1.25rem);
     font-weight: 600;
     line-height: 15px;
-  }
 
-  &__cost span {
-    margin-left: 5px;
+    
+    .total-count {
+      margin-right: 5px;
+    }
+
+    .total-text {
+      margin-right: 5px;
+    }
+
+    .total-price {
+      margin-right: 5px;
+    }
   }
 
   &__worth {
     margin: 0;
     padding: 0;
     border: 0;
-    grid-column: 1 / -1;
   }
 }

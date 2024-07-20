@@ -1,24 +1,29 @@
 .selected-products {
   min-height: 163px;
 
-  &__list {
-    display: grid;
-    gap: 20px;
-  }
-
   &__item {
     min-height: 63px;
-    align-items: center;
     padding: 40px 18px 24px 9px;
     background-color: $background-color-secondary;
     border-radius: 13px;
     display: flex;
     flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
     position: relative;
+
+    @media (min-width:$tablet) {
+      padding: 40px 30px 24px 30px;
+    }
+
+    @media (min-width:$desktop) {
+      padding-top: 24px;
+      flex-direction: row;
+      align-items: center;
+    }
 
     input[type="checkbox"] {
       margin: 0;
-      justify-self: start;
       position: absolute;
       opacity: 0;
       cursor: pointer;
@@ -32,18 +37,21 @@
         left: 0;
         background-image: url("./../../images/icons/decors/check-mark-icon.svg");
         background-repeat: no-repeat;
-        background-size: 5px 6px;
+        background-size: 10px 11px;
         background-position: center center;
         background-color: $checkbox-background-color-active;
-        border-radius: 2px;
+        border-radius: 4px;
+
+        @media (min-width:$tablet) {
+          left: 80%;
+        }
       }
     }
 
     label {
-      font-weight: 500;
-      line-height: 10px;
       padding-left: 24px;
       position: relative;
+      margin-bottom: 4px;
 
       &::before {
         content: "";
@@ -52,33 +60,45 @@
         height: 19px;
         top: 10%;
         left: 0;
-        border: 1px solid black;
-        border-radius: 2px;
-      }
-    }
+        border: 1px solid $inpit-border-dark;
+        border-radius: 5px;
 
-    &-title {
-      margin: 0;
+        @media (min-width:$tablet) {
+          left: 80%;
+        }
+      }
     }
 
     &-size {
       margin: 0;
       padding: 8px 25px;
-      background-color: $background-color-secondary;
-      color: red;
+      font-family: $second-font;
+      font-size: clamp(0.563rem, 0.418rem + 0.58vw, 0.938rem);
+      font-weight: 500;
+      line-height: 12px;
+      color: $text-color-primary;
+      background-color: $background-color-primary;
+      border-radius: 9px;
+
+      & span {
+        margin-left: 5px;
+      }
+
+      @media (min-width:$tablet) {
+        padding: 13px 15px;
+      }
     }
-
-    // &-buttons-value {
-    // }
-
-    // &-price-wrapper {
-    // }
   }
 
-  &__characteristics {
-    display: flex;
-    justify-content: space-between;
-    min-width: 100%;
+  &__choose {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+
+    @media (min-width:$desktop) {
+      top: 50px;
+      left: 10px;
+    }
   }
 
   &__image {
@@ -87,17 +107,106 @@
     justify-content: flex-start;
     min-width: 100%;
     gap: 12px;
+    margin-bottom: 14px;
+
+    @media (min-width:$desktop) {
+      min-width: 440px;
+      padding-left: 30px;
+      margin-right: 30px;
+      margin-bottom: 0;
+    }
+
+    &-link {
+      font-family: $second-font;
+      font-size: clamp(1rem, 0.904rem + 0.38vw, 1.25rem);
+      font-weight: 600;
+      line-height: 20px;
+      color: $text-color-primary;
+
+      @media (min-width:$desktop) {
+        width: 300px;
+      }
+    }
+
+    &-link:hover {
+      @media (min-width:$desktop) {
+        opacity: 0.6;
+      }
+    }
   }
 
-  &__choose {
-    position: absolute;
-    top: 10px;
-    left: 10px;
+  &__characteristics {
+    display: flex;
+    justify-content: space-between;
+    min-width: 100%;
+
+    @media (min-width:$desktop) {
+      min-width: 450px;
+    }
   }
 
   &__character {
+    width: 250px;
     display: flex;
     align-items: center;
+    justify-content: start;
     gap: 14px;
+
+    @media (min-width:$tablet) {
+      gap: 25px;
+    }
+
+    @media (min-width:$desktop) {
+      flex-direction: row-reverse;
+      gap: 15px;
+    }
+
+    label {
+      padding-left: 0;
+
+      &::before {
+        content: none;
+        border: none;
+      }
+    }
+  }
+
+  &__cost-value {
+    padding: 0;
+    width: 28px;
+    max-width: 60px;
+    height: 28px;
+    font-family: $second-font;
+    font-size: clamp(0.938rem, 0.721rem + 0.87vw, 1.5rem);
+    font-weight: 500;
+    line-height: 18px;
+    color: $text-color-primary;
+    background-color: $background-color-primary;
+    border: none;
+    text-align: center;
+
+    @media (min-width:$tablet) {
+      width: 38px;
+      height: 38px;
+    }
+
+    @media (min-width:$desktop) {
+      width: 30px;
+      max-width: 70px;
+    }
+
+    &::placeholder {
+      font-family: $second-font;
+      font-size: clamp(0.938rem, 0.721rem + 0.87vw, 1.5rem);
+      font-weight: 500;
+      line-height: 18px;
+      color: $text-color-primary;
+    }
+  }
+
+  input[type="number"]::-webkit-outer-spin-button,
+  input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
   }
 }
